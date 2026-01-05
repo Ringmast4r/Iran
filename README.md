@@ -16,34 +16,23 @@
 
 ---
 
-<!-- Repository Stats -->
-![GitHub stars](https://img.shields.io/github/stars/Ringmast4r/Iran?style=for-the-badge&logo=github&color=gold)
-![GitHub forks](https://img.shields.io/github/forks/Ringmast4r/Iran?style=for-the-badge&logo=github&color=blue)
-![GitHub watchers](https://img.shields.io/github/watchers/Ringmast4r/Iran?style=for-the-badge&logo=github&color=green)
-![GitHub repo size](https://img.shields.io/github/repo-size/Ringmast4r/Iran?style=for-the-badge&logo=github&color=purple)
+<p align="center">
 
-<!-- Activity -->
-![GitHub last commit](https://img.shields.io/github/last-commit/Ringmast4r/Iran?style=for-the-badge&logo=github&color=red)
+![Visitors](https://api.visitorbadge.io/api/visitors?path=Ringmast4r%2FIran&label=VISITORS&countColor=%23dc143c&style=for-the-badge)
 
-<!-- Downloads -->
-![GitHub downloads](https://img.shields.io/github/downloads/Ringmast4r/Iran/total?style=for-the-badge&logo=github&color=brightgreen)
-
-<!-- Code Stats -->
-![GitHub code size](https://img.shields.io/github/languages/code-size/Ringmast4r/Iran?style=for-the-badge&logo=github&color=informational)
-![GitHub language count](https://img.shields.io/github/languages/count/Ringmast4r/Iran?style=for-the-badge&logo=github)
-![GitHub top language](https://img.shields.io/github/languages/top/Ringmast4r/Iran?style=for-the-badge&logo=github)
-
-<!-- License & Status -->
-![License](https://img.shields.io/badge/LICENSE-OSINT-green?style=for-the-badge)
-![Maintenance](https://img.shields.io/maintenance/yes/2026?style=for-the-badge&color=green)
-
-<!-- Visitor Counter -->
-![Visitors](https://api.visitorbadge.io/api/visitors?path=Ringmast4r%2FIran&label=VISITORS&countColor=%23263759&style=for-the-badge)
-
-<!-- Custom Badges -->
 ![FTO](https://img.shields.io/badge/FTO-DESIGNATED-red?style=for-the-badge)
 ![Counter-Terrorism](https://img.shields.io/badge/COUNTER-TERRORISM-darkred?style=for-the-badge)
 ![OSINT](https://img.shields.io/badge/OPEN_SOURCE-INTELLIGENCE-black?style=for-the-badge)
+
+![GitHub stars](https://img.shields.io/github/stars/Ringmast4r/Iran?style=for-the-badge&logo=github&color=gold)
+![GitHub forks](https://img.shields.io/github/forks/Ringmast4r/Iran?style=for-the-badge&logo=github&color=blue)
+![GitHub watchers](https://img.shields.io/github/watchers/Ringmast4r/Iran?style=for-the-badge&logo=github&color=green)
+
+![GitHub repo size](https://img.shields.io/github/repo-size/Ringmast4r/Iran?style=for-the-badge&logo=github&color=purple)
+![GitHub last commit](https://img.shields.io/github/last-commit/Ringmast4r/Iran?style=for-the-badge&logo=github&color=orange)
+![License](https://img.shields.io/badge/LICENSE-OSINT-green?style=for-the-badge)
+
+</p>
 
 ---
 
