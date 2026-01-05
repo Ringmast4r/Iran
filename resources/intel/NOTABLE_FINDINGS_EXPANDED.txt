@@ -1,0 +1,471 @@
+================================================================================
+                    EXPANDED NOTABLE FINDINGS
+                    Iranian Government & Hezbollah Infrastructure
+                    Deep-Dive Analysis of Exposed Systems
+                    Generated: 2026-01-04
+================================================================================
+
+================================================================================
+[1] FARSNEWS.IR - API INFRASTRUCTURE (CONFIRMED ACTIVE)
+================================================================================
+
+1.1 API ENDPOINT: api.farsnews.ir
+--------------------------------------------------------------------------------
+STATUS: ACTIVE - Returns 401 Unauthorized (requires authentication)
+URL: https://api.farsnews.ir
+
+HTTP RESPONSE HEADERS:
+Server: ninja (custom server implementation)
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Content-Security-Policy: frame-ancestors https://*.farsnews.ir
+X-Frame-Options: DENY
+Access-Control-Allow-Origin: .
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, PATCH
+
+CUSTOM HEADERS EXPECTED (reveals mobile app architecture):
+- X-Token (authentication token)
+- APPVERSION (mobile app version)
+- X-RFID (request identifier)
+- X-VERSION (API version)
+- project (project identifier)
+- token (alternative auth)
+- app-version (app version number)
+- api-version (API version)
+- accept-language (localization)
+- duid (device unique ID)
+- platform (iOS/Android)
+- os (operating system)
+- application-type (web/mobile)
+- content-encoding
+- app-market (app store source)
+- app-scope (app permissions)
+
+COOKIE SET:
+cookiesession1=678B286B29F37FAC96F0F1CB00C133DC
+Expires: Mon, 04 Jan 2027 (1 year)
+HttpOnly: true (XSS protection)
+
+RESPONSE FORMAT: MessagePack binary (not JSON)
+Response structure visible: {status, error, code, message, traceID, type, data}
+
+ANALYSIS:
+- Full RESTful API with CRUD operations (GET, POST, PUT, DELETE, PATCH)
+- Mobile app exists (requires device ID, platform, app version)
+- Token-based authentication
+- Session tracking via cookies
+- IRGC-linked news agency has sophisticated mobile infrastructure
+
+1.2 CDN INFRASTRUCTURE: cdn.farsnews.ir
+--------------------------------------------------------------------------------
+STATUS: ACTIVE
+URL: https://cdn.farsnews.ir/
+
+FEATURES:
+- Image resizing with parameters (centerCrop=true, width=600, ratio=16:9)
+- SID-based asset identifiers (e.g., SID=06b0f8aaf1354d2ebd426dc9e73ae88b)
+- User profile images with hash-based filenames
+
+ADDITIONAL CDN NODES:
+- ccdn.farsnews.ir (secondary CDN)
+- stream01.farsnews.ir (video streaming)
+- stream02.farsnews.ir (video streaming)
+- stream03.farsnews.ir (video streaming)
+- dl.farsnews.ir (downloads - including APK)
+- trace.farsnews.ir (analytics/tracing)
+
+MOBILE APP DOWNLOAD:
+https://dl.farsnews.ir/app.apk (Android APK direct download)
+
+1.3 INTERNAL ENDPOINTS (From CSP Header)
+--------------------------------------------------------------------------------
+ALLOWED SCRIPT SOURCES:
+- 'self'
+- trace.farsnews.ir
+- *.googletagmanager.com
+
+ALLOWED CONNECTIONS:
+- api.farsnews.ir (main API)
+- og.farsnews.ir (Open Graph)
+- cdn.farsnews.ir (CDN)
+- stream01-03.farsnews.ir (streaming)
+- h.r1-edge-v2.s3mer.net (external CDN edge)
+- live.cdn.asset.aparat.com (Iranian video platform)
+- capacitor://localhost (Capacitor hybrid app framework)
+- native-removal.triboon.net (ad network)
+
+DEVELOPMENT TOOLS (from prior subdomain enumeration):
+- jira.farsnews.ir (DOES NOT RESOLVE - internal only)
+- confluence.farsnews.ir (DOES NOT RESOLVE - internal only)
+- git.farsnews.ir (DOES NOT RESOLVE - internal only)
+- svn.farsnews.ir (DOES NOT RESOLVE - internal only)
+- chat.farsnews.ir (DOES NOT RESOLVE - internal only)
+
+NOTE: Development tools are internal-only (no public DNS resolution).
+These are likely accessible only via VPN or internal network.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[2] ANALYTICS.TASNIMNEWS.COM (MATOMO/PIWIK)
+================================================================================
+
+STATUS: ACTIVE - Returns 403 Forbidden
+URL: https://analytics.tasnimnews.com
+Server: nginx
+
+ANALYSIS:
+- Self-hosted Matomo (formerly Piwik) analytics instance
+- Blocks direct access (likely IP restricted or requires auth)
+- IRGC-affiliated Tasnim News runs own analytics
+- Avoids sending data to Google/Western platforms
+- May contain detailed user behavior data for their visitors
+
+INTELLIGENCE VALUE:
+- If compromised, would reveal all visitor analytics
+- User demographics, locations, reading patterns
+- Referrer sources (how users find the site)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[3] IRNA.IR - INTERNAL NETWORK EXPOSURE
+================================================================================
+
+3.1 PRIVATE IP LEAK: kateb.irna.ir
+--------------------------------------------------------------------------------
+DISCOVERY: kateb.irna.ir resolves to 10.30.41.85
+STATUS: RFC1918 private address exposed in public DNS
+
+ANALYSIS:
+- "Kateb" means "writer/scribe" in Farsi
+- Likely internal editorial/writing system
+- Reveals internal network uses 10.30.41.0/24 subnet
+- Suggests split-horizon DNS misconfiguration
+- Internal systems may be accessible if routed
+
+INTERNAL NETWORK TOPOLOGY (inferred):
+- 10.30.41.x - Editorial systems
+- 217.25.48.x - Mail/Gallery/Editorial
+- 217.25.51.x - RS1 server farm
+- 217.25.53.x - RS2 server farm
+- 217.25.56.x - News/Streaming
+- 217.25.58.x - Remote access
+
+3.2 MAIL SERVER: mail.irna.ir
+--------------------------------------------------------------------------------
+IP: 217.25.48.34
+STATUS: Requires Firefox 65+/Chrome 70+ (modern browser gate)
+
+RESPONSE:
+- Persian-language browser compatibility message
+- Links to download Firefox and Chrome
+- Suggests webmail interface behind the gate
+
+3.3 REMOTE ACCESS: remote.irna.ir
+--------------------------------------------------------------------------------
+IP: 217.25.58.101
+STATUS: Timeout (blocked or internal only)
+
+ANALYSIS:
+- Dedicated remote access server
+- Likely VPN or remote desktop gateway
+- High-value target for initial access
+
+3.4 EDITORIAL SYSTEM: tahrir.irna.ir
+--------------------------------------------------------------------------------
+IP: 217.25.48.63
+STATUS: Timeout (blocked or internal only)
+
+ANALYSIS:
+- "Tahrir" means "editing/editorial" in Farsi
+- Multiple language-specific editorial systems:
+  - entahrir.irna.ir (English editing)
+  - frtahrir.irna.ir (French editing)
+  - rutahrir.irna.ir (Russian editing)
+  - urtahrir.irna.ir (Urdu editing)
+  - prtahrir.irna.ir (?)
+  - phtahrir.irna.ir (?)
+  - estahrir.irna.ir (Spanish editing)
+- Suggests multi-language newsroom workflow
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[4] MFA.GOV.IR - FOREIGN MINISTRY INFRASTRUCTURE
+================================================================================
+
+4.1 VPN ENDPOINT: r1.vpn.minister.local.mfa.gov.ir
+--------------------------------------------------------------------------------
+STATUS: Resolves to 185.143.235.201 (ArvanCloud CDN)
+
+ANALYSIS:
+- "minister.local" suggests internal domain naming
+- "r1" suggests router/endpoint 1 (may have r2, r3...)
+- VPN hostname exposed via DNS
+- Could be Ministerial office VPN access point
+- ArvanCloud CDN fronting the VPN (unusual)
+
+POTENTIAL EXPLOITATION:
+- Credential stuffing attacks
+- VPN software vulnerability scanning
+- Social engineering of VPN credentials
+
+4.2 CONTROL PANEL: cp.mfa.gov.ir
+--------------------------------------------------------------------------------
+IP: 109.201.11.102
+STATUS: Timeout (blocked from foreign IPs)
+CONFIRMED BY: Reverse DNS shows "cp.mfa.gov.ir"
+ISP: Tose'h Fanavari (AS24631)
+ORG: "Foreign Ministry of IRAN" (confirmed!)
+
+ANALYSIS:
+- Administrative control panel
+- Likely hosting/server management interface
+- Blocked to foreign IPs but exists
+
+4.3 EMBASSY NETWORK - KEY SUBDOMAINS
+--------------------------------------------------------------------------------
+HEZBOLLAH CONNECTION:
+- lebanon.mfa.gov.ir -> Embassy in Beirut
+- beirut.mfa.gov.ir -> Direct Beirut reference
+
+VENEZUELA (Strategic Ally - Now Compromised):
+- venezuela.mfa.gov.ir -> Embassy operations affected by Maduro capture
+
+RUSSIA/CHINA (Strategic Partners):
+- russia.mfa.gov.ir
+- china.mfa.gov.ir
+- beijing.mfa.gov.ir
+- moscow.mfa.gov.ir
+
+INTERNAL SYSTEMS:
+- cms.mfa.gov.ir (Content Management)
+- cloud.mfa.gov.ir (Cloud Storage) - timeout
+- email.mfa.gov.ir (Email Portal) - timeout
+- webmail.mfa.gov.ir (Webmail) - timeout
+- mikhak.mfa.gov.ir (Form System) - connection reset
+
+4.4 VISA/CONSULAR SYSTEMS
+--------------------------------------------------------------------------------
+- visareq.mfa.gov.ir (Visa Request Portal) - timeout
+- econsulate.mfa.gov.ir (E-Consulate) - timeout
+- e_visa.mfa.gov.ir (E-Visa Portal)
+- wvisa.mfa.gov.ir (Web Visa)
+- appointment.mfa.gov.ir (Appointment Booking)
+
+NOTE: All systems timeout from external IPs.
+Likely geo-restricted to certain countries or require VPN.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[5] DEFAPRESS.IR - DEFENSE PRESS (MILITARY NEWS)
+================================================================================
+
+STATUS: ACTIVE and publicly accessible
+URL: https://defapress.ir/en
+
+TECH STACK:
+- Custom CMS (not WordPress)
+- Design/hosting by: Iran Samaneh (iransamaneh.com)
+- No visible third-party analytics in HTML
+- Relatively privacy-conscious
+
+CONTENT THEMES:
+- US-Iran tensions
+- Venezuela crisis coverage (pro-Maduro)
+- Middle East conflicts (Yemen, Palestine)
+- Military commemorations (Soleimani)
+- "Resistance" framework narratives
+- Saudi-UAE disputes
+
+INFRASTRUCTURE:
+- Main: 194.41.49.18 (AS200324)
+- Mail: 94.182.146.237 (AS31549 Aria Shatel)
+- DNS: iransamaneh.com
+
+GA TRACKING: G-94BW46TZJM (Google Analytics)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[6] FARSNEWS.IR - TECHNICAL DEEP DIVE
+================================================================================
+
+6.1 SERVICE WORKER (EXPOSED)
+--------------------------------------------------------------------------------
+URL: https://farsnews.ir/service-worker.js
+SIZE: ~100KB+ of minified JavaScript
+
+LIBRARIES/FRAMEWORKS USED:
+- Workbox (Google's PWA library)
+- Capacitor (Ionic hybrid app framework)
+- Custom inflation/compression (ZIP handling)
+- CRC32 implementation
+- MessagePack serialization
+
+PWA FEATURES:
+- Offline capability
+- Push notifications (implied)
+- App-like experience
+- 15-second delayed service worker registration
+
+6.2 MANIFEST (PWA)
+--------------------------------------------------------------------------------
+URL: https://farsnews.ir/manifest.json
+App Name: Fars News
+Theme Color: #1D9CF0 (Blue)
+Icons: 192x192, 512x512 PNG
+Maskable icon available
+
+6.3 EXTERNAL INTEGRATIONS
+--------------------------------------------------------------------------------
+- Aparat (Iranian YouTube alternative): live.cdn.asset.aparat.com
+- Triboon (Iranian ad network): native-removal.triboon.net
+- SportMonks (sports data API): cdn.sportmonks.com
+- Toast UI (Korean UI library): uicdn.toast.com
+
+6.4 PUBLIC API ENDPOINTS (From Frontend)
+--------------------------------------------------------------------------------
+- /trend/list - Trending topics
+- /showcase/block/listV2 - Content blocks
+- /search?query={term} - Search functionality
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[7] HEZBOLLAH INFRASTRUCTURE - FOREIGN HOSTING
+================================================================================
+
+7.1 MOQAWAMA.ORG.LB (Islamic Resistance)
+--------------------------------------------------------------------------------
+PRIMARY HOSTING:
+- IP: 91.109.206.65
+- Location: Moscow, Russia
+- ISP: Okay-Telecom Ltd.
+- ASN: AS199669
+- Reverse DNS: mq.webking1.net
+
+BACKUP HOSTING:
+- IP: 176.74.216.191
+- Location: Czech Republic
+- ISP: HOST-TELECOM
+- ASN: AS51248
+
+ANALYSIS:
+- Deliberately hosted outside Lebanon/Middle East
+- Russian infrastructure provides protection from Western action
+- Czech backup adds redundancy
+- Uses commercial hosting, not government infrastructure
+- Domain registrar likely non-Western
+
+7.2 ACTIVE DOMAINS (Post-US Seizure)
+--------------------------------------------------------------------------------
+CURRENT (Lebanese TLD - outside US jurisdiction):
+- moqawama.org.lb (main resistance site)
+- almanar.com.lb (Al-Manar TV)
+- alahednews.com.lb (Al-Ahed News)
+
+SEIZED (US DOJ):
+- moqawama.org -> DOJ seizure notice
+- almanarnews.org -> seized
+- manarnews.org -> seized
+- almanar-tv.org -> seized
+- alshahid.org -> seized
+
+LESSON: Hezbollah migrated to .lb TLD after US seizures.
+Lebanese ICANN registrar outside US legal reach.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[8] GOVERNMENT ASN INTELLIGENCE
+================================================================================
+
+DEDICATED GOVERNMENT ASNS:
+--------------------------------------------------------------------------------
+ASN       | Name                              | Usage
+----------|-----------------------------------|---------------------------
+AS34592   | Iranian Presidential Admin        | president.ir infrastructure
+AS29079   | IRNA                              | News agency dedicated network
+AS24631   | Tose'h Fanavari                   | Foreign Ministry (mfa.gov.ir)
+AS48434   | Tebyan-e-Noor Institute           | Khamenei.ir mail server
+
+HOSTING/CDN PROVIDERS:
+--------------------------------------------------------------------------------
+AS205585  | ArvanCloud                        | Primary CDN for all gov sites
+AS200554  | Dade Pardaz Kimia Pouyesh         | khamenei.ir main hosting
+AS31549   | Aria Shatel                       | defapress.ir mail
+AS200324  | (Unknown)                         | defapress.ir main
+
+HEZBOLLAH HOSTING (Foreign):
+--------------------------------------------------------------------------------
+AS199669  | Okay-Telecom (Moscow)             | moqawama.org.lb primary
+AS51248   | HOST-TELECOM (Czech)              | moqawama.org.lb backup
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[9] TRACKING INTELLIGENCE SUMMARY
+================================================================================
+
+GOOGLE ANALYTICS ACCOUNTS:
+--------------------------------------------------------------------------------
+Site                | Property ID       | Owner Account (Implied)
+--------------------|-------------------|---------------------------
+khamenei.ir         | UA-6238962-2      | Supreme Leader's office
+                    | G-8MVZ1HLJT0      |
+almanar.com.lb      | UA-199941297-1    | Hezbollah Media
+                    | G-JJ1SM3JFZW      |
+tasnimnews.com      | G-MGYZR3Q3BS      | IRGC Media
+presstv.ir          | G-F359E8PMME      | Press TV
+mehrnews.com        | G-ERSHRYVTBP      | Mehr News
+defapress.ir        | G-94BW46TZJM      | Defense Press
+moqawama.org.lb     | G-Z8F3HPDSWG      | Hezbollah Resistance
+
+GOOGLE TAG MANAGER CONTAINERS:
+--------------------------------------------------------------------------------
+GTM-TLJW8TR: Al-Manar/Hezbollah media network
+             Links: almanar.com.lb, almanartv.com.lb, manartv.com.lb
+
+GTM-PZ3N9B8: Tasnim News (IRGC)
+             Links: tasnimnews.com
+
+MICROSOFT CLARITY (Session Recording):
+--------------------------------------------------------------------------------
+almanar.com.lb:  cgaike4iub (primary), cs22bibpe3 (secondary)
+mehrnews.com:    o2z34ibfin
+
+SELF-HOSTED ANALYTICS:
+--------------------------------------------------------------------------------
+analytics.tasnimnews.com: Matomo instance (403 Forbidden)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[10] OPERATIONAL SECURITY OBSERVATIONS
+================================================================================
+
+WHAT THEY DO WELL:
+- ArvanCloud CDN provides DDoS protection
+- Embassy subdomains geo-restricted
+- Internal tools (JIRA, Confluence) not public
+- Development infrastructure on separate network
+- Mobile app uses token-based auth with device fingerprinting
+- Self-hosted analytics (Matomo) for sensitive sites
+
+WHAT THEY DO POORLY:
+- VPN endpoint hostname leaked in public DNS
+- Internal IP address (10.x) leaked via kateb.irna.ir
+- Use Google Analytics on regime sites (Google sees all traffic)
+- Use Microsoft Clarity (Microsoft records sessions)
+- API headers reveal mobile app architecture
+- Service worker exposes technology stack
+- APK download link exposed (can be reverse engineered)
+- Development subdomain names exposed (jira, confluence, git)
+
+================================================================================
+                              END EXPANDED FINDINGS
+================================================================================

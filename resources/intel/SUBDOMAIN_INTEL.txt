@@ -1,0 +1,323 @@
+================================================================================
+                    SUBDOMAIN & INFRASTRUCTURE INTELLIGENCE
+                    Iranian Government & Regime Sites Enumeration
+                    Generated: 2026-01-03
+================================================================================
+
+================================================================================
+[1] MFA.GOV.IR (Foreign Ministry) - 182 SUBDOMAINS FOUND
+================================================================================
+
+HOSTING: ArvanCloud CDN (AS205585)
+PRIMARY IPs: 185.143.232.201, 185.143.235.201
+MAIL SERVER: mail.mfa.gov.ir -> 109.201.11.102
+DNS: ArvanCloud (i.ns.arvancdn.ir, r.ns.arvancdn.ir)
+
+KEY INFRASTRUCTURE SUBDOMAINS:
+- cms.mfa.gov.ir (Content Management System)
+- mail.mfa.gov.ir (Email Server)
+- webmail.mfa.gov.ir (Webmail Access)
+- cp.mfa.gov.ir -> 109.201.11.102 (Control Panel)
+- mikhak.mfa.gov.ir -> 185.143.233.235 (Form System - xhtml)
+- econsulate.mfa.gov.ir (E-Consulate System)
+- visareq.mfa.gov.ir (Visa Request System)
+- e_visa.mfa.gov.ir (E-Visa Portal)
+- appointment.mfa.gov.ir (Appointment System)
+- cloud.mfa.gov.ir (Cloud Storage)
+- email.mfa.gov.ir (Email Portal)
+- ns2.mfa.gov.ir (Nameserver)
+- web-srv.mfa.gov.ir / websrv.mfa.gov.ir (Web Servers)
+
+EMBASSY SUBDOMAINS (Diplomatic Network):
+Afghanistan:  afghanistan.mfa.gov.ir, kabul.mfa.gov.ir, kandahar.mfa.gov.ir, mazarisharif.mfa.gov.ir
+Americas:     argentina.mfa.gov.ir, buenosaires.mfa.gov.ir, brazil.mfa.gov.ir, brasilia.mfa.gov.ir
+              chile.mfa.gov.ir, bogota.mfa.gov.ir, colombia.mfa.gov.ir, cuba.mfa.gov.ir
+              mexico.mfa.gov.ir, ottawa.mfa.gov.ir, venezuela.mfa.gov.ir
+Asia:         china.mfa.gov.ir, beijing.mfa.gov.ir, shanghai.mfa.gov.ir, guangzhou.mfa.gov.ir
+              hongkong.mfa.gov.ir, japan.mfa.gov.ir, southkorea.mfa.gov.ir
+              india.mfa.gov.ir, newdelhi.mfa.gov.ir, mumbai.mfa.gov.ir, hyderabad.mfa.gov.ir
+              indonesia.mfa.gov.ir, malaysia.mfa.gov.ir, thailand.mfa.gov.ir, bangkok.mfa.gov.ir
+              vietnam.mfa.gov.ir, hanoi.mfa.gov.ir, brunei.mfa.gov.ir, manila.mfa.gov.ir
+              pakistan.mfa.gov.ir, islamabad.mfa.gov.ir, lahore.mfa.gov.ir
+              bangladesh.mfa.gov.ir, dhaka.mfa.gov.ir, srilanka.mfa.gov.ir, colombo.mfa.gov.ir
+Europe:       austria.mfa.gov.ir, vienna.mfa.gov.ir, viennaun.mfa.gov.ir
+              belgium.mfa.gov.ir, brussels.mfa.gov.ir
+              czech.mfa.gov.ir, prague.mfa.gov.ir
+              denmark.mfa.gov.ir, finland.mfa.gov.ir
+              germany.mfa.gov.ir, berlin.mfa.gov.ir, munich.mfa.gov.ir, frankfurt.mfa.gov.ir
+              greece.mfa.gov.ir, athens.mfa.gov.ir
+              ireland.mfa.gov.ir, dublin.mfa.gov.ir
+              italy.mfa.gov.ir, rome.mfa.gov.ir, milan.mfa.gov.ir
+              netherlands.mfa.gov.ir, thehague.mfa.gov.ir
+              poland.mfa.gov.ir, portugal.mfa.gov.ir
+              romania.mfa.gov.ir, bucharest.mfa.gov.ir
+              spain.mfa.gov.ir, sweden.mfa.gov.ir, stockholm.mfa.gov.ir
+              switzerland.mfa.gov.ir, bern.mfa.gov.ir
+              uk.mfa.gov.ir, london.mfa.gov.ir
+              croatia.mfa.gov.ir, zagreb.mfa.gov.ir
+              slovenia.mfa.gov.ir, ljubljana.mfa.gov.ir
+              tirana.mfa.gov.ir, nicosia.mfa.gov.ir
+Russia/CIS:   russia.mfa.gov.ir, ukraine.mfa.gov.ir, kiev.mfa.gov.ir
+              belarus.mfa.gov.ir, georgia.mfa.gov.ir, tbilisi.mfa.gov.ir, batumi.mfa.gov.ir
+              armenia.mfa.gov.ir, yerevan.mfa.gov.ir
+              azerbaijan.mfa.gov.ir, kazakhstan.mfa.gov.ir, astana.mfa.gov.ir, aktau.mfa.gov.ir
+              uzbekistan.mfa.gov.ir, tajikistan.mfa.gov.ir
+              ashgabat.mfa.gov.ir, astrakhan.mfa.gov.ir, bishkek.mfa.gov.ir, merv.mfa.gov.ir
+Middle East:  iraq.mfa.gov.ir, baghdad.mfa.gov.ir, basra.mfa.gov.ir, sulaymaniyah.mfa.gov.ir, najaf.mfa.gov.ir
+              lebanon.mfa.gov.ir, beirut.mfa.gov.ir  <-- HEZBOLLAH CONNECTION
+              jordan.mfa.gov.ir, oman.mfa.gov.ir, muscat.mfa.gov.ir
+              qatar.mfa.gov.ir, dubai.mfa.gov.ir, abudhabi.mfa.gov.ir, riyadh.mfa.gov.ir
+              turkey.mfa.gov.ir, ankara.mfa.gov.ir, trabzon.mfa.gov.ir, erzurum.mfa.gov.ir
+Africa:       ethiopia.mfa.gov.ir, kenya.mfa.gov.ir, nigeria.mfa.gov.ir
+              southafrica.mfa.gov.ir, mauritania.mfa.gov.ir
+Australia:    australia.mfa.gov.ir
+
+NOTABLE FINDING:
+- r1.vpn.minister.local.mfa.gov.ir -> 185.143.235.201 (VPN endpoint exposed!)
+
+SPF MAIL SERVERS (from DNS TXT):
+- 109.201.11.102
+- 109.201.11.104
+- 109.201.11.110
+- 217.218.131.82
+- 217.218.131.83
+- 217.218.131.84
+- 172.254.124.227
+- 24.136.100.19
+- 88.255.32.35
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[2] IRNA.IR (Islamic Republic News Agency) - 50 SUBDOMAINS
+================================================================================
+
+HOSTING: ArvanCloud CDN (AS205585)
+PRIMARY IPs: 185.143.234.235, 185.143.233.235
+MAIL SERVER: mail.irna.ir -> 217.25.48.34
+INTERNAL IP LEAK: kateb.irna.ir -> 10.30.41.85 (RFC1918 private!)
+
+LANGUAGE SUBDOMAINS:
+- en.irna.ir (English)
+- ar.irna.ir (Arabic)
+- ru.irna.ir (Russian)
+- fr.irna.ir (French)
+- de.irna.ir (German)
+- es.irna.ir (Spanish)
+- tr.irna.ir (Turkish)
+- ur.irna.ir (Urdu)
+- zh.irna.ir (Chinese)
+- af.irna.ir (Dari/Afghan)
+
+EDITORIAL SYSTEMS (tahrir = "editing"):
+- tahrir.irna.ir -> 217.25.48.63
+- entahrir.irna.ir
+- frtahrir.irna.ir
+- rutahrir.irna.ir
+- urtahrir.irna.ir
+- prtahrir.irna.ir
+- phtahrir.irna.ir
+- estahrir.irna.ir
+- gltahrir.irna.ir
+- ltahrir.irna.ir
+- ptahrir.irna.ir
+- xtahrir.irna.ir
+
+INFRASTRUCTURE:
+- mail.irna.ir -> 217.25.48.34
+- remote.irna.ir -> 217.25.58.101 (Remote Access)
+- lms.irna.ir -> 178.216.249.74 (Learning Management)
+- gallery.irna.ir -> 217.25.48.64
+- news.irna.ir -> 217.25.56.77
+- sky.irna.ir -> 217.25.56.202
+- rs1.irna.ir -> 217.25.51.11
+- rs2.irna.ir -> 217.25.53.11
+- ch1.irna.ir -> 217.25.56.28
+- bazar.irna.ir (Market news)
+- edu.irna.ir (Educational)
+- life.irna.ir (Lifestyle)
+- tv.irna.ir -> 185.143.235.201
+- media.irna.ir -> 185.143.235.201
+- photo.irna.ir -> 185.143.232.201
+
+LAB/DEVELOPMENT:
+- lab.irna.ir
+- lab1.irna.ir
+- lab2.irna.ir
+- lab3.irna.ir
+- opr.irna.ir
+- opr2.irna.ir
+- exp-e.irna.ir
+- plus.irna.ir
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[3] PRESIDENT.IR (Iran Presidency) - LIMITED DATA
+================================================================================
+
+HOSTING: ArvanCloud CDN (AS205585) + Iranian Government Network (AS34592)
+PRIMARY IPs: 185.143.233.235, 185.143.234.235, 194.225.148.172, 194.225.148.241
+
+SUBDOMAINS FOUND:
+- president.ir (main)
+- www.president.ir
+- service.president.ir
+- video.president.ir
+- media.president.ir
+- dolat7-8.president.ir (Ahmadinejad era archive)
+- dolat9-10.president.ir (Rouhani era archive)
+
+DIRECT IP ACCESS: 194.225.148.241 (AS34592 - Government network)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[4] DEFAPRESS.IR (Defense Press - Military News)
+================================================================================
+
+HOSTING: AS200324 / AS31549
+PRIMARY IP: 194.41.49.18
+MAIL SERVER: mail.defapress.ir -> 94.182.146.237
+DNS: iransamaneh.com
+
+SUBDOMAINS:
+- defapress.ir (main)
+- mail.defapress.ir
+
+GA TRACKING: G-94BW46TZJM
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[5] KHAMENEI.IR (Supreme Leader) - 48 SUBDOMAINS (Prior Run)
+================================================================================
+
+HOSTING: Dade Pardaz Kimia Pouyesh (AS200554) + ArvanCloud CDN
+PRIMARY IPs: 5.160.10.200, 5.160.10.201, 5.160.10.202
+MAIL SERVER: mail.khamenei.ir -> 94.232.174.104 (Tebyan-e-Noor Institute)
+
+LANGUAGE SUBDOMAINS:
+- farsi.khamenei.ir
+- english.khamenei.ir
+- arabic.khamenei.ir
+- french.khamenei.ir
+- spanish.khamenei.ir
+- urdu.khamenei.ir
+- hindi.khamenei.ir
+- russian.khamenei.ir
+- azeri.khamenei.ir
+- nojavan.khamenei.ir (Youth)
+
+STREAMING INFRASTRUCTURE:
+- live1.khamenei.ir
+- live2.khamenei.ir
+- live3.khamenei.ir
+- live4.khamenei.ir
+- live5.khamenei.ir
+- cdn-*.khamenei.ir (Multiple CDN nodes)
+
+OTHER:
+- doran.khamenei.ir
+- mail.khamenei.ir
+
+GA TRACKING: UA-6238962-2, G-8MVZ1HLJT0
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[6] FARSNEWS.IR (IRGC-Linked News) - 36 SUBDOMAINS (Prior Run)
+================================================================================
+
+HOSTING: AS62229
+KEY FINDING: Internal tools exposed!
+
+INTERNAL INFRASTRUCTURE:
+- api.farsnews.ir (API Endpoint)
+- jira.farsnews.ir (Issue Tracker - Atlassian JIRA)
+- confluence.farsnews.ir (Wiki - Atlassian Confluence)
+- chat.farsnews.ir (Internal Chat)
+- svn.farsnews.ir (Version Control)
+- git.farsnews.ir (Git Repository)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[7] PRESSTV.IR (State Media - English) - 12 SUBDOMAINS (Prior Run)
+================================================================================
+
+HOSTING: AS39825, AS8473
+Tech: ASP.NET Core
+
+SUBDOMAINS:
+- www.presstv.ir
+- en.presstv.ir
+- cdn.presstv.ir
+- static.presstv.ir
+- live.presstv.ir
+- api.presstv.ir
+
+GA TRACKING: G-F359E8PMME
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[8] TASNIMNEWS.COM (IRGC-Linked News) - 9 SUBDOMAINS (Prior Run)
+================================================================================
+
+HOSTING: Microsoft-IIS + ArvanCloud
+GTM: GTM-PZ3N9B8
+GA: G-MGYZR3Q3BS
+MATOMO: analytics.tasnimnews.com (Self-hosted analytics)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[9] SEPAH.IR (IRGC Main) - NO DATA
+================================================================================
+
+STATUS: Domain appears inactive or heavily protected
+No subdomains found via public recon
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[10] MODAFL.IR (Ministry of Defense) - NO DATA
+================================================================================
+
+STATUS: Domain appears inactive or DNS not resolving
+No subdomains found via public recon
+
+--------------------------------------------------------------------------------
+
+================================================================================
+KEY IP RANGES IDENTIFIED
+================================================================================
+
+ARVANCLOUD CDN (Iranian):
+- 185.143.232.0/22 (185.143.232.x - 185.143.235.x)
+
+IRANIAN GOVERNMENT NETWORK (AS34592):
+- 194.225.148.0/24
+
+IRANIAN ISPs:
+- AS200554 - Dade Pardaz Kimia Pouyesh (khamenei.ir)
+- AS48434 - Tebyan-e-Noor (mail.khamenei.ir)
+- AS31549 - Aria Shatel (defapress.ir)
+- AS62229 - farsnews.ir hosting
+- AS39825 - presstv.ir hosting
+
+IRNA Internal Network:
+- 217.25.48.0/24
+- 217.25.51.0/24
+- 217.25.53.0/24
+- 217.25.56.0/24
+- 217.25.58.0/24
+- 10.30.41.0/24 (PRIVATE - leaked!)
+
+MFA Mail Servers:
+- 109.201.11.0/24
+
+================================================================================
+                              END SUBDOMAIN INTEL
+================================================================================

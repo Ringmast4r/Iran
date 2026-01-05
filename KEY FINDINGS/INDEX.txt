@@ -1,0 +1,67 @@
+IRAN KEY FINDINGS INDEX
+========================
+Last Updated: 2026-01-05 03:15 UTC
+Total Files: 23
+
+=== CRITICAL SECURITY EXPOSURES ===
+01_PRIVATE_IP_LEAK.txt     - IRNA internal IP exposure (10.30.41.85)
+02_VPN_ENDPOINT.txt        - MFA VPN endpoint in DNS
+03_ADMIN_PORTAL.txt        - khamenei.ir admin subdomain
+04_HIDDEN_API.txt          - formx.khamenei.link API discovery
+
+=== TRACKING & TOKENS ===
+05_HASHES_TOKENS.txt       - 21 collected tracking items
+11_TRACKING_IDS.txt        - GTM/GA/Clarity tracking IDs
+
+=== HEZBOLLAH INFRASTRUCTURE ===
+06_HEZBOLLAH_HOSTING.txt   - Russian/Czech hosting strategy
+09_HEZBOLLAH_DNS.txt       - Hezbollah DNS infrastructure (awt-lb.com)
+10_HOSTING_ASNS.txt        - Hosting provider ASN analysis
+17_EXIF_METADATA.txt       - Attribution via Photoshop/WhatsApp
+19_SEIZED_DOMAINS.txt      - US DOJ seizure effectiveness
+
+=== IRANIAN GOVERNMENT ===
+07_GOVERNMENT_ASNS.txt     - Iranian gov ASN ownership
+08_PRESIDENT_IR.txt        - president.ir infrastructure
+12_ARVANCLOUD_CDN.txt      - ArvanCloud single point of failure
+15_MFA_EMBASSY_MAP.txt     - 182 embassy subdomains mapped
+18_KHAMENEI_STREAMING.txt  - Supreme Leader streaming infra
+
+=== INTERNAL SYSTEMS ===
+14_FARSNEWS_DEVTOOLS.txt   - JIRA/Confluence/Git exposed
+16_IRNA_INTERNAL.txt       - News agency internal network
+
+=== SUMMARY ===
+13_ACTIONABLE_INTEL.txt    - Priority targets summary
+
+=== CURRENT EVENTS ===
+20_CURRENT_EVENTS.txt      - Live news updates (Jan 4, 2026)
+
+=== ACTIVIST RESOURCES ===
+21_OSINT_FOR_ACTIVISTS.txt - How intel helps Iranian people
+22_ACTIONABLE_OSINT_TASKS.txt - Specific research tasks
+
+=== NEW COLLECTION (Jan 5) ===
+23_NEW_HASHES_EXPOSED.txt   - Fresh hashes, subdomains, emails
+
+=======================================
+KEY DISCOVERIES SUMMARY
+=======================================
+
+HIGH VALUE TARGETS:
+[x] admin.english.khamenei.ir - Admin portal
+[x] formx.khamenei.link - Hidden API
+[x] jira.farsnews.ir - IRGC issue tracker
+[x] r1.vpn.minister.local.mfa.gov.ir - VPN endpoint
+
+INFRASTRUCTURE:
+[x] ArvanCloud AS205585 - ALL Iranian gov sites
+[x] awt-lb.com - Hezbollah custom DNS (Hungary)
+[x] Selectel/Okay-Telecom - Hezbollah hosting (Russia)
+
+LEAKS:
+[x] 10.30.41.85 - IRNA private IP
+[x] 182 MFA embassy subdomains
+[x] EXIF metadata = content creator attribution
+
+OSINT METHOD: Tor SOCKS5 (127.0.0.1:9050)

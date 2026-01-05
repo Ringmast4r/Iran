@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Database Viewer</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Consolas', 'Monaco', monospace;
+            background: #1a1a2e;
+            color: #eee;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            color: #00ff88;
+            border-bottom: 2px solid #00ff88;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #00d4ff;
+            margin-top: 30px;
+            border-left: 4px solid #00d4ff;
+            padding-left: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: #16213e;
+        }
+        th {
+            background: #0f3460;
+            color: #00ff88;
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #1a1a2e;
+        }
+        td {
+            padding: 10px 12px;
+            border: 1px solid #1a1a2e;
+            word-break: break-all;
+        }
+        tr:hover { background: #1f4068; }
+        .hash {
+            color: #ff6b6b;
+            font-family: monospace;
+            font-size: 13px;
+        }
+        .source { color: #ffd93d; }
+        .type {
+            color: #6bcb77;
+            font-weight: bold;
+        }
+        .note {
+            color: #aaa;
+            font-size: 12px;
+        }
+        .stats {
+            background: #0f3460;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .stat {
+            text-align: center;
+        }
+        .stat-num {
+            font-size: 32px;
+            color: #00ff88;
+            font-weight: bold;
+        }
+        .stat-label { color: #aaa; }
+        .copy-btn {
+            background: #0f3460;
+            border: 1px solid #00d4ff;
+            color: #00d4ff;
+            padding: 3px 8px;
+            cursor: pointer;
+            font-size: 11px;
+            border-radius: 3px;
+        }
+        .copy-btn:hover { background: #00d4ff; color: #1a1a2e; }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>HASH & TOKEN DATABASE</h1>
+    <p>Iranian Government & Hezbollah Infrastructure - Collected 2026-01-04</p>
+
+    <div class="stats">
+        <div class="stat">
+            <div class="stat-num">21</div>
+            <div class="stat-label">Total Items</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">7</div>
+            <div class="stat-label">Unique Hashes</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">14</div>
+            <div class="stat-label">Tracking IDs</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">9</div>
+            <div class="stat-label">Domains</div>
+        </div>
+    </div>
+
+    <h2>1. PHP Session Hashes</h2>
+    <p class="note">Collected from HTTP Set-Cookie headers during OSINT</p>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Source Domain</th>
+            <th>Cookie Name</th>
+            <th>Hash Value</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td class="source">moqawama.org.lb</td>
+            <td>PHPSESSID</td>
+            <td class="hash">83d0d0dde0bdea9c508fb780f5e22330</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td class="source">audio.moqawama.org.lb</td>
+            <td>sec_session_id</td>
+            <td class="hash">78278a485df2a5807e6d9c45158a989e</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td class="source">gallery.moqawama.org.lb</td>
+            <td>sec_session_id</td>
+            <td class="hash">d0130803e2bad19514db5f13679dbd1f</td>
+        </tr>
+    </table>
+
+    <h2>2. Cookie Session ID</h2>
+    <p class="note">Collected from farsnews.ir API response headers</p>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Source Domain</th>
+            <th>Cookie Name</th>
+            <th>Hash Value</th>
+            <th>Notes</th>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td class="source">farsnews.ir</td>
+            <td>cookiesession1</td>
+            <td class="hash">678B286B29F37FAC96F0F1CB00C133DC</td>
+            <td class="note">Expires Jan 2027, HttpOnly</td>
+        </tr>
+    </table>
+
+    <h2>3. CSS Cache Hash</h2>
+    <p class="note">Found in HTML source - content-based cache busting</p>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Source Domain</th>
+            <th>Pattern</th>
+            <th>Hash Value</th>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td class="source">almanar.com.lb</td>
+            <td>mnrminify_[MD5].css</td>
+            <td class="hash">3c902298363cd2282b362f860e54fe29</td>
+        </tr>
+    </table>
+
+    <h2>4. API Tracking Hash</h2>
+    <p class="note">Found in formx.khamenei.link API JSON response</p>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Source Domain</th>
+            <th>Parameter</th>
+            <th>Hash Value</th>
+            <th>Purpose</th>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td class="source">formx.khamenei.link</td>
+            <td>c=</td>
+            <td class="hash">ae8373ca17dc9561f317</td>
+            <td class="note">Redirect/click tracking</td>
+        </tr>
+    </table>
+
+    <h2>5. Google Site Verification Token</h2>
+    <p class="note">Found in DNS TXT record - proves Google account ownership</p>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Source Domain</th>
+            <th>Location</th>
+            <th>Token Value</th>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td class="source">khamenei.ir</td>
+            <td>DNS TXT Record</td>
+            <td class="hash">FrS79LKnklz_7cQGdeYYR5RW-gtYz2sm3JWIVWo24W0</td>
+        </tr>
+    </table>
+
+    <h2>6. Google Analytics IDs</h2>
+    <p class="note">Found in HTML &lt;script&gt; tags - Google has full traffic visibility</p>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Source Domain</th>
+            <th>Property ID</th>
+            <th>Type</th>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td class="source">khamenei.ir</td>
+            <td class="hash">UA-6238962-2</td>
+            <td>Universal Analytics</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td class="source">khamenei.ir</td>
+            <td class="hash">G-8MVZ1HLJT0</td>
+            <td>GA4</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td class="source">almanar.com.lb</td>
+            <td class="hash">UA-199941297-1</td>
+            <td>Universal Analytics</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td class="source">almanar.com.lb</td>
+            <td class="hash">G-JJ1SM3JFZW</td>
+            <td>GA4</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td class="source">tasnimnews.com</td>
+            <td class="hash">G-MGYZR3Q3BS</td>
+            <td>GA4</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td class="source">presstv.ir</td>
+            <td class="hash">G-F359E8PMME</td>
+            <td>GA4</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td class="source">mehrnews.com</td>
+            <td class="hash">G-ERSHRYVTBP</td>
+            <td>GA4</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td class="source">defapress.ir</td>
+            <td class="hash">G-94BW46TZJM</td>
+            <td>GA4</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td class="source">moqawama.org.lb</td>
+            <td class="hash">G-Z8F3HPDSWG</td>
+            <td>GA4</td>
+        </tr>
+    </table>
+
+    <h2>7. Google Tag Manager Containers</h2>
+    <p class="note">Found in HTML - links multiple sites together</p>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Container ID</th>
+            <th>Primary Domain</th>
+            <th>Linked Sites</th>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td class="hash">GTM-TLJW8TR</td>
+            <td class="source">almanar.com.lb</td>
+            <td class="note">almanar.com.lb, almanartv.com.lb, manartv.com.lb</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td class="hash">GTM-PZ3N9B8</td>
+            <td class="source">tasnimnews.com</td>
+            <td class="note">IRGC media network</td>
+        </tr>
+    </table>
+
+    <h2>8. Microsoft Clarity Project IDs</h2>
+    <p class="note">Found in HTML - Microsoft records full user sessions</p>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Source Domain</th>
+            <th>Project ID</th>
+            <th>Notes</th>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td class="source">almanar.com.lb</td>
+            <td class="hash">cgaike4iub</td>
+            <td class="note">Primary project</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td class="source">almanar.com.lb</td>
+            <td class="hash">cs22bibpe3</td>
+            <td class="note">Secondary project</td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td class="source">mehrnews.com</td>
+            <td class="hash">o2z34ibfin</td>
+            <td class="note">Session recording enabled</td>
+        </tr>
+    </table>
+
+    <footer>
+        <p>All data collected via open-source intelligence (OSINT) methods</p>
+        <p>Database: hash_database.db | Generated: 2026-01-04</p>
+    </footer>
+</body>
+</html>

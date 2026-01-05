@@ -1,0 +1,279 @@
+================================================================================
+                    IRAN MASTER INTELLIGENCE DOCUMENT
+                    Government | Military | Nuclear | Tracking
+                    Compiled: 2026-01-03
+================================================================================
+
+================================================================================
+[1] SITE FINGERPRINTING - COMPLETE TRACKING ID DATABASE
+================================================================================
+
+HEZBOLLAH MEDIA:
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ SITE               │ GTM           │ GA (UA)         │ GA4            │ OTHER         │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ almanar.com.lb     │ GTM-TLJW8TR   │ UA-199941297-1  │ G-JJ1SM3JFZW   │ Clarity: cgaike4iub, cs22bibpe3 │
+│                    │               │                 │                │ Clicky: 101369727    │
+│ moqawama.org.lb    │ -             │ -               │ G-Z8F3HPDSWG   │ -             │
+│ alahednews.com.lb  │ -             │ -               │ (checking)     │ -             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+IRANIAN REGIME MEDIA:
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ SITE               │ GTM           │ GA              │ OTHER                │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ khamenei.ir        │ -             │ UA-6238962-2    │ G-8MVZ1HLJT0        │
+│ tasnimnews.com     │ GTM-PZ3N9B8   │ -               │ G-MGYZR3Q3BS        │
+│                    │               │                 │ Matomo: analytics.tasnimnews.com │
+│ presstv.ir         │ -             │ -               │ G-F359E8PMME        │
+│ mehrnews.com       │ -             │ -               │ G-ERSHRYVTBP        │
+│                    │               │                 │ Clarity: o2z34ibfin │
+│ defapress.ir       │ -             │ -               │ G-94BW46TZJM        │
+│ farsnews.ir        │ -             │ -               │ (custom server)     │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+LINKED DOMAINS (via GTM-TLJW8TR):
+- almanar.com.lb
+- almanartv.com.lb
+- manartv.com.lb
+
+LINKED DOMAINS (via GTM-PZ3N9B8):
+- tasnimnews.com
+- tasnimnews.or (hostname rewrite)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[2] SERVER INFRASTRUCTURE & HEADERS
+================================================================================
+
+ALMANAR.COM.LB:
+- Server: nginx
+- HSTS: max-age=31536000; includeSubDomains; preload
+- X-Proxy-Cache: HIT
+- Tech: Custom CMS, jQuery, Bootstrap, OwlCarousel
+
+KHAMENEI.IR:
+- Server: nginx
+- Response: HTTP 445 (custom status)
+- CDN: ArvanCloud (Iranian)
+- Keep-Alive: timeout=15
+
+MOQAWAMA.ORG.LB:
+- Server: Apache
+- Response: 403 Forbidden (blocks direct curl)
+- Tech: Custom PHP, Bootstrap, Video.js
+
+FARSNEWS.IR:
+- Server: ninja
+- HSTS: max-age=63072000
+- X-XSS-Protection: 1; mode=block
+- CSP: frame-ancestors https://*.farsnews.ir
+- Cookies: cookiesession1 (session tracking)
+
+PRESSTV.IR:
+- Server: nginx
+- Tech: ASP.NET Core
+- X-Edge-Location: Ashburn, US (CDN edge)
+- Session: .AspNetCore.Session cookie
+- X-Powered-By: ASP.NET
+
+TASNIMNEWS.COM:
+- Server: Microsoft-IIS
+- Redirect: 301 to www.tasnimnews.com
+
+MFA.GOV.IR (Foreign Ministry):
+- Server: ArvanCloud
+- Cookies: __arcscoc, __arcsco (ArvanCloud tracking)
+- Response: 307 Temporary Redirect
+
+AEOI.ORG.IR (Atomic Energy):
+- Response: 500 Internal Server Error (site issues)
+
+DEFAPRESS.IR (Defense Press):
+- X-Cache: HIT (34474 hits)
+- Legacy cache headers (Expires: 1997)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[3] IRANIAN NUCLEAR PROGRAM - TIMELINE 2025-2026
+================================================================================
+
+MAY 31, 2025:
+- IAEA reports Iran stockpile of 60% enriched uranium: 408kg
+- Nearly 50% increase since February
+- Enough for multiple nuclear weapons if further enriched
+
+JUNE 12, 2025:
+- IAEA finds Iran NON-COMPLIANT for first time in 20 years
+- Iran retaliates by launching new enrichment site
+- Installs advanced centrifuges
+
+JUNE 13, 2025:
+- Israel launches Iran-Israel War
+- 200 fighter jets strike dozens of targets
+- Hits Natanz, Fordow, and other nuclear facilities
+- IRGC commanders Hossein Salami and Amir Ali Hajizadeh killed
+
+JUNE 21, 2025:
+- United States bombs three Iranian nuclear sites
+
+JUNE 26, 2025:
+- IAEA confirms Fordow centrifuges "no longer operational"
+- Esfahan nuclear site: 4 buildings damaged
+  * Central chemical laboratory
+  * Uranium conversion plant
+  * Tehran reactor-fuel manufacturing plant
+  * Enriched uranium metal processing facility
+
+JULY 2, 2025:
+- President Pezeshkian approves law to halt IAEA cooperation
+
+AUGUST 28, 2025:
+- E3 (France, Germany, UK) initiate snapback mechanism
+- Cite Iran's "highly enriched uranium stockpile"
+
+SEPTEMBER 2025:
+- Analysis: Iran's gas centrifuge program destroyed
+- No identifiable route to weapon-grade uranium in centrifuge plants
+- BUT: 60% uranium stock can still be used for nuclear explosive
+  * 40kg sufficient for implosion-type weapon
+  * 80kg sufficient for gun-type explosive
+
+DECEMBER 24, 2025:
+- AEOI head Eslami refuses IAEA inspection of bombed sites
+- Cites no "established regulations" for damaged facility inspections
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[4] IRGC MILITARY OPERATIONS - TIMELINE 2025-2026
+================================================================================
+
+FEBRUARY 25, 2025:
+- Joint Navy-IRGC Aerospace Force missile drill (Zolfaqar 1403)
+- First joint exercise of its kind
+- Maritime Security Belt 2025 with China and Russia
+- Location: Gulf of Oman near Strait of Hormuz
+
+MARCH 2025:
+- Iran strengthens military in Persian Gulf
+- Air defense exercises near Natanz, Fordow, Arak
+
+JUNE 13, 2025:
+- IRGC top commander Hossein Salami KILLED in Israeli strikes
+- IRGC Aerospace chief Amir Ali Hajizadeh KILLED
+- Khamenei appoints replacements same day
+
+POST-WAR (Late 2025):
+- Iran resumes ballistic missile production at scale
+- Israeli intelligence warns could be urgent issue in 2026
+- 200% military budget increase proposed
+- Over half of oil/gas revenue to armed forces
+
+DECEMBER 27, 2025:
+- Khamenei appoints Brig. Gen. Ahmad Vahidi as IRGC deputy commander
+
+DECEMBER 31, 2025:
+- Security forces shoot live fire at protesters
+- Fourth consecutive day of protests
+
+UPCOMING 2026:
+- Soleimani satellite constellation launch planned (March 2026)
+- IRGC general Yahya Rahim Safavi warns: "Another war may happen"
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[5] IRAN PROTESTS - JANUARY 2026 CRISIS
+================================================================================
+
+DECEMBER 28, 2025:
+- Protests begin over currency collapse (rial depreciation)
+- Merchants protest catastrophic economic conditions
+
+JANUARY 1, 2026:
+- Protests spread nationwide
+- Trump warns: "If Iran shoots peaceful protesters...US will come to their rescue"
+- States US is "locked and loaded"
+
+JANUARY 2, 2026:
+- Death toll rises
+- Demonstrations in 100+ locations
+- 22 of 31 provinces affected
+
+JANUARY 3, 2026 (DAY 7):
+- At least 10 killed by regime forces
+- Khamenei's first public speech: "Rioters must be put in their place"
+- Separates "protesters" from "rioters"
+- Blames "enemy mercenaries"
+
+VIOLENT INCIDENTS:
+- Malekshahi (western Iran): Direct live fire on protesters
+- Multiple killed, dozens in critical condition
+- Khomeini Hospital overwhelmed with wounded
+
+TEHRAN:
+- Capital under virtual lockdown
+- Naziabad district: Youth seize control of streets
+- Burning regime vehicles
+- Chants: "Death to Khamenei"
+
+REGIME RESPONSE:
+- Internet disruptions (35% lower traffic - Cloudflare data)
+- Multiple arrests
+- Security forces deployed heavily
+
+COMPARISON:
+- Biggest protests since 2022 Mahsa Amini uprising
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[6] IRAN-VENEZUELA CONNECTION
+================================================================================
+
+JAN 3, 2026:
+- US strikes on Caracas, Venezuela
+- Maduro captured and extracted by US forces
+- Khamenei calls for "resistance" against US
+- Iran Foreign Ministry condemns as "blatant violation of sovereignty"
+
+STRATEGIC RELATIONSHIP:
+- 20-year defense pact (signed 2022)
+- IRGC investments in billions
+- Joint drone manufacturing on Venezuelan soil
+- Iranian drone base at El Libertador air base
+- IRGC training Venezuelan military
+
+IMPACT:
+- Maduro's fall = major blow to Iranian influence in Americas
+- Part of "Axis of Resistance" network
+- Used for oil sanctions evasion
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[7] KEY FIGURES STATUS
+================================================================================
+
+LEADERSHIP:
+- Ayatollah Ali Khamenei (86) - Supreme Leader - ACTIVE
+- President Masoud Pezeshkian - ACTIVE
+
+KILLED IN JUNE 2025 STRIKES:
+- Hossein Salami - IRGC Commander - KILLED
+- Amir Ali Hajizadeh - IRGC Aerospace Chief - KILLED
+
+CURRENT IRGC LEADERSHIP:
+- Ahmad Vahidi - IRGC Deputy Commander (appointed Dec 27, 2025)
+- Esmail Qaani - Quds Force Commander - ACTIVE (status uncertain)
+
+HEZBOLLAH:
+- Sheikh Naim Qassem - Secretary General - ACTIVE
+- Hassan Nasrallah - Former SG - DECEASED
+
+================================================================================
+                              END MASTER INTEL DOCUMENT
+================================================================================

@@ -1,0 +1,181 @@
+================================================================================
+                    EMAIL HASH COLLECTION
+                    MD5 Hashes for OSINT Research
+                    Generated: 2026-01-03
+================================================================================
+
+[1] TARGET EMAIL HASHES (Gravatar MD5)
+================================================================================
+
+KHAMENEI.IR:
+info@khamenei.ir                 -> 07d45421d2d63c62a6a198931c6399ed
+admin@khamenei.ir                -> e5625b35a8c4d9a27eb2b331a17ba990
+webmaster@khamenei.ir            -> dcb2cf703bdf8938063151d31bb9f73b
+
+MOQAWAMA.ORG.LB:
+contact@moqawama.org.lb          -> 8376c8ea7abe548ec0cee8abd6397aeb
+info@moqawama.org.lb             -> ad1b889c44af21a79d7fac02ff54f342
+
+ALMANAR.COM.LB:
+info@almanar.com.lb              -> 0c826cd5f2c125e0cf4e6e5a5c8fd01a
+news@almanar.com.lb              -> 560e65ba46574c25529b0e97853298c4
+
+STATUS: No Gravatar profiles found for these hashes (checked 2026-01-03)
+
+--------------------------------------------------------------------------------
+
+[2] IP GEOLOCATION INTEL
+================================================================================
+
+KHAMENEI.IR INFRASTRUCTURE:
+IP: 5.160.10.200
+    Country: Iran (IR) - Tehran
+    Coords:  35.7446, 51.4082
+    ISP:     RSPN
+    ASN:     AS200554 Dade Pardaz Kimia Pouyesh PJS.
+
+IP: 5.160.10.201
+    Country: Iran (IR) - Tehran
+    Coords:  35.7446, 51.4082
+    ASN:     AS200554 Dade Pardaz Kimia Pouyesh PJS.
+
+IP: 5.160.10.202
+    Country: Iran (IR) - Tehran
+    Coords:  35.7446, 51.4082
+    ASN:     AS200554 Dade Pardaz Kimia Pouyesh PJS.
+
+IP: 81.12.39.177
+    Country: Iran (IR) - Tehran
+    Coords:  35.7446, 51.4082
+    ISP:     Respina Networks & Beyond PJSC
+    ASN:     AS42337 Respina Networks & Beyond PJSC
+
+IP: 94.232.174.104
+    Country: Iran (IR) - Tehran
+    Coords:  35.7085, 51.3953
+    ISP:     Tebyan-e-Noor Cultural-Artistic Institute
+    Org:     Tebyan-e-Noor Cultural-Artistic Institute
+    ASN:     AS48434 Tebyan-e-Noor Cultural-Artistic Institute
+    Reverse: mail.khamenei.ir  <-- MAIL SERVER
+
+IP: 185.143.234.120
+    Country: Iran (IR) - Tehran
+    Coords:  35.7219, 51.3347
+    ISP:     Noyan Abr Arvan Co. (ArvanCloud)
+    ASN:     AS205585 (ArvanCloud CDN)
+
+MOQAWAMA.ORG.LB INFRASTRUCTURE:
+IP: 91.109.206.65
+    Country: Russia (RU) - Moscow
+    Coords:  55.7487, 37.6187
+    ISP:     Okay-Telecom Ltd.
+    Org:     Okay telecom
+    ASN:     AS199669 Okay-Telecom Ltd.
+    Reverse: mq.webking1.net
+
+IP: 176.74.216.191
+    Country: Czechia (CZ)
+    ASN:     AS51248 HOST-TELECOM
+
+--------------------------------------------------------------------------------
+
+[3] KEY FINDINGS
+================================================================================
+
+HOSTING PROVIDERS:
+- Dade Pardaz Kimia Pouyesh (AS200554) - khamenei.ir main
+- Tebyan-e-Noor Cultural Institute (AS48434) - khamenei.ir mail
+- ArvanCloud (AS205585) - Iranian CDN
+- Okay-Telecom Moscow (AS199669) - moqawama.org.lb
+- HOST-TELECOM Czech (AS51248) - moqawama.org.lb backup
+
+COORDINATES FOR MAPPING:
+Tehran (khamenei.ir):     35.7446, 51.4082
+Tehran (mail server):     35.7085, 51.3953
+Moscow (moqawama):        55.7487, 37.6187
+
+MAIL SERVER IDENTIFIED:
+mail.khamenei.ir -> 94.232.174.104 (Tebyan-e-Noor Institute)
+
+--------------------------------------------------------------------------------
+
+[4] ADDITIONAL IP INTEL (2026-01-03 UPDATE)
+================================================================================
+
+MFA.GOV.IR INFRASTRUCTURE:
+IP: 109.201.11.102
+    Country: Iran (IR) - Tehran
+    Coords:  35.6824, 51.4158
+    ISP:     Tose'h Fanavari Ertebabat Pasargad Arian Co. PJS
+    Org:     Foreign Ministry of IRAN  <-- CONFIRMED!
+    ASN:     AS24631 Tose'h Fanavari Ertebabat Pasargad Arian Co. PJS
+    Reverse: cp.mfa.gov.ir (Control Panel)
+
+IP: 185.143.232.201 / 185.143.235.201
+    Country: Iran (IR) - Tehran
+    ISP:     ArvanCloud CDN
+    ASN:     AS205585
+
+PRESIDENT.IR INFRASTRUCTURE:
+IP: 194.225.148.172
+    Country: Iran (IR) - Tehran
+    Coords:  35.6906, 51.395
+    ISP:     IRIPO
+    ASN:     AS34592 Iranian Presidential Administration  <-- DIRECT GOV NETWORK
+    Note:    Direct government-owned ASN
+
+IP: 194.225.148.241
+    Country: Iran (IR) - Tehran
+    ASN:     AS34592 Iranian Presidential Administration
+
+IRNA.IR INFRASTRUCTURE:
+IP: 217.25.48.34
+    Country: Iran (IR) - Tehran
+    Coords:  35.6802, 51.4765
+    ISP:     IRNA-LAN
+    ASN:     AS29079 IRNA  <-- DEDICATED IRNA ASN
+    Purpose: Mail server (mail.irna.ir)
+
+IP: 217.25.48.63
+    ASN:     AS29079 IRNA
+    Purpose: Editorial system (tahrir.irna.ir)
+
+IP: 217.25.58.101
+    ASN:     AS29079 IRNA
+    Purpose: Remote access (remote.irna.ir)
+
+DEFAPRESS.IR (Defense Press):
+IP: 194.41.49.18
+    Country: Iran (IR)
+    ASN:     AS200324
+    Purpose: Main site
+
+IP: 94.182.146.237
+    Country: Iran (IR)
+    ASN:     AS31549 (Aria Shatel)
+    Purpose: Mail server
+
+--------------------------------------------------------------------------------
+
+[5] ASN OWNERSHIP SUMMARY
+================================================================================
+
+IRANIAN GOVERNMENT ASNS:
+- AS34592: Iranian Presidential Administration (president.ir)
+- AS29079: IRNA (Islamic Republic News Agency)
+- AS24631: Foreign Ministry infrastructure (mfa.gov.ir)
+
+IRANIAN CDN/HOSTING:
+- AS205585: ArvanCloud (primary CDN for all gov sites)
+- AS200554: Dade Pardaz Kimia Pouyesh (khamenei.ir)
+- AS48434: Tebyan-e-Noor Cultural Institute (khamenei.ir mail)
+- AS31549: Aria Shatel (defapress.ir mail)
+- AS200324: defapress.ir hosting
+
+HEZBOLLAH INFRASTRUCTURE (Foreign):
+- AS199669: Okay-Telecom Moscow (moqawama.org.lb)
+- AS51248: HOST-TELECOM Czech (moqawama backup)
+
+================================================================================
+                              END HASH COLLECTION
+================================================================================

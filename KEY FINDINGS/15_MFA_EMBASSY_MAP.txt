@@ -1,0 +1,32 @@
+MFA.GOV.IR - EMBASSY SUBDOMAIN MAP
+===================================
+
+FINDING: 182 subdomains mapping entire diplomatic network
+
+INTERNAL SYSTEMS FOUND:
+- cms.mfa.gov.ir (Content Management)
+- cloud.mfa.gov.ir (Cloud Storage)
+- email.mfa.gov.ir (Email Portal)
+- webmail.mfa.gov.ir (Webmail)
+- visareq.mfa.gov.ir (Visa Requests)
+- e_visa.mfa.gov.ir (E-Visa System)
+- econsulate.mfa.gov.ir (E-Consulate)
+
+KEY EMBASSIES:
+- lebanon.mfa.gov.ir / beirut.mfa.gov.ir (Hezbollah)
+- venezuela.mfa.gov.ir (Maduro - NOW DISRUPTED)
+- russia.mfa.gov.ir (Strategic ally)
+- china.mfa.gov.ir (Economic partner)
+
+REGIONAL COUNTS:
+- Europe: 35+ embassies
+- Asia: 25+ embassies
+- Middle East: 15+ embassies
+- Americas: 10+ embassies
+- Africa: 8+ embassies
+- CIS: 12+ embassies
+
+WHY IT MATTERS:
+- Complete diplomatic web presence mapped
+- Centralized visa system = single point of failure
+- embassy.mfa.gov.ir pattern predictable

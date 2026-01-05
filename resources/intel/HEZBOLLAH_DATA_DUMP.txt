@@ -1,0 +1,206 @@
+================================================================================
+                    HEZBOLLAH WEBSITE DATA DUMP
+                         moqawama.org.lb | alahednews.news
+                              Extracted: 2026-01-03
+================================================================================
+
+[1] WEBSITE INFRASTRUCTURE
+================================================================================
+
+MAIN SITES:
+- moqawama.org.lb (Islamic Resistance - Lebanon) - ACTIVE
+- moqawama.org (US DOJ SEIZED - Eastern District of Virginia)
+- english.alahednews.news (Al-Ahed News English)
+- almanar.com.lb (Al-Manar TV)
+
+SEIZED DOMAINS (US DOJ):
+- moqawama.org
+- almanarnews.org
+- manarnews.org
+- almanar-tv.org
+- alshahid.org
+(Total 13 domains seized under IEEPA)
+
+TECHNICAL DETAILS:
+- Google Analytics: G-Z8F3HPDSWG (moqawama)
+- Google Analytics: G-KLX8R3DK7V (alahednews)
+- Framework: Bootstrap RTL
+- Video Player: Video.js
+- Last Update: 2026-01-03 19:39 Beirut
+
+--------------------------------------------------------------------------------
+
+[2] SOCIAL MEDIA ACCOUNTS
+================================================================================
+
+MOQAWAMA.ORG.LB:
+- Twitter: @almoqawama1
+- YouTube: MoqawamaOrg
+- SoundCloud: audiomoqawama
+
+AL-AHED NEWS:
+- Facebook: facebook.com/AlAhedEnglish/
+- Twitter: twitter.com/English_AlAhed/
+- Telegram: t.me/Eng_ahed/
+- RSS Feed: english.alahednews.news/rsspage.php
+
+AL-MANAR:
+- Twitter (mentioned)
+- Telegram
+- WhatsApp service
+
+--------------------------------------------------------------------------------
+
+[3] SITEMAP STRUCTURE (341 Categories)
+================================================================================
+
+URL Pattern: https://moqawama.org.lb/catessays.php?cid={ID}
+Category ID Range: 91 - 541 (non-sequential)
+Priority: 0.95 (high)
+Update Frequency: Hourly
+
+RECENT CATEGORIES (2026):
+- cid=539 (2026-01-03)
+- cid=540 (2026-01-03)
+- cid=541 (2026-01-03)
+
+HISTORICAL CATEGORIES:
+- Earliest: 2007-10-12
+- Major cluster: 2024
+
+--------------------------------------------------------------------------------
+
+[4] ARTICLE ENDPOINTS
+================================================================================
+
+ESSAY DETAILS:
+https://moqawama.org.lb/essaydetails.php?eid={ID}
+
+RECENT ARTICLES:
+| EID   | Date       | Title                                              |
+|-------|------------|----------------------------------------------------|
+| 42005 | 2026-01-03 | Secretary General on Soleimani Anniversary         |
+| 41966 | 2025-12-28 | Lebanon amid Storm - America and Israeli Enemy     |
+| 41898 | 2025-12-18 | Appreciation to Fatimid Gathering                  |
+| 41864 | 2025-12-13 | If Lebanon Surrenders, History Erased              |
+| 41818 | 2025-12-05 | America Unrelated to Weapons Strategy              |
+
+AL-AHED ARTICLE PATTERN:
+https://english.alahednews.com.lb/{ARTICLE_ID}/{CATEGORY_ID}
+
+Example: https://english.alahednews.com.lb/84485/616
+
+--------------------------------------------------------------------------------
+
+[5] SHEIKH QASSEM SPEECHES (RSS FEED 616)
+================================================================================
+
+| Date       | Title                                                          |
+|------------|----------------------------------------------------------------|
+| 2025-01-13 | Full Speech - Commemoration of Sayyeda Fatima's Birth          |
+| 2025-12-05 | Full Speech - Martyred Scholars Path to Al-Quds                |
+| 2025-11-28 | Memorial - Jihadi Leader Sayyed Haitham Al-Tabatabai          |
+| 2025-11-11 | Martyr's Day Speech                                            |
+| 2025-04-02 | Ardi Souk Exhibition Opening                                   |
+
+SOURCE: https://english.alahednews.news/rss/616
+
+--------------------------------------------------------------------------------
+
+[6] CONTENT CATEGORIES
+================================================================================
+
+MOQAWAMA SECTIONS:
+- News (أخبار)
+- Positions (مواقف)
+- Selections (مختارات)
+- Leadership Statements (كلام الامين)
+- Enemy News (أخبار العدو)
+- Islamic Resistance
+- Zionist Terrorism Documentation
+
+MARTYRS DATABASE:
+- Organized by month (January-December)
+- Historical operations documented
+
+OPERATIONS ARCHIVE:
+- Prisoner exchanges
+- Capture operations
+- Combat operations
+- Shebaa Farms operations
+- July 2006 War
+- April 1996 Aggression
+
+AL-AHED COVERAGE:
+- Middle East (Lebanon, Syria, Palestine, Yemen, Iraq)
+- Americas (US, Canada, Latin America)
+- Asia-Pacific (Iran, Pakistan, Afghanistan)
+- Africa (Sudan, Egypt, Libya)
+- Europe (UK, Russia, Turkey, France)
+
+SPEECH ARCHIVES BY YEAR:
+- 2000-2025 (annual collections)
+- Reports 2005-2025
+
+--------------------------------------------------------------------------------
+
+[7] RSS FEED ENDPOINTS
+================================================================================
+
+AL-AHED NEWS RSS:
+Base: https://english.alahednews.news/rss/{CATEGORY_ID}
+
+Known Categories:
+- /rss/616 - Sheikh Qassem Speeches
+- (200+ categories available per rsspage.php)
+
+MOQAWAMA RSS:
+https://moqawama.org.lb/rss (if available)
+
+--------------------------------------------------------------------------------
+
+[8] API ENDPOINTS DISCOVERED
+================================================================================
+
+SEARCH AUTOCOMPLETE:
+https://english.alahednews.news/keys.php
+
+SITEMAP:
+https://moqawama.org.lb/sitemap.xml
+https://moqawama.org/sitemap.xml (seized)
+
+ROBOTS.TXT:
+https://moqawama.org.lb/robots.txt
+- User-agent: *
+- Allow: /
+- Sitemap: https://moqawama.org/sitemap.xml
+
+--------------------------------------------------------------------------------
+
+[9] LEADERSHIP MENTIONS
+================================================================================
+
+HEZBOLLAH:
+- Sheikh Naim Qassem (Secretary General - current)
+- Hassan Nasrallah (Former SG - deceased)
+- Sayyed Haitham Al-Tabatabai (Jihadi Leader - deceased)
+
+IRAN CONNECTION:
+- Imam Khamenei (mentioned frequently)
+- Hajj Qassem Soleimani (commemorated - KIA 2020-01-03)
+
+--------------------------------------------------------------------------------
+
+[10] VENEZUELA COVERAGE (2026-01-03)
+================================================================================
+
+HEADLINES:
+- "Hezbollah: This assault confirms U.S. imperialism and arrogance"
+- "Trump Announces Airstrikes on Caracas"
+- "US Forces Forcibly Detain President Maduro"
+- Venezuelan Foreign Ministry statements
+- Colombian President Gustavo Petro statements
+
+================================================================================
+                              END DATA DUMP
+================================================================================

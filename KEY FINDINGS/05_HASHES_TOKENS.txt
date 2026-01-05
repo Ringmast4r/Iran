@@ -1,0 +1,39 @@
+COLLECTED HASHES & TOKENS - IRAN
+=================================
+
+PHP SESSION HASHES:
+1. moqawama.org.lb      | PHPSESSID      | 83d0d0dde0bdea9c508fb780f5e22330
+2. audio.moqawama.org.lb| sec_session_id | 78278a485df2a5807e6d9c45158a989e
+3. gallery.moqawama.org.lb| sec_session_id | d0130803e2bad19514db5f13679dbd1f
+
+COOKIE SESSIONS:
+4. farsnews.ir | cookiesession1 | 678B286B29F37FAC96F0F1CB00C133DC
+
+CSS CACHE HASH:
+5. almanar.com.lb | mnrminify_3c902298363cd2282b362f860e54fe29.css
+
+API TRACKING:
+6. formx.khamenei.link | c=ae8373ca17dc9561f317
+
+GOOGLE VERIFICATION (DNS):
+7. khamenei.ir | FrS79LKnklz_7cQGdeYYR5RW-gtYz2sm3JWIVWo24W0
+
+GOOGLE ANALYTICS IDs:
+8.  khamenei.ir     | UA-6238962-2   | G-8MVZ1HLJT0
+9.  almanar.com.lb  | UA-199941297-1 | G-JJ1SM3JFZW
+10. tasnimnews.com  | G-MGYZR3Q3BS
+11. presstv.ir      | G-F359E8PMME
+12. mehrnews.com    | G-ERSHRYVTBP
+13. defapress.ir    | G-94BW46TZJM
+14. moqawama.org.lb | G-Z8F3HPDSWG
+
+GTM CONTAINERS:
+15. GTM-TLJW8TR | almanar.com.lb (Hezbollah)
+16. GTM-PZ3N9B8 | tasnimnews.com (IRGC)
+
+MICROSOFT CLARITY:
+17. cgaike4iub | almanar.com.lb
+18. cs22bibpe3 | almanar.com.lb
+19. o2z34ibfin | mehrnews.com
+
+TOTAL: 21 real collected items

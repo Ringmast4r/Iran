@@ -1,0 +1,264 @@
+================================================================================
+                    OSINT SOURCES & REFERENCES
+                    All Sources Used in This Research
+                    Compiled: 2026-01-03
+================================================================================
+
+================================================================================
+[1] OFFICIAL GOVERNMENT & INSTITUTIONAL SOURCES
+================================================================================
+
+IAEA (International Atomic Energy Agency):
+- https://www.iaea.org/sites/default/files/25/06/gov2025-24.pdf
+- https://www.iaea.org/newscenter/statements/iaea-director-general-grossis-statement-to-unsc-on-situation-in-iran-20-june-2025
+
+US GOVERNMENT:
+- Treasury OFAC: https://home.treasury.gov/news/press-releases/sb0308
+- Treasury: https://home.treasury.gov/news/press-releases/sb0063
+- Treasury: https://home.treasury.gov/news/press-releases/sb0189
+- Treasury: https://home.treasury.gov/news/press-releases/jy2648
+- DOJ: https://www.justice.gov/archives/opa/pr/ofac-designated-hezbollah-financier-and-eight-associates-charged-multiple-crimes-arising-out
+- DEA: https://www.dea.gov/press-releases/2016/02/01/dea-and-european-authorities-uncover-massive-hizballah-drug-and-money
+- Congress: https://www.congress.gov/crs-product/IF12106
+- GovInfo: https://www.govinfo.gov/content/pkg/CHRG-115hhrg25730/html/CHRG-115hhrg25730.htm
+
+UK PARLIAMENT:
+- https://commonslibrary.parliament.uk/research-briefings/cbp-10284/
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[2] THINK TANKS & RESEARCH ORGANIZATIONS
+================================================================================
+
+CRITICAL THREATS (AEI):
+- https://www.criticalthreats.org/analysis/iran-update-december-31-2025
+- https://www.criticalthreats.org/analysis/iran-update-december-22-2025
+
+INSTITUTE FOR SCIENCE & INTERNATIONAL SECURITY (ISIS):
+- https://isis-online.org/isis-reports/analysis-of-iaea-iran-verification-and-monitoring-report-may-2025
+- https://isis-online.org/isis-reports/analysis-of-iaea-iran-verification-and-monitoring-and-npt-safeguards-reports-september-2025
+
+FOUNDATION FOR DEFENSE OF DEMOCRACIES (FDD):
+- https://www.fdd.org/analysis/2024/07/02/how-hezbollah-fundraises-through-crime/
+- https://www.fdd.org/analysis/op_eds/2025/03/25/iran-strengthens-its-military-in-the-persian-gulf/
+
+ATLANTIC COUNCIL:
+- https://www.atlanticcouncil.org/dispatches/us-just-captured-maduro-whats-next-for-venezuela-and-the-region/
+
+WASHINGTON INSTITUTE:
+- https://www.washingtoninstitute.org/policy-analysis/deas-targeting-hezbollahs-global-criminal-support-network
+- https://www.washingtoninstitute.org/sites/default/files/pdf/LevittTestimony20251021-Senate%20caucus.pdf
+
+COUNCIL ON FOREIGN RELATIONS (CFR):
+- https://www.cfr.org/backgrounder/irans-revolutionary-guards
+- https://www.cfr.org/interview/hezbollah-connection-syria-and-iran
+
+USIP (Iran Primer):
+- https://iranprimer.usip.org/blog/2023/oct/19/timeline-iran-and-hezbollah
+
+IRAN WATCH:
+- https://www.iranwatch.org/our-publications/articles-reports/irans-nuclear-timetable-weapon-potential
+
+UNITED AGAINST NUCLEAR IRAN (UANI):
+- https://www.unitedagainstnucleariran.com/ideological-expansion/iranian-influence-lebanon-hezbollah-model
+
+ALMA RESEARCH CENTER:
+- https://israel-alma.org/special-report-hezbollah-in-the-digital-sphere-the-cyberattack-group-bqt-lock-and-its-leader-karim-fayad/
+
+MIDDLE EAST FORUM:
+- https://www.meforum.org/mef-observer/iranians-celebrate-maduros-fall-as-protests-challenge-khamenei
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[3] NEWS MEDIA SOURCES
+================================================================================
+
+IRAN INTERNATIONAL:
+- https://www.iranintl.com/en/202305079860
+- https://www.iranintl.com/en/202512115535
+- https://www.iranintl.com/en/202601037844
+- https://www.iranintl.com/en/202402090405
+- https://www.iranintl.com/en/202508196725
+
+AL JAZEERA:
+- https://www.aljazeera.com/news/2024/9/23/get-away-from-hezbollah-has-israel-hacked-lebanons-telecoms-networks
+- https://www.aljazeera.com/news/2026/1/3/irans-khamenei-says-rioters-must-be-put-in-their-place-amid-protests
+- https://www.aljazeera.com/news/2026/1/3/internet-disruption-several-arrests-made-as-iran-protests-continue
+- https://www.aljazeera.com/news/2025/6/15/what-is-irans-irgc-and-who-has-israel-killed
+
+CNN:
+- https://www.cnn.com/2026/01/01/middleeast/iran-protests-deadly-clashes-latam-intl
+
+TIMES OF ISRAEL:
+- https://www.timesofisrael.com/khameneis-day-old-hebrew-account-on-x-suspended-after-threats-against-israel/
+- https://www.timesofisrael.com/meta-removes-iranian-leaders-facebook-instagram-accounts-for-content-violations/
+- https://www.timesofisrael.com/russia-iran-slam-venezuela-strikes-as-eu-and-uk-urge-respect-for-international-law/
+
+JERUSALEM POST:
+- https://www.jpost.com/middle-east/article-826216
+- https://www.jpost.com/breaking-news/article-839388
+
+NEWSWEEK:
+- https://www.newsweek.com/x-twitter-ayatollah-ali-khamenei-iran-supreme-leader-1975772
+
+EURONEWS:
+- https://www.euronews.com/2026/01/03/analysis-what-does-the-fall-of-venezuelas-maduro-mean-for-tehran
+
+NBC NEWS:
+- https://www.nbcnews.com/world/latin-america/live-blog/venezuela-explosions-trump-maduro-live-updates-rcna251053
+
+CBC:
+- https://www.cbc.ca/news/world/trump-maduro-venezuela-strikes-9.7032572
+
+FOX NEWS:
+- https://www.foxnews.com/world/irans-khamenei-lashes-out-protesters-nationwide-anti-regime-unrest-grows
+
+ABC NEWS:
+- https://abcnews.go.com/International/wireStory/death-toll-rises-10-violence-iran-protests-128861935
+
+NCRI (National Council of Resistance of Iran):
+- https://www.ncr-iran.org/en/news/iran-protests/iran-uprising-day-7-bloodshed-in-malekshahi-and-khameneis-panic-as-nation-defies-crackdown/
+- https://www.ncr-iran.org/en/news/iran-protests/iran-protests-day-5-regime-buildings-stormed-in-multiple-cities-as-demonstrations-expand-across-country/
+
+HACKER NEWS (Cybersecurity):
+- https://thehackernews.com/2025/06/pro-iranian-hacktivist-group-leaks.html
+- https://thehackernews.com/2025/08/leaked-credentials-up-160-what.html
+
+CYBERSCOOP:
+- https://cyberscoop.com/iran-government-hack-leak-documents-hacktivist/
+
+SECURITY WEEK:
+- https://www.securityweek.com/israeli-group-claims-lebanon-water-hack-as-cisa-reiterates-warning-on-simple-ics-attacks/
+
+CYBERNEWS:
+- https://cybernews.com/security/billions-passwords-credentials-leaked-mother-of-all-breaches/
+- https://cybernews.com/security/billions-credentials-exposed-infostealers-data-leak/
+
+PJ MEDIA:
+- https://pjmedia.com/robert-spencer/2026/01/03/the-capture-of-maduro-was-a-massive-blow-to-this-rogue-state-n4947874
+
+CASPIAN NEWS:
+- https://caspiannews.com/news-detail/iranian-navy-and-irgc-aerospace-force-conduct-first-joint-missile-drill-in-indian-ocean-2025-2-26-0/
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[4] OSINT TOOLS & TECHNICAL SOURCES
+================================================================================
+
+CERTIFICATE TRANSPARENCY:
+- https://crt.sh/
+
+SUBDOMAIN ENUMERATION:
+- https://api.hackertarget.com/hostsearch/
+- https://api.hackertarget.com/dnslookup/
+
+URL SCANNING:
+- https://urlscan.io/api/v1/search/
+
+IP GEOLOCATION:
+- http://ip-api.com/json/
+- https://ipinfo.io/
+
+GOOGLE TAG MANAGER:
+- https://www.googletagmanager.com/gtm.js?id=GTM-TLJW8TR
+- https://www.googletagmanager.com/gtm.js?id=GTM-PZ3N9B8
+
+OSINT FRAMEWORKS:
+- https://osintme.com/index.php/2020/12/23/osint-iran-passive-reconnaissance-of-iranian-ip-space-iot-wifi-networks-social-media-and-more/
+- https://osint.sh/subdomain/
+- https://greypike.com/osint-framework/iran-resources
+
+HASH/EMAIL TOOLS:
+- https://github.com/balestek/hashtray
+- https://github.com/Akinarisekigawa/Gravsint
+- https://github.com/sham00n/buster
+
+USERNAME SEARCH:
+- https://github.com/sherlock-project/sherlock
+- https://github.com/soxoj/maigret
+- https://github.com/soxoj/osint-namecheckers-list
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[5] WIKIPEDIA REFERENCES
+================================================================================
+
+- https://en.wikipedia.org/wiki/Hezbollah–Iran_relations
+- https://en.wikipedia.org/wiki/Hezbollah
+- https://en.wikipedia.org/wiki/Funding_of_Hezbollah
+- https://en.wikipedia.org/wiki/Nuclear_program_of_Iran
+- https://en.wikipedia.org/wiki/Islamic_Revolutionary_Guard_Corps
+- https://en.wikipedia.org/wiki/2025–2026_Iranian_protests
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[6] TARGET WEBSITES ANALYZED
+================================================================================
+
+HEZBOLLAH/LEBANESE:
+- https://moqawama.org.lb (Islamic Resistance - Hezbollah)
+- https://english.almanar.com.lb (Al-Manar TV)
+- https://english.alahednews.com.lb (Al-Ahed News)
+
+IRANIAN REGIME:
+- https://khamenei.ir (Supreme Leader office)
+- https://farsi.khamenei.ir
+- https://english.khamenei.ir
+- https://www.tasnimnews.com (Tasnim News - IRGC-linked)
+- https://www.presstv.ir (Press TV - state media)
+- https://mehrnews.com (Mehr News Agency)
+- https://farsnews.ir (Fars News - IRGC-linked)
+- https://defapress.ir (Defense Press)
+- https://en.irna.ir (IRNA - official news agency)
+
+IRANIAN GOVERNMENT:
+- https://president.ir (Presidency)
+- https://dolat.ir (Government portal)
+- https://mfa.gov.ir (Foreign Ministry)
+- https://aeoi.org.ir (Atomic Energy Organization)
+- https://www.modafl.ir (Ministry of Defense)
+
+SEIZED DOMAINS (US DOJ):
+- moqawama.org (seized)
+- almanarnews.org (seized)
+- manarnews.org (seized)
+- almanar-tv.org (seized)
+- alshahid.org (seized)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[7] SOCIAL MEDIA ACCOUNTS TRACKED
+================================================================================
+
+KHAMENEI:
+- Twitter/X: @khamenei_ir (1M+ followers)
+- Twitter/X: @Khamenei_m (Khamenei Media)
+- Website: khamenei.ir
+- Instagram: REMOVED by Meta (Feb 2024)
+- Facebook: REMOVED by Meta (Feb 2024)
+- Hebrew X account: SUSPENDED (Jan 2024)
+
+HEZBOLLAH/MOQAWAMA:
+- Twitter: @almoqawama1
+- YouTube: MoqawamaOrg
+- SoundCloud: audiomoqawama
+
+AL-AHED NEWS:
+- Facebook: facebook.com/AlAhedEnglish/
+- Twitter: twitter.com/English_AlAhed/
+- Telegram: t.me/Eng_ahed/
+
+AL-MANAR:
+- Telegram: (via /static/r.php?r=telegram)
+- Twitter: (via /static/r.php?r=twitter)
+- WhatsApp: almanar.com.lb/whatsapp/
+
+================================================================================
+                              END SOURCES DOCUMENT
+================================================================================

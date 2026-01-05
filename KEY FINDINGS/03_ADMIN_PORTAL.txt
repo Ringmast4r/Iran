@@ -1,0 +1,14 @@
+ADMIN PORTAL - KHAMENEI.IR
+===========================
+
+FINDING: Admin subdomain exposed via SSL certs
+
+SUBDOMAIN: admin.english.khamenei.ir
+
+WHY IT MATTERS:
+- Administrative interface exists
+- Exposed in public Certificate Transparency logs
+- Likely internal-only but now known
+- Target for access attempts
+
+STATUS: MEDIUM VALUE - Target identified

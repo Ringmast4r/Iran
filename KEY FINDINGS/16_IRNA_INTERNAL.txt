@@ -1,0 +1,30 @@
+IRNA.IR - INTERNAL NETWORK EXPOSED
+===================================
+
+FINDING: News agency internal systems mapped
+
+EDITORIAL SYSTEMS (tahrir = "editing"):
+- tahrir.irna.ir -> 217.25.48.63
+- entahrir.irna.ir (English)
+- frtahrir.irna.ir (French)
+- rutahrir.irna.ir (Russian)
+- urtahrir.irna.ir (Urdu)
+- estahrir.irna.ir (Spanish)
+
+INTERNAL IP RANGES:
+- 217.25.48.x - Mail (34), Gallery (64), Tahrir (63)
+- 217.25.51.x - RS1 server (11)
+- 217.25.53.x - RS2 server (11)
+- 217.25.56.x - CH1 (28), News (77), Sky (202)
+- 217.25.58.x - Remote access (101)
+- 10.30.41.x  - PRIVATE network (LEAKED!)
+
+LAB/DEV SERVERS:
+- lab.irna.ir, lab1-3.irna.ir
+- opr.irna.ir, opr2.irna.ir
+- exp-e.irna.ir
+
+WHY IT MATTERS:
+- Private 10.x IP in public DNS = misconfiguration
+- Editorial systems accessible
+- Remote access at 217.25.58.101

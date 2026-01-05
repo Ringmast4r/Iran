@@ -1,0 +1,32 @@
+ACTIONABLE INTELLIGENCE SUMMARY
+================================
+
+HIGH VALUE TARGETS:
+1. admin.english.khamenei.ir - Admin portal in certs
+2. formx.khamenei.link - Hidden API infrastructure
+3. ArvanCloud AS205585 - Single CDN for all gov
+4. awt-lb.com - Hezbollah custom DNS service
+
+PRIVATE INFRASTRUCTURE LEAKS:
+5. kateb.irna.ir -> 10.30.41.85 (internal IP)
+6. r1.vpn.minister.local.mfa.gov.ir (VPN endpoint)
+
+TRACKING PIVOT OPPORTUNITIES:
+7. GTM-TLJW8TR -> almanar.com.lb admin
+8. GTM-PZ3N9B8 -> tasnimnews.com admin
+9. Microsoft Clarity accounts -> session replays
+
+HOSTING WEAK POINTS:
+10. AS199669 Okay-Telecom (Russia) -> Hezbollah primary
+11. AS50340 Selectel (Russia) -> Hezbollah backup
+12. AS210772 NewPush (Hungary) -> Hezbollah DNS
+
+DNS VERIFICATION TOKENS:
+13. president.ir TXT: 59cc9d3d3aab44f8...
+14. khamenei.ir Google: FrS79LKnklz...
+
+PRIORITY ACTIONS:
+- Monitor ArvanCloud for new gov sites
+- Track GTM containers for changes
+- Watch awt-lb.com for new domains
+- Certificate transparency monitoring

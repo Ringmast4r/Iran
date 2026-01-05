@@ -1,0 +1,360 @@
+================================================================================
+                    NOTABLE OSINT FINDINGS
+                    Iranian Government & Hezbollah Infrastructure
+                    Critical Discoveries from Open Source Intelligence
+                    Generated: 2026-01-03
+================================================================================
+
+================================================================================
+[1] CRITICAL SECURITY EXPOSURES
+================================================================================
+
+1.1 VPN ENDPOINT EXPOSED (MFA.GOV.IR)
+--------------------------------------------------------------------------------
+Discovery:  r1.vpn.minister.local.mfa.gov.ir -> 185.143.235.201
+Severity:   HIGH
+Analysis:   Internal VPN hostname leaked via DNS. The naming convention
+            "minister.local" suggests this is the Minister's personal/office
+            VPN access point. Exposed to public internet via ArvanCloud CDN.
+Implication: Potential target for credential stuffing or VPN exploitation.
+
+1.2 INTERNAL IP ADDRESS LEAK (IRNA.IR)
+--------------------------------------------------------------------------------
+Discovery:  kateb.irna.ir -> 10.30.41.85
+Severity:   MEDIUM
+Analysis:   RFC1918 private IP address exposed in public DNS. This reveals
+            internal network structure. "Kateb" means "writer" in Farsi,
+            likely an internal editorial system.
+Implication: Network topology disclosure, internal subnet identified as 10.30.41.0/24
+
+1.3 DEVELOPMENT TOOLS EXPOSED (FARSNEWS.IR)
+--------------------------------------------------------------------------------
+Discovery:  Multiple internal development tools accessible:
+            - jira.farsnews.ir (Atlassian JIRA - Issue Tracker)
+            - confluence.farsnews.ir (Atlassian Confluence - Wiki)
+            - git.farsnews.ir (Git Repository)
+            - svn.farsnews.ir (Subversion Repository)
+            - chat.farsnews.ir (Internal Chat System)
+            - api.farsnews.ir (API Endpoint)
+Severity:   HIGH
+Analysis:   IRGC-linked Fars News Agency has exposed their entire development
+            infrastructure. JIRA/Confluence often contain sensitive project
+            info, credentials, internal communications.
+Implication: Potential source code exposure, internal project data, credentials.
+
+1.4 CONTROL PANEL EXPOSED (MFA.GOV.IR)
+--------------------------------------------------------------------------------
+Discovery:  cp.mfa.gov.ir -> 109.201.11.102
+Severity:   MEDIUM
+Analysis:   Foreign Ministry control panel accessible on public IP.
+            Reverse DNS confirms "cp.mfa.gov.ir" hostname.
+            ISP confirms ownership: "Foreign Ministry of IRAN"
+Implication: Administrative interface potentially accessible for enumeration.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[2] GOVERNMENT NETWORK ARCHITECTURE
+================================================================================
+
+2.1 DEDICATED GOVERNMENT ASNs IDENTIFIED
+--------------------------------------------------------------------------------
+ASN         | Owner                              | Sites
+------------|------------------------------------|--------------------------
+AS34592     | Iranian Presidential Administration | president.ir
+AS29079     | IRNA (News Agency)                 | irna.ir, all subdomains
+AS24631     | Foreign Ministry                   | mfa.gov.ir infrastructure
+AS48434     | Tebyan-e-Noor Institute            | khamenei.ir mail server
+
+Key Finding: Iranian government operates dedicated ASNs for critical
+infrastructure, separate from commercial ISPs. This indicates sophisticated
+network segregation.
+
+2.2 ARVANCLOUD CDN DEPENDENCY
+--------------------------------------------------------------------------------
+All major Iranian government sites use ArvanCloud (AS205585):
+- IP Range: 185.143.232.0/22 (185.143.232.x - 185.143.235.x)
+- DNS: *.ns.arvancdn.ir
+
+Sites using ArvanCloud:
+- khamenei.ir
+- president.ir
+- mfa.gov.ir
+- irna.ir
+- tasnimnews.com
+- presstv.ir
+- mehrnews.com
+
+Key Finding: Single point of failure. ArvanCloud disruption would affect
+all Iranian government web presence.
+
+2.3 IRNA INTERNAL NETWORK STRUCTURE
+--------------------------------------------------------------------------------
+IP Range        | Purpose
+----------------|------------------------------------------
+217.25.48.x     | Mail (34), Gallery (64), Tahrir (63)
+217.25.51.x     | RS1 server (11)
+217.25.53.x     | RS2 server (11)
+217.25.56.x     | CH1 (28), News (77), Sky (202)
+217.25.58.x     | Remote access (101)
+10.30.41.x      | Internal network (leaked)
+
+Key Finding: IRNA operates on multiple /24 subnets with clear functional
+segregation. Remote access server at 217.25.58.101 is notable target.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[3] DIPLOMATIC NETWORK MAPPING (MFA.GOV.IR)
+================================================================================
+
+3.1 EMBASSY SUBDOMAIN STRUCTURE
+--------------------------------------------------------------------------------
+Total Embassies/Consulates Mapped: 100+
+
+Regional Distribution:
+- Europe: 35+ (germany, france, uk, italy, spain, etc.)
+- Asia: 25+ (china, japan, india, pakistan, etc.)
+- Middle East: 15+ (iraq, lebanon, syria, jordan, etc.)
+- Americas: 10+ (venezuela, cuba, brazil, argentina, etc.)
+- Africa: 8+ (kenya, ethiopia, nigeria, etc.)
+- CIS: 12+ (russia, ukraine, kazakhstan, etc.)
+
+Notable Embassy Subdomains:
+- lebanon.mfa.gov.ir / beirut.mfa.gov.ir (Hezbollah connection)
+- venezuela.mfa.gov.ir (Maduro alliance, recently disrupted)
+- russia.mfa.gov.ir (Strategic ally)
+- china.mfa.gov.ir (Economic partner)
+
+3.2 VISA & CONSULAR SYSTEMS
+--------------------------------------------------------------------------------
+- visareq.mfa.gov.ir (Visa Request Portal)
+- e_visa.mfa.gov.ir (E-Visa System)
+- wvisa.mfa.gov.ir (Web Visa)
+- econsulate.mfa.gov.ir (E-Consulate)
+- appointment.mfa.gov.ir (Appointment Booking)
+
+Key Finding: Centralized visa processing infrastructure. Single compromise
+could affect all Iranian visa operations globally.
+
+3.3 INTERNAL SYSTEMS EXPOSED
+--------------------------------------------------------------------------------
+- cms.mfa.gov.ir (Content Management)
+- comment.mfa.gov.ir / ecomment.mfa.gov.ir (Comment System)
+- cloud.mfa.gov.ir (Cloud Storage)
+- email.mfa.gov.ir (Email Portal)
+- webmail.mfa.gov.ir (Webmail)
+- mikhak.mfa.gov.ir (Form System - Java/xhtml)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[4] TRACKING & ANALYTICS INTELLIGENCE
+================================================================================
+
+4.1 GOOGLE TAG MANAGER CONTAINERS
+--------------------------------------------------------------------------------
+GTM-TLJW8TR (Al-Manar/Hezbollah):
+- Linked domains: almanar.com.lb, almanartv.com.lb, manartv.com.lb
+- Confirms shared management of Hezbollah media properties
+
+GTM-PZ3N9B8 (Tasnim News):
+- Linked to tasnimnews.com
+- IRGC-affiliated media
+
+4.2 GOOGLE ANALYTICS PROPERTIES
+--------------------------------------------------------------------------------
+Site                | UA (Legacy)      | GA4
+--------------------|------------------|------------------
+khamenei.ir         | UA-6238962-2     | G-8MVZ1HLJT0
+almanar.com.lb      | UA-199941297-1   | G-JJ1SM3JFZW
+tasnimnews.com      | -                | G-MGYZR3Q3BS
+presstv.ir          | -                | G-F359E8PMME
+mehrnews.com        | -                | G-ERSHRYVTBP
+defapress.ir        | -                | G-94BW46TZJM
+moqawama.org.lb     | -                | G-Z8F3HPDSWG
+
+Key Finding: All sites use Google Analytics despite anti-Western rhetoric.
+Google has visibility into all traffic patterns.
+
+4.3 MICROSOFT CLARITY (Session Recording)
+--------------------------------------------------------------------------------
+almanar.com.lb: cgaike4iub, cs22bibpe3 (TWO projects!)
+mehrnews.com:   o2z34ibfin
+
+Key Finding: Microsoft Clarity records user sessions including mouse
+movements, clicks, scroll depth. Microsoft has visibility into user
+behavior on Hezbollah and Iranian state media.
+
+4.4 SELF-HOSTED ANALYTICS
+--------------------------------------------------------------------------------
+tasnimnews.com: analytics.tasnimnews.com (Matomo instance)
+farsnews.ir:    Custom server-side analytics
+
+Key Finding: Some sites maintain self-hosted analytics, likely for
+operational security or to avoid Western platform dependencies.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[5] HEZBOLLAH INFRASTRUCTURE FINDINGS
+================================================================================
+
+5.1 FOREIGN HOSTING (OPERATIONAL SECURITY)
+--------------------------------------------------------------------------------
+moqawama.org.lb (Islamic Resistance):
+- Primary: 91.109.206.65 - Moscow, Russia (AS199669 Okay-Telecom)
+- Backup: 176.74.216.191 - Czech Republic (AS51248 HOST-TELECOM)
+- Reverse DNS: mq.webking1.net
+
+Key Finding: Hezbollah's main military site is NOT hosted in Lebanon or
+Iran. Uses Russian and European infrastructure for resilience against
+Israeli/US attacks on Lebanese infrastructure.
+
+5.2 SEIZED DOMAINS (US DOJ Actions)
+--------------------------------------------------------------------------------
+Confirmed seized by US Department of Justice:
+- moqawama.org (redirects to DOJ seizure notice)
+- almanarnews.org
+- manarnews.org
+- almanar-tv.org
+- alshahid.org
+
+Current active domains:
+- moqawama.org.lb (Lebanese TLD - outside US jurisdiction)
+- almanar.com.lb (Lebanese TLD)
+- alahednews.com.lb (Lebanese TLD)
+
+Key Finding: Hezbollah migrated to .lb domains after US seizures.
+Lebanese TLD provides jurisdictional protection.
+
+5.3 SOCIAL MEDIA PRESENCE
+--------------------------------------------------------------------------------
+Platform    | Account           | Status
+------------|-------------------|------------------
+Twitter/X   | @almoqawama1      | Active
+YouTube     | MoqawamaOrg       | Active
+SoundCloud  | audiomoqawama     | Active
+Telegram    | Multiple channels | Active
+Facebook    | AlAhedEnglish     | Active
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[6] KHAMENEI.IR INFRASTRUCTURE
+================================================================================
+
+6.1 MULTI-LANGUAGE PROPAGANDA NETWORK
+--------------------------------------------------------------------------------
+Languages supported (each with dedicated subdomain):
+- farsi.khamenei.ir (Primary)
+- english.khamenei.ir
+- arabic.khamenei.ir
+- french.khamenei.ir
+- spanish.khamenei.ir
+- russian.khamenei.ir
+- urdu.khamenei.ir
+- hindi.khamenei.ir
+- azeri.khamenei.ir
+
+Special:
+- nojavan.khamenei.ir ("Youth" - targeting younger generation)
+
+6.2 STREAMING INFRASTRUCTURE
+--------------------------------------------------------------------------------
+Live streaming servers:
+- live1.khamenei.ir
+- live2.khamenei.ir
+- live3.khamenei.ir
+- live4.khamenei.ir
+- live5.khamenei.ir
+
+CDN nodes:
+- cdn-*.khamenei.ir (multiple)
+
+Key Finding: Khamenei maintains robust streaming infrastructure for
+broadcasting speeches and Friday prayers. 5 live servers indicates
+high-availability setup.
+
+6.3 MAIL SERVER SEPARATION
+--------------------------------------------------------------------------------
+Main site: 5.160.10.200-202 (AS200554 Dade Pardaz Kimia)
+Mail server: 94.232.174.104 (AS48434 Tebyan-e-Noor Institute)
+
+Key Finding: Email infrastructure deliberately hosted on separate ASN
+from web infrastructure. Tebyan-e-Noor is a "Cultural-Artistic Institute"
+providing cover for regime communications.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[7] CURRENT EVENTS CONTEXT (January 2026)
+================================================================================
+
+7.1 IRAN PROTESTS (Day 7 as of 2026-01-03)
+--------------------------------------------------------------------------------
+- At least 10 killed by regime forces
+- Demonstrations in 100+ locations across 22 provinces
+- Internet disrupted (35% lower traffic per Cloudflare)
+- Khamenei: "Rioters must be put in their place"
+- Biggest protests since 2022 Mahsa Amini uprising
+
+7.2 VENEZUELA CONNECTION SEVERED
+--------------------------------------------------------------------------------
+- US captured Maduro (2026-01-03)
+- 20-year Iran-Venezuela defense pact disrupted
+- IRGC investments in billions at risk
+- Iranian drone base at El Libertador compromised
+- Major blow to sanctions evasion network
+
+7.3 POST-WAR MILITARY STATUS
+--------------------------------------------------------------------------------
+June 2025 Israeli strikes killed:
+- Hossein Salami (IRGC Commander)
+- Amir Ali Hajizadeh (IRGC Aerospace Chief)
+
+Current leadership:
+- Ahmad Vahidi appointed IRGC Deputy Commander (Dec 27, 2025)
+- Esmail Qaani still Quds Force Commander (status uncertain)
+
+Nuclear program:
+- Fordow centrifuges "no longer operational" (IAEA)
+- 60% enriched uranium stockpile still exists (408kg as of May 2025)
+- Iran halted IAEA cooperation (July 2025)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[8] OPERATIONAL RECOMMENDATIONS
+================================================================================
+
+For further OSINT collection:
+
+1. JIRA/Confluence Enumeration (farsnews.ir)
+   - Check for public projects/spaces
+   - Look for exposed user lists
+   - Search for leaked credentials in public issues
+
+2. VPN Endpoint Analysis (mfa.gov.ir)
+   - Identify VPN software/version
+   - Check for known vulnerabilities
+   - Monitor for credential leaks
+
+3. Editorial System Access (irna.ir)
+   - tahrir.irna.ir endpoints
+   - Check for authentication bypasses
+   - Look for exposed APIs
+
+4. CDN Cache Analysis (ArvanCloud)
+   - Check for cached sensitive data
+   - Look for origin IP leaks
+   - Monitor for misconfigurations
+
+5. Email Infrastructure
+   - Enumerate mail servers for each domain
+   - Check SPF/DKIM/DMARC configurations
+   - Look for mail server version disclosures
+
+================================================================================
+                              END NOTABLE FINDINGS
+================================================================================

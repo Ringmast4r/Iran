@@ -1,0 +1,46 @@
+================================================================================
+                    OSINT SESSION LOG
+                    Started: 2026-01-03 23:30 UTC
+                    Exit Node: IRAN ({ir})
+================================================================================
+
+[2026-01-03 23:21] Tor bootstrapped (Swiss exit {ch})
+[2026-01-03 23:22] Downloaded: moqawama_sitemap.xml (341 categories)
+[2026-01-03 23:22] Downloaded: alahednews_rss_616.xml (Sheikh Qassem speeches)
+[2026-01-03 23:23] Downloaded: article_42005.html (Soleimani anniversary speech)
+[2026-01-03 23:23] Downloaded: alahednews_homepage.html
+[2026-01-03 23:23] 403 Forbidden: moqawama homepage (Tor blocked)
+[2026-01-03 23:30] Switching to Iranian exit node ({ir})
+
+--------------------------------------------------------------------------------
+[2026-01-04 04:32:21 UTC] Downloaded: moqawama_homepage.html
+[2026-01-04 04:32:25 UTC] Downloaded: khamenei_homepage.html
+[2026-01-04 04:32:27 UTC] Downloaded: khamenei_english.html
+[2026-01-04 04:32:44 UTC] Downloaded: almanar_homepage.html (Al-Manar TV)
+[2026-01-04 04:32:48 UTC] Downloaded: khamenei_farsi.html
+[2026-01-04 04:33:08 UTC] Downloaded: Al-Ahed RSS feeds (1,100,200,300,400,500)
+[2026-01-04 04:33:19 UTC] Downloaded: moqawama category 199 (latest updated 2026-01-03)
+[2026-01-04 04:33:55 UTC] Re-downloaded: article_42005.html (0 bytes)
+[2026-01-04 04:34:28 UTC] Downloaded: audio.moqawama.org.lb (34083 bytes)
+[2026-01-04 04:34:32 UTC] Downloaded: video.moqawama.org.lb (91418 bytes)
+[2026-01-04 04:34:36 UTC] Downloaded: gallery.moqawama.org.lb (25430 bytes)
+[2026-01-04 04:34:56 UTC] Downloaded: july2006.moqawama.org.lb (0 bytes)
+[2026-01-04 04:34:58 UTC] Downloaded: games.moqawama.org.lb (35438 bytes)
+[2026-01-04 04:35:01 UTC] Downloaded: english.almanar.com.lb (51568 bytes)
+
+--------------------------------------------------------------------------------
+[\2026-01-04 04:35:18 UTC] SESSION SUMMARY
+Exit nodes: RU/TR/AE/LB
+[2026-01-04 04:53:05 UTC] Downloaded: khamenei_news.html
+[2026-01-04 04:53:21 UTC] Downloaded: moqawama categories 541,540,539,538,537,330,209,212
+[2026-01-04 04:53:42 UTC] Downloaded: khamenei_archive.html
+[2026-01-04 04:53:44 UTC] Downloaded: khamenei_speeches.html (Ede=speeches)
+[2026-01-04 04:54:16 UTC] Downloaded: Khamenei articles 12044,12039,12041,12042,12025,12024,12020,12019,12017,12014
+[2026-01-04 04:54:29 UTC] Downloaded: Moqawama essays 42004-41998
+[2026-01-04 04:56:30 UTC] Downloaded: 10 Khamenei articles (12044,12039,12041,12042,12025,12024,12020,12019,12017,12014)
+[\2026-01-04 04:57:36 UTC] Downloaded: Khamenei photo/video/treatise sections + articles 11992,11988
+
+[2026-01-04 05:03:09 UTC] Created: DOMAIN_SEIZURE_ANALYSIS.txt
+[2026-01-04 05:15:22 UTC] Downloaded: 20 media files (2.8MB) from Al-Ahed News
+[2026-01-04 05:15:22 UTC] Created: MEDIA_INTEL.txt (filename analysis)
+[2026-01-04 05:15:22 UTC] Note: Moqawama.org.lb blocks image hotlinking (403)

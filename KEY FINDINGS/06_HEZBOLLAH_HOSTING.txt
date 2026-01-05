@@ -1,0 +1,24 @@
+HEZBOLLAH HOSTING STRATEGY
+===========================
+
+FINDING: Deliberate use of Russian/Czech hosting
+
+MOQAWAMA.ORG.LB:
+- Primary: 91.109.206.65 (Moscow - Okay-Telecom)
+- Backup: 176.74.216.191 (Czech - HOST-TELECOM)
+
+ALMANAR.COM.LB:
+- IPs: 5.35.14.164-166 (Selectel Moscow)
+- Backup: 47.250.57.153 (Alibaba Malaysia)
+
+WHY IT MATTERS:
+- Russian hosting = protection from Western takedowns
+- Multiple countries = redundancy
+- .lb TLD = outside US jurisdiction
+- Deliberate infrastructure planning
+
+US-SEIZED DOMAINS (ineffective):
+- moqawama.org -> DOJ seized
+- almanarnews.org -> DOJ seized
+- almanar-tv.org -> DOJ seized
+- .lb alternatives REMAIN OPERATIONAL

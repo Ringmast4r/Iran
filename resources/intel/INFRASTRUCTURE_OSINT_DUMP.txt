@@ -1,0 +1,202 @@
+================================================================================
+                    INFRASTRUCTURE OSINT DUMP
+                    Subdomains | IPs | DNS | ASN Data
+                    Extracted via Open APIs: 2026-01-03
+================================================================================
+
+================================================================================
+[1] KHAMENEI.IR INFRASTRUCTURE
+================================================================================
+
+SUBDOMAINS (36 discovered):
+- arabic.khamenei.ir
+- azeri.khamenei.ir
+- cdn-arabic.khamenei.ir
+- cdn-azeri.khamenei.ir
+- cdn-english.khamenei.ir
+- cdn-french.khamenei.ir
+- cdn-hindi.khamenei.ir
+- cdn-nojavan.khamenei.ir
+- cdn-russian.khamenei.ir
+- cdn-spanish.khamenei.ir
+- cdn-urdu.khamenei.ir
+- doran.khamenei.ir
+- enghelab.khamenei.ir
+- english.khamenei.ir
+- farsi.khamenei.ir
+- french.khamenei.ir
+- hindi.khamenei.ir
+- idc0-cdn0.khamenei.ir
+- idc0-cdn1.khamenei.ir
+- idc0-cdn4.khamenei.ir
+- idc0-cdn5.khamenei.ir
+- indonesian.khamenei.ir
+- japanese.khamenei.ir
+- live1.khamenei.ir
+- live2.khamenei.ir
+- live3.khamenei.ir
+- live4.khamenei.ir
+- live5.khamenei.ir
+- mail.khamenei.ir
+- nojavan.khamenei.ir
+- russian.khamenei.ir
+- s13.khamenei.ir
+- s2.khamenei.ir
+- spanish.khamenei.ir
+- urdu.khamenei.ir
+- www.khamenei.ir
+- admin.english.khamenei.ir
+- virastar.nojavan.khamenei.ir
+- gaame2.khamenei.ir
+
+IP ADDRESSES:
+- 5.160.10.200 (primary - khamenei.ir)
+- 5.160.10.201 (farsi.khamenei.ir)
+- 5.160.10.202 (english.khamenei.ir)
+- 81.12.39.67
+- 81.12.39.68
+- 81.12.39.69
+- 81.12.39.70
+- 81.12.39.113
+- 81.12.39.177 (idc0-cdn0)
+- 81.12.39.237
+- 81.12.39.238
+- 94.232.173.140
+- 94.232.174.104
+- 185.143.234.120
+- 185.143.234.235 (doran.khamenei.ir)
+- 217.218.67.226
+- 217.218.67.227
+
+DNS RECORDS:
+A: 5.160.10.200
+MX: 10 najm.khamenei.ir.
+NS: ns1.nashridc.com, ns2.nashridc.ir, ns2.nashridc.com, ns1.nashridc.ir
+TXT: v=spf1 mx -all
+TXT: v=spf1 +a +mx +ip4:94.232.174.104 ~all
+TXT: google-site-verification=FrS79LKnklz_7cQGdeYYR5RW-gtYz2sm3JWIVWo24W0
+SOA: khamenei.ir. root.khamenei.ir. 1002 604800 86400 2419200 604800
+
+ASN:
+- AS200554 (KimiaCloud-AS) - primary hosting
+- AS205585 (ARVANCLOUD-CDN-IR) - doran subdomain
+
+REDIRECT DOMAINS (phishing/mirrors on Cloudflare):
+- khl.ink -> farsi.khamenei.ir
+- entsecure.pw -> khamenei.ir
+- Multiple .lol and .space domains (70+ documented)
+
+================================================================================
+[2] MOQAWAMA.ORG.LB INFRASTRUCTURE
+================================================================================
+
+SUBDOMAINS (12 discovered):
+- www.moqawama.org.lb
+- audio.moqawama.org.lb
+- www.audio.moqawama.org.lb
+- video.moqawama.org.lb
+- www.video.moqawama.org.lb
+- gallery.moqawama.org.lb
+- www.gallery.moqawama.org.lb
+- games.moqawama.org.lb
+- www.games.moqawama.org.lb
+- july2006.moqawama.org.lb
+- www.july2006.moqawama.org.lb
+- newvideo.moqawama.org.lb
+- mail.moqawama.org.lb
+- webmail.moqawama.org.lb
+- test.july2006.moqawama.org.lb
+- test.games.moqawama.org.lb
+
+IP ADDRESSES:
+- 91.109.206.65 (primary)
+- 176.74.216.191
+- 172.67.159.182 (Cloudflare)
+- 23.111.167.130
+
+DNS RECORDS:
+A: 91.109.206.65
+MX: 10 mail.moqawama.org.lb
+NS: ns41.cloudns.net, ns42.cloudns.net, ns43.cloudns.net, ns44.cloudns.net
+TXT: v=spf1 +mx +a +ip4:23.111.167.130 ~all
+SOA: ns41.cloudns.net. support.cloudns.net. 2025091201
+
+ASN:
+- AS51248 (HOST-TELECOM, CZ)
+- AS199669 (ATLEX-AS, RU)
+- AS13335 (CLOUDFLARENET, US)
+- AS29802 (HVC-AS, US)
+- AS39010 (TERRANET-AS, LB)
+
+RELATED DOMAINS:
+- moqawama.news
+- moqawama.derheiligegeist.eu (mirror)
+
+================================================================================
+[3] ALMANAR.COM.LB INFRASTRUCTURE
+================================================================================
+
+SUBDOMAINS:
+- www.almanar.com.lb
+- english.almanar.com.lb
+- french.almanar.com.lb
+- spanish.almanar.com.lb
+- ads.almanar.com.lb
+- archive.almanar.com.lb
+- en-archive.almanar.com.lb
+- program.almanar.com.lb
+- sport.almanar.com.lb
+- survey.almanar.com.lb
+
+IP ADDRESSES:
+- 5.35.14.164 (RU - SELECTEL-MSK)
+- 5.35.14.165 (RU - SELECTEL-MSK)
+- 5.35.14.166 (RU - SELECTEL-MSK)
+- 47.250.57.153 (MY - ALIBABA-CN-NET)
+- 89.39.149.251
+- 162.244.82.184 (US - SERVERROOM)
+- 159.138.156.8 (HK - HWCLOUDS-AS-AP)
+- 3.148.134.161 (US - AMAZON-02)
+- 89.33.44.52 (RO - ROMARG HOSTING)
+
+ASN:
+- AS50340 (SELECTEL-MSK JSC, Russia) - PRIMARY
+- AS45102 (ALIBABA-CN-NET, China)
+- AS16509 (AMAZON-02, US)
+- AS13335 (CLOUDFLARENET, US)
+- AS136907 (HWCLOUDS-AS-AP, Hong Kong)
+- AS205585 (ARVANCLOUD-CDN, Iran)
+
+TECHNOLOGIES:
+- Web Servers: nginx, Apache, Cloudflare
+- CDN: Cloudflare, ArvanCloud, Selectel, Alibaba Cloud, Huawei Cloud
+- SSL Issuers: Sectigo, Let's Encrypt (R3, E5-E8)
+
+================================================================================
+[4] ALAHEDNEWS.COM.LB (from CT logs)
+================================================================================
+
+Shares infrastructure with Al-Manar group
+Multiple SSL certificates via Let's Encrypt
+
+================================================================================
+[5] API SOURCES USED
+================================================================================
+
+SUCCESSFUL:
+- hackertarget.com/hostsearch (subdomain enum)
+- hackertarget.com/dnslookup (DNS records)
+- crt.sh (Certificate Transparency)
+- urlscan.io (scan data, technologies, ASN)
+
+RATE LIMITED:
+- hackertarget.com/reverseiplookup (API count exceeded)
+
+REQUIRES AUTH:
+- virustotal.com/api/v3 (401 - needs API key)
+- shodan.io (needs API key)
+- securitytrails.com (needs API key)
+
+================================================================================
+                              END INFRASTRUCTURE DUMP
+================================================================================

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iran-Hezbollah OSINT Timeline | 2025-2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .header {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 4px solid #cc0000;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .header .subtitle {
+            color: #888;
+            font-size: 1.1em;
+        }
+
+        .header .classification {
+            display: inline-block;
+            background: #cc0000;
+            padding: 5px 20px;
+            margin-top: 15px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #cc0000, #ff6600, #00aa44, #1a1a1a);
+        }
+
+        .timeline-section {
+            margin-bottom: 50px;
+        }
+
+        .timeline-section h2 {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 15px 25px;
+            margin-bottom: 20px;
+            margin-left: -40px;
+            font-size: 1.4em;
+            border-left: 5px solid #cc0000;
+        }
+
+        .event {
+            position: relative;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-left: 4px solid #1a1a1a;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .event.critical {
+            border-left-color: #cc0000;
+            background: #fff5f5;
+        }
+
+        .event.warning {
+            border-left-color: #ff6600;
+            background: #fff8f0;
+        }
+
+        .event.success {
+            border-left-color: #00aa44;
+            background: #f0fff5;
+        }
+
+        .event-date {
+            font-weight: bold;
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .event-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .event-content {
+            color: #444;
+        }
+
+        .event-content ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 3px 10px;
+            font-size: 0.75em;
+            font-weight: bold;
+            border-radius: 3px;
+            margin-right: 5px;
+            text-transform: uppercase;
+        }
+
+        .tag.nuclear { background: #cc0000; color: #fff; }
+        .tag.military { background: #ff6600; color: #fff; }
+        .tag.hezbollah { background: #00aa44; color: #fff; }
+        .tag.sanctions { background: #1a1a1a; color: #fff; }
+        .tag.protest { background: #666; color: #fff; }
+
+        .stats-bar {
+            display: flex;
+            justify-content: space-around;
+            background: #1a1a1a;
+            padding: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 10px 30px;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #cc0000;
+        }
+
+        .stat-label {
+            color: #888;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer {
+            background: #1a1a1a;
+            color: #666;
+            padding: 30px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer .sources {
+            font-size: 0.85em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 { font-size: 1.8em; }
+            .timeline { padding-left: 30px; }
+            .timeline::before { left: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>IRAN-HEZBOLLAH INTELLIGENCE TIMELINE</h1>
+    <div class="subtitle">Open Source Intelligence Collection | 2025-2026</div>
+    <div class="classification">OSINT - UNCLASSIFIED</div>
+</div>
+
+<div class="stats-bar">
+    <div class="stat">
+        <div class="stat-number">19+</div>
+        <div class="stat-label">Protesters Killed</div>
+    </div>
+    <div class="stat">
+        <div class="stat-number">222</div>
+        <div class="stat-label">Protest Locations</div>
+    </div>
+    <div class="stat">
+        <div class="stat-number">26</div>
+        <div class="stat-label">Provinces Affected</div>
+    </div>
+    <div class="stat">
+        <div class="stat-number">2,024</div>
+        <div class="stat-label">Hezbollah Ceasefire Violations</div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="timeline">
+
+        <div class="timeline-section">
+            <h2>ONGOING: 8+ DAY ECONOMIC UPRISING (Dec 28 - Present)</h2>
+
+            <div class="event critical">
+                <div class="event-date">January 4, 2026 - DAY 8</div>
+                <div class="event-title">Malekshahi Massacre - Khamenei Escape Plans Reported</div>
+                <span class="tag protest">PROTESTS</span>
+                <span class="tag military">MILITARY</span>
+                <div class="event-content">
+                    <ul>
+                        <li><strong>MALEKSHAHI:</strong> 5 protesters killed, 30+ injured - security forces opened fire</li>
+                        <li><strong>TOTAL DEAD:</strong> 19+ protesters, 1 security force member (HRANA)</li>
+                        <li><strong>222 locations</strong> in 78 cities across 26 provinces</li>
+                        <li><strong>ESCAPE PLAN:</strong> The Times reports Khamenei has Moscow evacuation plan with 20 aides</li>
+                        <li><strong>FIRST IN 50 YEARS:</strong> Pro-monarchy slogans dominating chants</li>
+                        <li>Internet cut in protest areas since Saturday night</li>
+                        <li>State Dept condemns suppression of protesters' funerals</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="event critical">
+                <div class="event-date">January 3, 2026 - DAY 7</div>
+                <div class="event-title">Khamenei: "Rioters Must Be Put In Their Place"</div>
+                <span class="tag protest">PROTESTS</span>
+                <div class="event-content">
+                    <ul>
+                        <li><strong>KHAMENEI SPEECH:</strong> "We talk to protesters... but rioters must be put in their place"</li>
+                        <li>Distinguishes "concerned citizens" from "rioters" backed by "enemies"</li>
+                        <li>Also states: "We will not yield to the enemy" - responding to Trump</li>
+                        <li><strong>TRIGGER:</strong> Rial collapse - worst economic crisis since 1979</li>
+                        <li>"Death to the dictator" and "Death to Khamenei" chants widespread</li>
+                        <li>Loss of faith in President Pezeshkian's reform promises</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="event critical">
+                <div class="event-date">January 2, 2026 - DAY 6</div>
+                <div class="event-title">Protesters Killed - Security Forces Open Fire</div>
+                <span class="tag protest">PROTESTS</span>
+                <div class="event-content">
+                    <ul>
+                        <li><strong>CONFIRMED DEATHS:</strong> Security forces using live fire on crowds</li>
+                        <li>Videos show gunfire in multiple cities</li>
+                        <li>Hospitals overwhelmed - some refusing to treat protesters</li>
+                        <li>Arrests numbering in hundreds</li>
+                        <li>Government threatens "severe consequences" for continued unrest</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="event critical">
+                <div class="event-date">December 28, 2025 - DAY 1</div>
+                <div class="event-title">Economic Riots Erupt Nationwide</div>
+                <span class="tag protest">PROTESTS</span>
+                <span class="tag sanctions">SANCTIONS</span>
+                <div class="event-content">
+                    <ul>
+                        <li><strong>TRIGGER:</strong> Iranian Rial collapses to record lows</li>
+                        <li>Merchants cannot afford to restock goods</li>
+                        <li>Food prices surge beyond reach of average citizens</li>
+                        <li>Unemployment and inflation crushing middle class</li>
+                        <li><strong>ROOT CAUSE:</strong> Crippling US/EU sanctions + war costs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-section">
+            <h2>ECONOMIC COLLAPSE - SANCTIONS IMPACT</h2>
+
+            <div class="event warning">
+                <div class="event-date">December 2025</div>
+                <div class="event-title">Rial Crashes to Historic Lows</div>
+                <span class="tag sanctions">SANCTIONS</span>
+                <div class="event-content">
+                    <ul>
+                        <li>Currency lost 90%+ of value since 2018 sanctions</li>
+                        <li>Inflation estimated at 40-50% annually</li>
+                        <li>Oil exports severely restricted by sanctions</li>
+                        <li>Foreign reserves depleted by war spending</li>
+                        <li>June 2025 war costs + nuclear site reconstruction</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="event warning">
+                <div class="event-date">August 28, 2025</div>
+                <div class="event-title">E3 Initiates Snapback - Full Sanctions Return</div>
+                <span class="tag nuclear">NUCLEAR</span>
+                <span class="tag sanctions">SANCTIONS</span>
+                <div class="event-content">
+                    <ul>
+                        <li>France, Germany, UK trigger snapback mechanism</li>
+                        <li>All UN sanctions restored on Iran</li>
+                        <li>Arms embargo reinstated</li>
+                        <li>Banking sector completely isolated</li>
+                        <li>Economy pushed to breaking point</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-section">
+            <h2>JANUARY 2026 - MAJOR DEVELOPMENTS</h2>
+
+            <div class="event critical">
+                <div class="event-date">January 3, 2026</div>
+                <div class="event-title">US Captures Maduro - Iran Axis Devastated</div>
+                <span class="tag military">MILITARY</span>
+                <span class="tag sanctions">SANCTIONS</span>
+                <div class="event-content">
+                    <ul>
+                        <li><strong>OPERATION:</strong> 2-hour military op - Maduro & wife extracted to USS Iwo Jima</li>
+                        <li>Strikes in 4 states: Caracas, La Guaira, Miranda, Aragua</li>
+                        <li>Maduro indicted in SDNY on drug trafficking charges</li>
+                        <li><strong>IRAN IMPACT:</strong> "Devastating setback" to Tehran's Western Hemisphere influence</li>
+                        <li>20-year Iran-Venezuela defense pact disrupted</li>
+                        <li>IRGC investments in billions now at risk</li>
+                        <li>Iran/Hezbollah used Venezuela for terrorism, drug trafficking hub</li>
+                        <li><strong>32 CUBANS KILLED</strong> during operation (Cuban govt statement)</li>
+                        <li>Iran MFA: "Strongly condemns... flagrant violation of sovereignty"</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="event-date">January 3, 2026</div>
+                <div class="event-title">Khamenei Speech - Soleimani Anniversary</div>
+                <span class="tag military">MILITARY</span>
+                <div class="event-content">
+                    <ul>
+                        <li>6th anniversary of Soleimani martyrdom</li>
+                        <li>Met with families of "12-day War" martyrs</li>
+                        <li>Claims Iran "forced enemy to beg for ceasefire"</li>
+                        <li>IRGC vows revenge for Soleimani assassination</li>
+                        <li>Conspicuously avoids mentioning economic protests</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-section">
+            <h2>LEBANON-HEZBOLLAH CEASEFIRE STATUS</h2>
+
+            <div class="event warning">
+                <div class="event-date">January 2026</div>
+                <div class="event-title">Hezbollah Disarmament Deadline Expires</div>
+                <span class="tag hezbollah">HEZBOLLAH</span>
+                <span class="tag military">MILITARY</span>
+                <div class="event-content">
+                    <ul>
+                        <li><strong>DEADLINE PASSED:</strong> US-required Hezbollah disarmament by year-end expired</li>
+                        <li><strong>2,024 VIOLATIONS:</strong> IDF reports Hezbollah breached ceasefire 2,024 times</li>
+                        <li>Netanyahu awaiting Trump green light for new offensive</li>
+                        <li>IDF preparing "swift offensive" lasting "just a few days"</li>
+                        <li>IDF struck Radwan Force training site in southern Lebanon</li>
+                        <li>IDF struck Hezbollah operatives in Al-Khiyam and Jmaijmeh</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="event success">
+                <div class="event-date">January 2026</div>
+                <div class="event-title">New Lebanese Leadership - Aoun & Salam</div>
+                <span class="tag hezbollah">HEZBOLLAH</span>
+                <div class="event-content">
+                    <ul>
+                        <li><strong>PRESIDENT:</strong> Joseph Aoun ends Lebanon's leadership deadlock</li>
+                        <li><strong>PM:</strong> Nawaf Salam appointed Prime Minister</li>
+                        <li>Aoun committed to "state's monopoly on use of force"</li>
+                        <li><strong>HISTORIC:</strong> First direct Lebanese-Israeli civilian talks since 1982</li>
+                        <li>UNIFIL mandate extended only until end of 2026 - then withdrawal</li>
+                        <li>Lebanese Army has 12 months to prove it can secure the south</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-section">
+            <h2>LATE 2025 - POST-WAR PERIOD</h2>
+
+            <div class="event warning">
+                <div class="event-date">December 27, 2025</div>
+                <div class="event-title">IRGC Leadership Restructure - Vahidi Appointed</div>
+                <span class="tag military">MILITARY</span>
+                <div class="event-content">
+                    <ul>
+                        <li><strong>NEW DEPUTY:</strong> Brig. Gen. Ahmad Vahidi appointed IRGC deputy commander</li>
+                        <li>Replaces Ali Fadavi (moved to advisory role)</li>
+                        <li><strong>SIGNIFICANCE:</strong> Vahidi = founder of Quds Force, former Defense Minister</li>
+                        <li><strong>WANTED:</strong> Implicated in 1994 AMIA bombing (85 dead) - Interpol notice</li>
+                        <li>Known for "harsher methods" and strict loyalty to Khamenei</li>
+                        <li>PhD in Strategic Studies - combines academic/operational experience</li>
+                        <li>Reflects Khamenei's struggle to reconstitute military after June 2025 war</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="event warning">
+                <div class="event-date">December 24, 2025</div>
+                <div class="event-title">AEOI Refuses IAEA Inspection</div>
+                <span class="tag nuclear">NUCLEAR</span>
+                <div class="event-content">
+                    AEOI head Eslami refuses IAEA inspection of bombed nuclear sites, citing no "established regulations" for damaged facility inspections.
+                </div>
+            </div>
+
+            <div class="event success">
+                <div class="event-date">November 2025</div>
+                <div class="event-title">OFAC Sanctions - Hezbollah Finance</div>
+                <span class="tag sanctions">SANCTIONS</span>
+                <span class="tag hezbollah">HEZBOLLAH</span>
+                <div class="event-content">
+                    <ul>
+                        <li>Sanctioned individuals funneling tens of millions from Iran to Hezbollah</li>
+                        <li>Targeted exchange houses exploiting Lebanon's cash economy</li>
+                        <li>Key individual: Ossama Jaber - collected/converted tens of millions via exchange houses</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="event success">
+                <div class="event-date">September 2025</div>
+                <div class="event-title">$10M Reward Offer - Hezbollah Networks</div>
+                <span class="tag sanctions">SANCTIONS</span>
+                <span class="tag hezbollah">HEZBOLLAH</span>
+                <div class="event-content">
+                    US State Department Rewards for Justice program announces $10 million reward for information on Hezbollah financial networks in the Tri-Border Area (Argentina, Brazil, Paraguay).
+                </div>
+            </div>
+
+            <div class="event warning">
+                <div class="event-date">August 28, 2025</div>
+                <div class="event-title">E3 Initiates Snapback Mechanism</div>
+                <span class="tag nuclear">NUCLEAR</span>
+                <div class="event-content">
+                    France, Germany, and UK initiate snapback mechanism citing Iran's "highly enriched uranium stockpile."
+                </div>
+            </div>
+
+            <div class="event success">
+                <div class="event-date">August 2025</div>
+                <div class="event-title">Lebanon Votes to Disarm Hezbollah</div>
+                <span class="tag hezbollah">HEZBOLLAH</span>
+                <div class="event-content">
+                    Lebanese government votes on US-backed plan to disarm Hezbollah. Sheikh Qassem continues as Secretary General.
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-section">
+            <h2>JUNE 2025 - IRAN-ISRAEL WAR</h2>
+
+            <div class="event critical">
+                <div class="event-date">June 26, 2025</div>
+                <div class="event-title">IAEA Confirms Nuclear Damage</div>
+                <span class="tag nuclear">NUCLEAR</span>
+                <div class="event-content">
+                    <ul>
+                        <li>Fordow centrifuges "no longer operational"</li>
+                        <li>Esfahan: 4 buildings damaged including uranium conversion plant</li>
+                        <li>Gas centrifuge program destroyed</li>
+                        <li>BUT: 60% uranium stock still usable for nuclear explosive</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="event critical">
+                <div class="event-date">June 21, 2025</div>
+                <div class="event-title">United States Bombs Iranian Nuclear Sites</div>
+                <span class="tag nuclear">NUCLEAR</span>
+                <span class="tag military">MILITARY</span>
+                <div class="event-content">
+                    US bombs three Iranian nuclear sites in coordinated action with Israel.
+                </div>
+            </div>
+
+            <div class="event critical">
+                <div class="event-date">June 13, 2025</div>
+                <div class="event-title">Israel Launches Iran-Israel War</div>
+                <span class="tag military">MILITARY</span>
+                <span class="tag nuclear">NUCLEAR</span>
+                <div class="event-content">
+                    <ul>
+                        <li>200 Israeli fighter jets strike dozens of targets</li>
+                        <li>Natanz and Fordow nuclear facilities hit</li>
+                        <li><strong>IRGC Commander Hossein Salami - KILLED</strong></li>
+                        <li><strong>IRGC Aerospace Chief Amir Ali Hajizadeh - KILLED</strong></li>
+                        <li>Khamenei appoints replacements same day</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="event warning">
+                <div class="event-date">June 12, 2025</div>
+                <div class="event-title">IAEA Finds Iran Non-Compliant</div>
+                <span class="tag nuclear">NUCLEAR</span>
+                <div class="event-content">
+                    First time in 20 years IAEA finds Iran non-compliant. Iran retaliates by launching new enrichment site and installing advanced centrifuges.
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-section">
+            <h2>EARLY 2025 - ESCALATION</h2>
+
+            <div class="event warning">
+                <div class="event-date">May 31, 2025</div>
+                <div class="event-title">IAEA: 408kg of 60% Enriched Uranium</div>
+                <span class="tag nuclear">NUCLEAR</span>
+                <div class="event-content">
+                    <ul>
+                        <li>Nearly 50% increase since February</li>
+                        <li>Enough for multiple nuclear weapons if further enriched</li>
+                        <li>40kg sufficient for implosion-type weapon</li>
+                        <li>80kg sufficient for gun-type explosive</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="event-date">March 2025</div>
+                <div class="event-title">Treasury Targets Sanctions Evasion Network</div>
+                <span class="tag sanctions">SANCTIONS</span>
+                <span class="tag hezbollah">HEZBOLLAH</span>
+                <div class="event-content">
+                    Treasury targets "Hizballah Finance Team Sanctions Evasion Network" - Press release sb0063.
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="event-date">February 25, 2025</div>
+                <div class="event-title">Joint Navy-IRGC Missile Drill</div>
+                <span class="tag military">MILITARY</span>
+                <div class="event-content">
+                    <ul>
+                        <li>Zolfaqar 1403 exercise - first joint exercise of its kind</li>
+                        <li>Maritime Security Belt 2025 with China and Russia</li>
+                        <li>Location: Gulf of Oman near Strait of Hormuz</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="event success">
+                <div class="event-date">January 2025</div>
+                <div class="event-title">IRGC-QF Transfers $1B+ to Hezbollah</div>
+                <span class="tag hezbollah">HEZBOLLAH</span>
+                <span class="tag sanctions">SANCTIONS</span>
+                <div class="event-content">
+                    Since January 2025, IRGC Quds Force transferred over $1 billion to Hezbollah, primarily through money exchange companies.
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-section">
+            <h2>2024 - KEY EVENTS</h2>
+
+            <div class="event critical">
+                <div class="event-date">December 2024</div>
+                <div class="event-title">Assad Regime Collapses in Syria</div>
+                <span class="tag military">MILITARY</span>
+                <span class="tag hezbollah">HEZBOLLAH</span>
+                <div class="event-content">
+                    Assad regime collapse "profoundly degraded" Hezbollah financial transfer capability. Syria served as key bridge to Iran for decades.
+                </div>
+            </div>
+
+            <div class="event success">
+                <div class="event-date">April 2023</div>
+                <div class="event-title">Nazem Ahmad Network Designated</div>
+                <span class="tag sanctions">SANCTIONS</span>
+                <span class="tag hezbollah">HEZBOLLAH</span>
+                <div class="event-content">
+                    <ul>
+                        <li>52 individuals and entities across 9 countries designated</li>
+                        <li>Major Hezbollah financial donor</li>
+                        <li>Blood diamond smuggling in DRC</li>
+                        <li>Facilitated cash, diamonds, gems, art, luxury goods</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="footer">
+    <div class="sources">
+        <strong>SOURCES:</strong> HRANA | Al Jazeera | PBS | Iran International | The Times (UK) | CBS News | NPR |
+        Times of Israel | Critical Threats | Mehr News | Tehran Times | US Treasury OFAC | IAEA Reports |
+        DOJ Press Releases | State Department | khamenei.ir | moqawama.org.lb | Direct OSINT via Tor
+        <br><br>
+        <strong>Last Updated:</strong> 2026-01-04 23:00 UTC | Classification: OSINT - UNCLASSIFIED
+    </div>
+</div>
+
+</body>
+</html>

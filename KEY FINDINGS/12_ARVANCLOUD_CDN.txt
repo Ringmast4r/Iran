@@ -1,0 +1,29 @@
+ARVANCLOUD CDN - IRANIAN GOVERNMENT
+=====================================
+
+FINDING: All major Iranian gov sites use ArvanCloud
+
+CONFIRMED SITES ON ARVANCLOUD:
+- president.ir
+- khamenei.ir
+- irna.ir
+- mfa.gov.ir
+- tasnimnews.com
+- presstv.ir
+- mehrnews.com
+
+ARVANCLOUD DETAILS:
+ASN: AS205585
+Nameserver pattern: *.ns.arvancdn.ir
+Server header: "ArvanCloud"
+
+PRESIDENT.IR ARVANCLOUD IPs:
+- 185.143.234.235
+- 185.143.233.235
+
+WHY IT MATTERS:
+- SINGLE POINT OF FAILURE for Iranian regime web
+- Iranian-owned CDN (not Cloudflare/Akamai)
+- Sanctions-compliant infrastructure
+- All eggs in one basket
+- If ArvanCloud fails = all gov sites fail

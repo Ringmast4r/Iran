@@ -1,0 +1,388 @@
+================================================================================
+                    KHAMENEI.IR OSINT INTELLIGENCE REPORT
+                    Supreme Leader's Official Website
+                    Generated: 2026-01-04
+================================================================================
+
+================================================================================
+EXECUTIVE SUMMARY
+================================================================================
+
+Target: khamenei.ir (Official Website of Ayatollah Khamenei)
+Status: ACTIVE and publicly accessible
+Languages: 14+ (Farsi, English, Arabic, Turkish, French, Spanish, Russian, etc.)
+
+Key Findings:
+- 41 subdomains discovered via Certificate Transparency
+- Google Analytics actively tracking visitors (UA-6238962-2, G-8MVZ1HLJT0)
+- Multiple exposed API endpoints discovered
+- Hidden domain: formx.khamenei.link (API server)
+- Google Site Verification token exposed in DNS TXT records
+- Mail server hosted by Tebyan-e-Noor Cultural-Artistic Institute (AS48434)
+
+================================================================================
+[1] DNS & INFRASTRUCTURE
+================================================================================
+
+MAIN DOMAIN:
+- IP: 5.160.10.200
+- Location: Tehran, Iran
+- ISP: RSPN
+- ASN: AS200554 Dade Pardaz Kimia Pouyesh PJS
+
+MAIL SERVER (MX):
+- Host: najm.khamenei.ir
+- IP: 45.15.201.10
+- ISP: Sigma IT Infrastructures Development Co.
+- ASN: AS57986
+
+ALTERNATIVE MAIL:
+- Host: mail.khamenei.ir
+- IP: 94.232.174.104 (matches SPF record!)
+- ISP: Tebyan-e-Noor Cultural-Artistic Institute
+- ASN: AS48434 (same as documented in CRITICAL_FINDINGS.txt)
+
+LIVE STREAMING:
+- Host: live1.khamenei.ir
+- IP: 81.12.39.67
+- ISP: Respina Networks & Beyond PJSC
+- ASN: AS42337
+
+DNS RECORDS:
+Nameservers:
+- ns1.nashridc.ir (5.160.10.204)
+- ns2.nashridc.ir
+- ns1.nashridc.com
+- ns2.nashridc.com (91.247.188.205)
+
+TXT Records (CRITICAL):
+- SPF: "v=spf1 +a +mx +ip4:94.232.174.104 ~all"
+- Google Site Verification: FrS79LKnklz_7cQGdeYYR5RW-gtYz2sm3JWIVWo24W0
+
+NOTE: Google Site Verification token proves the Supreme Leader's office
+has a Google account and uses Google services for site verification.
+
+================================================================================
+[2] SUBDOMAINS DISCOVERED (41 total)
+================================================================================
+
+LANGUAGE PORTALS:
+- arabic.khamenei.ir
+- english.khamenei.ir
+- farsi.khamenei.ir
+- french.khamenei.ir
+- hindi.khamenei.ir
+- russian.khamenei.ir
+- spanish.khamenei.ir
+- urdu.khamenei.ir
+- turkish.khamenei.ir (from HTML)
+- hausa.khamenei.ir (from HTML)
+- japanese.khamenei.ir (from HTML)
+- indonesian.khamenei.ir (from HTML)
+- swahili.khamenei.ir (from HTML)
+
+CDN NODES (Per-Language):
+- cdn-arabic.khamenei.ir
+- cdn-azeri.khamenei.ir
+- cdn-english.khamenei.ir
+- cdn-farsi.khamenei.ir
+- cdn-french.khamenei.ir
+- cdn-hindi.khamenei.ir
+- cdn-nojavan.khamenei.ir
+- cdn-russian.khamenei.ir
+- cdn-spanish.khamenei.ir
+- cdn-urdu.khamenei.ir
+
+IDC (Data Center) CDN:
+- idc0-cdn0.khamenei.ir
+- idc0-cdn1.khamenei.ir
+- idc0-cdn4.khamenei.ir
+- idc0-cdn5.khamenei.ir
+
+LIVE STREAMING INFRASTRUCTURE:
+- live.idc0-cdn1.khamenei.ir
+- live.idc0-cdn2.khamenei.ir
+- live.idc0-cdn3.khamenei.ir
+- live.idc0-cdn4.khamenei.ir
+- live.idc0-cdn11.khamenei.ir
+- live.idc0-cdn12.khamenei.ir
+- live.idc0-cdn13.khamenei.ir
+- live1.khamenei.ir
+- live2.khamenei.ir
+- live3.khamenei.ir
+- live4.khamenei.ir
+- live5.khamenei.ir
+
+SPECIAL PORTALS:
+- nojavan.khamenei.ir (Youth portal)
+- virastar.nojavan.khamenei.ir (Youth editor)
+- doran.khamenei.ir (Unknown - possibly "era/period")
+- gaame2.khamenei.ir (Unknown - possibly "step")
+- admin.english.khamenei.ir (ADMIN PORTAL!)
+- irane-hamdel.khamenei.ir (from HTML - solidarity portal)
+
+HIDDEN DOMAIN (NOT in crt.sh):
+- formx.khamenei.link (API server - see section 4)
+
+================================================================================
+[3] TRACKING & ANALYTICS
+================================================================================
+
+GOOGLE ANALYTICS:
+- Universal Analytics: UA-6238962-2
+- GA4: G-8MVZ1HLJT0
+
+GOOGLE TAG MANAGER:
+- GTM URL: googletagmanager.com/gtag/js?id=G-8MVZ1HLJT0
+
+GOOGLE SITE VERIFICATION:
+- Token: FrS79LKnklz_7cQGdeYYR5RW-gtYz2sm3JWIVWo24W0
+
+INTELLIGENCE VALUE:
+- Google has complete visibility into all khamenei.ir traffic
+- Visitor demographics, locations, reading patterns visible to Google
+- The "anti-Western" Supreme Leader uses Western tracking extensively
+- GA account UA-6238962 is one of the oldest in use (registered ~2006-2008)
+
+================================================================================
+[4] API ENDPOINTS DISCOVERED
+================================================================================
+
+HIDDEN API SERVER:
+- Domain: formx.khamenei.link
+- Endpoint: https://formx.khamenei.link/farsi-json/topticker
+- Status: ACTIVE (returns JSON)
+- Response includes:
+  - Unix timestamp
+  - Persian date
+  - News items with redirect tracking
+
+REDIRECT TRACKING SYSTEM:
+API returns URLs like:
+redirect?id=62251&c=ae8373ca17dc9561f317&u=https://farsi.khamenei.ir/...
+
+The "c" parameter appears to be a tracking hash for each link.
+
+PUBLIC SERVICE ENDPOINTS:
+- https://english.khamenei.ir/service/artworks
+- https://english.khamenei.ir/service/Analysis
+- http://english.khamenei.ir/service/leader-s-opinion
+
+DATA ENDPOINTS:
+- https://farsi.khamenei.ir/ndata/news/{id}/View
+- https://farsi.khamenei.ir/ndata/news/{id}/Highlights
+- https://idc0-cdn0.khamenei.ir/ndata/news/{id}/nama2
+
+================================================================================
+[5] TECHNOLOGY STACK
+================================================================================
+
+SERVER:
+- Web Server: nginx
+- Caching: Custom (Age, X-Cache-Hits headers)
+- Location Header: rt-loc: I01, T01 (datacenter identifiers)
+
+CMS:
+- Generator: www.nastooh.ir (Iranian CMS platform)
+- Content-Language: en_IR (English/Iran locale)
+
+JAVASCRIPT LIBRARIES:
+- jQuery 1.6.2 (outdated!)
+- Swiper (slider)
+- Lazy Load 1.9.3
+- QRCode.js
+- vTicker 1.15
+- TinyScrollbar 1.8.1
+- Custom video/audio players
+
+VIDEO PLAYER:
+- Video.js with VR support
+- Custom video-actions.js
+- videojs-ie8.min.js (IE8 compatibility)
+
+LIVE STREAMING:
+- Custom player-live/activity.js
+- Multiple CDN endpoints for redundancy
+
+================================================================================
+[6] HTTP HEADERS & SECURITY ANALYSIS
+================================================================================
+
+RESPONSE HEADERS:
+Server: nginx
+Content-Type: text/html;charset=UTF-8
+Transfer-Encoding: chunked
+Keep-Alive: timeout=15
+Content-Encoding: gzip
+Vary: Accept-Encoding
+X-Cache-Hits: 0
+grace: none
+rt-loc: I01, T01
+
+SECURITY HEADERS STATUS:
+[OK] Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+[OK] X-Frame-Options: SAMEORIGIN
+[OK] X-Content-Type-Options: nosniff
+[OK] X-XSS-Protection: 1; mode=block
+[MISSING] Content-Security-Policy
+[MISSING] Referrer-Policy
+[MISSING] Permissions-Policy
+
+ANALYSIS:
+- Better security than initially observed (HSTS with 1-year max-age + preload)
+- X-Frame-Options prevents clickjacking
+- Missing CSP allows potential XSS vectors
+- "rt-loc: I01, T01" reveals datacenter routing
+
+================================================================================
+[6.1] SSL CERTIFICATE DETAILS
+================================================================================
+
+CERTIFICATE INFO:
+- Common Name: *.khamenei.ir (WILDCARD)
+- Issuer: Let's Encrypt (R13)
+- Valid From: Dec 27, 2025
+- Valid Until: Mar 27, 2026
+
+SUBJECT ALTERNATIVE NAMES (SAN):
+- *.khamenei.ir
+- *.english.khamenei.ir
+- *.nojavan.khamenei.ir
+- khamenei.ir
+
+NOTE: Wildcard cert allows unlimited subdomains without new certs.
+
+================================================================================
+[6.2] ROBOTS.TXT & SITEMAP
+================================================================================
+
+ROBOTS.TXT:
+User-Agent: *
+Allow: /
+
+ANALYSIS: Very permissive - allows all crawlers access to everything.
+
+SITEMAP.XML (Key URLs discovered):
+- /index - Homepage
+- /telex - News ticker (priority: 0.8, hourly updates)
+- /fast - Fast news
+- /keyword-index - Keyword index
+- /memory-index - Memory/history index
+- /speech - Speeches (priority: 0.9)
+- /speech-quran - Quran commentaries
+- /speech-nahj - Nahj al-Balagha commentaries
+- /speech-hadis - Hadith commentaries
+
+================================================================================
+[6.3] WAYBACK MACHINE HISTORY
+================================================================================
+
+FIRST ARCHIVED: November 30, 2002
+WEBSITE AGE: 23+ years online!
+
+HISTORICAL SNAPSHOTS:
+- 2002-11-30: First archive of http://www.khamenei.ir
+- 2003-02-11: Second snapshot
+- 2004-04-13: Early site evolution
+- Continuous archiving since
+
+INTELLIGENCE VALUE:
+- Can compare old vs new infrastructure
+- Track domain/hosting changes over time
+- Find removed content or hidden pages
+
+================================================================================
+[6.4] EXPOSED FILES CHECK
+================================================================================
+
+TESTED PATHS:
+/.git/HEAD      - Not exposed
+/.git/config    - Not exposed
+/.env           - Not exposed
+/swagger.json   - Not exposed
+/api-docs       - Not exposed
+/graphql        - Not exposed
+/humans.txt     - Not found
+/security.txt   - Not found
+
+SOURCE MAPS:
+/js/global.js.map  - 404 (not exposed)
+/js/forms.js.map   - 404 (not exposed)
+
+ANALYSIS: Good security - no common sensitive files exposed
+
+================================================================================
+[7] POTENTIAL CREDENTIALS/HASHES
+================================================================================
+
+MD5-LIKE HASHES FOUND: 1
+SHA1-LIKE HASHES FOUND: 1
+
+These may be:
+- Asset checksums
+- User session tokens
+- Cache busting strings
+
+EXPOSED DATA IN URLS:
+- Tracking hashes in redirect URLs (c=ae8373ca17dc9561f317)
+- News content IDs (id=62251)
+- Version strings (v=1398-4 - Persian year 1398)
+
+================================================================================
+[8] ADMIN PORTAL DISCOVERY
+================================================================================
+
+CRITICAL: admin.english.khamenei.ir exists in Certificate Transparency!
+
+This indicates:
+- Administrative interface exists
+- May be accessible via VPN/internal network only
+- Could be targeted for credential attacks
+
+================================================================================
+[9] OPERATIONAL SECURITY OBSERVATIONS
+================================================================================
+
+WHAT THEY DO WELL:
+- Multiple CDN endpoints for redundancy
+- Language-specific CDNs for localization
+- Live streaming infrastructure distributed
+- Hidden API domain (khamenei.link vs khamenei.ir)
+
+WHAT THEY DO POORLY:
+- Google Analytics on Supreme Leader's site (ironic)
+- Google Site Verification exposed in DNS
+- Admin subdomain exposed in certs
+- Outdated jQuery (1.6.2 - security vulnerabilities)
+- No security headers (CSP, HSTS, X-Frame-Options)
+- Redirect tracking hashes predictable format
+- API endpoints enumerable
+
+================================================================================
+[10] FILES SAVED
+================================================================================
+
+RAW HTML:
+- C:\Users\Squir\Desktop\IRAN\resources\khamenei\raw_html\english_khamenei_ir.html
+- C:\Users\Squir\Desktop\IRAN\resources\khamenei\raw_html\farsi_khamenei_ir.html
+
+JAVASCRIPT:
+- C:\Users\Squir\Desktop\IRAN\resources\khamenei\js\global.js (73KB)
+- C:\Users\Squir\Desktop\IRAN\resources\khamenei\js\forms.js (11KB)
+- C:\Users\Squir\Desktop\IRAN\resources\khamenei\js\activity.js (6KB)
+
+================================================================================
+[11] RECOMMENDATIONS FOR FURTHER ANALYSIS
+================================================================================
+
+1. Reverse engineer API at formx.khamenei.link for more endpoints
+2. Enumerate all /service/* endpoints
+3. Download and analyze mobile apps if available
+4. Monitor admin.english.khamenei.ir for accessibility
+5. Archive all language versions
+6. Extract and analyze all JavaScript for hidden endpoints
+7. Monitor Google Analytics account for linked properties
+
+================================================================================
+                              END KHAMENEI.IR OSINT REPORT
+================================================================================

@@ -1,0 +1,28 @@
+FARSNEWS.IR - INTERNAL TOOLS EXPOSED
+=====================================
+
+FINDING: IRGC-linked Fars News has exposed dev infrastructure
+
+EXPOSED SYSTEMS:
+- jira.farsnews.ir (Atlassian JIRA - Issue Tracker)
+- confluence.farsnews.ir (Atlassian Confluence - Wiki)
+- git.farsnews.ir (Git Repository)
+- svn.farsnews.ir (Subversion Repository)
+- chat.farsnews.ir (Internal Chat System)
+- api.farsnews.ir (API Endpoint - returns 401)
+
+MOBILE APP EXPOSED:
+- URL: https://dl.farsnews.ir/app.apk
+- Can be reverse engineered
+- May contain hardcoded API keys
+
+API HEADERS REVEAL:
+- duid (device unique ID)
+- platform, os
+- app-market, app-scope
+
+WHY IT MATTERS:
+- JIRA/Confluence often contain credentials
+- Git/SVN = potential source code exposure
+- Chat system = internal communications
+- APK reverse engineering = API secrets

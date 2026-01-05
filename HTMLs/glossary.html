@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iran-Hezbollah Glossary | Key Terms</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .header {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 4px solid #cc0000;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .header .subtitle {
+            color: #888;
+            font-size: 1.1em;
+        }
+
+        .search-container {
+            background: #f5f5f5;
+            padding: 30px 20px;
+            border-bottom: 2px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 1.1em;
+            border: 3px solid #1a1a1a;
+            border-radius: 0;
+            outline: none;
+        }
+
+        .search-box input:focus {
+            border-color: #cc0000;
+        }
+
+        .search-box .search-hint {
+            text-align: center;
+            color: #666;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        .results-count {
+            text-align: center;
+            padding: 10px;
+            color: #666;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .category {
+            margin-bottom: 40px;
+        }
+
+        .category h2 {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 15px 25px;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            border-left: 5px solid #cc0000;
+        }
+
+        .term {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-left: 4px solid #1a1a1a;
+        }
+
+        .term.hidden {
+            display: none;
+        }
+
+        .term-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+
+        .term-alt {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .term-def {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .term-context {
+            background: #fff;
+            padding: 10px 15px;
+            border-left: 3px solid #ff6600;
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 3px 10px;
+            font-size: 0.7em;
+            font-weight: bold;
+            border-radius: 3px;
+            margin-right: 5px;
+            text-transform: uppercase;
+        }
+
+        .tag.military { background: #ff6600; color: #fff; }
+        .tag.political { background: #cc0000; color: #fff; }
+        .tag.financial { background: #00aa44; color: #fff; }
+        .tag.nuclear { background: #1a1a1a; color: #fff; }
+        .tag.org { background: #666; color: #fff; }
+
+        .footer {
+            background: #1a1a1a;
+            color: #666;
+            padding: 30px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 { font-size: 1.8em; }
+            .term-name { font-size: 1.1em; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>IRAN-HEZBOLLAH GLOSSARY</h1>
+    <div class="subtitle">Key Terms for Understanding the Conflict</div>
+</div>
+
+<div class="search-container">
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search terms... (e.g., IRGC, sanctions, Hezbollah)" onkeyup="searchTerms()">
+        <div class="search-hint">Type to filter terms instantly</div>
+    </div>
+    <div class="results-count" id="resultsCount"></div>
+</div>
+
+<div class="container" id="glossaryContainer">
+
+    <div class="category">
+        <h2>IRANIAN GOVERNMENT & MILITARY</h2>
+
+        <div class="term" data-terms="supreme leader khamenei ayatollah iran government religious head">
+            <div class="term-name">Supreme Leader (Rahbar)</div>
+            <div class="term-alt">Currently: Ayatollah Ali Khamenei (since 1989)</div>
+            <span class="tag political">POLITICAL</span>
+            <div class="term-def">The highest political and religious authority in Iran. Controls the military, judiciary, and state media. Has final say on all major state decisions. Not elected by popular vote.</div>
+            <div class="term-context">Khamenei has been Supreme Leader for 35+ years. He appoints the heads of the IRGC, judiciary, and state broadcasting.</div>
+        </div>
+
+        <div class="term" data-terms="irgc revolutionary guard corps pasdaran military iran elite force">
+            <div class="term-name">IRGC (Islamic Revolutionary Guard Corps)</div>
+            <div class="term-alt">Persian: Sepah-e Pasdaran | Also: Revolutionary Guards, Pasdaran</div>
+            <span class="tag military">MILITARY</span>
+            <div class="term-def">Iran's elite military force, separate from the regular army. ~125,000 personnel. Controls missiles, drones, and special operations. Designated a Foreign Terrorist Organization (FTO) by the US in 2019.</div>
+            <div class="term-context">The IRGC answers directly to the Supreme Leader, not the President. They control significant portions of Iran's economy including construction, oil, and telecommunications.</div>
+        </div>
+
+        <div class="term" data-terms="quds force qods special operations foreign irgc soleimani">
+            <div class="term-name">IRGC Quds Force</div>
+            <div class="term-alt">Also: Qods Force, Jerusalem Force</div>
+            <span class="tag military">MILITARY</span>
+            <div class="term-def">The external operations branch of the IRGC. Conducts covert operations, supports proxy militias (Hezbollah, Hamas, Houthis), and projects Iranian power abroad. ~15,000 operatives.</div>
+            <div class="term-context">Qassem Soleimani led the Quds Force until his assassination in January 2020. The force funnels over $1 billion annually to Hezbollah.</div>
+        </div>
+
+        <div class="term" data-terms="basij militia paramilitary volunteer iran protests crackdown">
+            <div class="term-name">Basij</div>
+            <div class="term-alt">Full name: Basij Resistance Force</div>
+            <span class="tag military">MILITARY</span>
+            <div class="term-def">Paramilitary volunteer militia under IRGC control. Used for internal security, protest suppression, and enforcing Islamic codes. Millions of members including students and civil servants.</div>
+            <div class="term-context">The Basij are typically deployed to violently suppress protests. They were heavily involved in crackdowns during the 2009 Green Movement and 2022 Mahsa Amini protests.</div>
+        </div>
+
+        <div class="term" data-terms="aeoi atomic energy nuclear program enrichment">
+            <div class="term-name">AEOI (Atomic Energy Organization of Iran)</div>
+            <span class="tag nuclear">NUCLEAR</span>
+            <div class="term-def">Iran's civilian nuclear agency responsible for uranium enrichment, nuclear research, and operating facilities at Natanz, Fordow, and Isfahan.</div>
+            <div class="term-context">The AEOI claims Iran's nuclear program is peaceful, but enrichment to 60% (near weapons-grade) has raised international alarm.</div>
+        </div>
+    </div>
+
+    <div class="category">
+        <h2>HEZBOLLAH & PROXIES</h2>
+
+        <div class="term" data-terms="hezbollah hizballah lebanon militia party god terrorist">
+            <div class="term-name">Hezbollah</div>
+            <div class="term-alt">Arabic: Hizb Allah ("Party of God") | Founded: 1982</div>
+            <span class="tag org">ORGANIZATION</span>
+            <div class="term-def">Lebanese Shia militant group and political party. Founded and funded by Iran. Designated a terrorist organization by US, EU, UK, and others. Has ~30,000 fighters and extensive rocket arsenal.</div>
+            <div class="term-context">Hezbollah receives $700M-$1B+ annually from Iran. They fought Israel in 2006 and have been involved in Syrian civil war supporting Assad.</div>
+        </div>
+
+        <div class="term" data-terms="nasrallah qassem sheikh secretary general hezbollah leader">
+            <div class="term-name">Sheikh Naim Qassem</div>
+            <div class="term-alt">Current Hezbollah Secretary General</div>
+            <span class="tag org">ORGANIZATION</span>
+            <div class="term-def">Current leader of Hezbollah. Previously served as Deputy Secretary General under Hassan Nasrallah.</div>
+            <div class="term-context">Qassem assumed leadership after previous leadership losses. He continues Hezbollah's alignment with Iran's "Axis of Resistance."</div>
+        </div>
+
+        <div class="term" data-terms="axis resistance iran proxies houthis hamas militia network">
+            <div class="term-name">Axis of Resistance</div>
+            <div class="term-alt">Arabic: Mihwar al-Muqawama</div>
+            <span class="tag military">MILITARY</span>
+            <div class="term-def">Iran-led coalition of allied governments and militias opposing US and Israeli influence. Includes: Syria (Assad), Hezbollah (Lebanon), Hamas (Gaza), Houthis (Yemen), and various Iraqi militias.</div>
+            <div class="term-context">Iran uses this network to project power without direct confrontation. The December 2024 fall of Assad significantly weakened this axis.</div>
+        </div>
+
+        <div class="term" data-terms="moqawama resistance website media propaganda">
+            <div class="term-name">Moqawama</div>
+            <div class="term-alt">Arabic: "Resistance"</div>
+            <span class="tag org">ORGANIZATION</span>
+            <div class="term-def">Term used by Hezbollah and Iran to describe their "resistance" movement against Israel and the US. Also the name of Hezbollah's main website (moqawama.org.lb).</div>
+            <div class="term-context">The .org domain was seized by the US DOJ, but the .org.lb Lebanese domain remains active outside US jurisdiction.</div>
+        </div>
+    </div>
+
+    <div class="category">
+        <h2>NUCLEAR TERMS</h2>
+
+        <div class="term" data-terms="enrichment uranium centrifuge nuclear weapons heu leu">
+            <div class="term-name">Uranium Enrichment</div>
+            <span class="tag nuclear">NUCLEAR</span>
+            <div class="term-def">Process of increasing concentration of U-235 isotope. Natural uranium is 0.7% U-235. Power reactors need 3-5%. Weapons-grade is 90%+. Iran has enriched to 60% - just one technical step from weapons-grade.</div>
+            <div class="term-context">As of May 2025, Iran had 408kg of 60% enriched uranium - enough for multiple nuclear weapons if further enriched.</div>
+        </div>
+
+        <div class="term" data-terms="iaea international atomic energy agency inspectors vienna un">
+            <div class="term-name">IAEA</div>
+            <div class="term-alt">International Atomic Energy Agency</div>
+            <span class="tag nuclear">NUCLEAR</span>
+            <div class="term-def">UN nuclear watchdog based in Vienna. Monitors nuclear programs worldwide through inspections and surveillance. Reports to UN Security Council on compliance.</div>
+            <div class="term-context">In June 2025, the IAEA found Iran non-compliant for the first time in 20 years, triggering military action.</div>
+        </div>
+
+        <div class="term" data-terms="natanz fordow nuclear facility underground enrichment">
+            <div class="term-name">Natanz & Fordow</div>
+            <span class="tag nuclear">NUCLEAR</span>
+            <div class="term-def"><strong>Natanz:</strong> Iran's primary enrichment facility, above and below ground. <strong>Fordow:</strong> Deeply buried facility inside a mountain, nearly impervious to conventional bombs.</div>
+            <div class="term-context">Both facilities were struck during the June 2025 Israel-Iran war. Fordow's centrifuges were rendered "no longer operational" per IAEA.</div>
+        </div>
+
+        <div class="term" data-terms="jcpoa iran deal nuclear agreement snapback">
+            <div class="term-name">JCPOA (Iran Nuclear Deal)</div>
+            <div class="term-alt">Joint Comprehensive Plan of Action (2015)</div>
+            <span class="tag nuclear">NUCLEAR</span>
+            <div class="term-def">2015 agreement limiting Iran's nuclear program in exchange for sanctions relief. US withdrew in 2018 under Trump. Iran subsequently exceeded all limits.</div>
+            <div class="term-context">The "snapback" mechanism allows any original participant to restore all UN sanctions - triggered by E3 (France, Germany, UK) in August 2025.</div>
+        </div>
+    </div>
+
+    <div class="category">
+        <h2>SANCTIONS & FINANCE</h2>
+
+        <div class="term" data-terms="ofac treasury sanctions designations sdn list blocked">
+            <div class="term-name">OFAC</div>
+            <div class="term-alt">Office of Foreign Assets Control (US Treasury)</div>
+            <span class="tag financial">FINANCIAL</span>
+            <div class="term-def">US Treasury office that administers economic sanctions. Maintains the SDN (Specially Designated Nationals) list of blocked persons and entities.</div>
+            <div class="term-context">OFAC has designated hundreds of Iranian individuals, companies, and Hezbollah financiers. Sanctions make it illegal for US persons to do business with them.</div>
+        </div>
+
+        <div class="term" data-terms="rial currency iran money inflation collapse economic">
+            <div class="term-name">Iranian Rial</div>
+            <span class="tag financial">FINANCIAL</span>
+            <div class="term-def">Iran's currency. Has lost over 90% of its value since 2018 sanctions. As of late 2025, approximately 600,000+ rials = 1 USD (black market rate).</div>
+            <div class="term-context">The rial's collapse in December 2025 triggered the ongoing economic protests, as citizens can no longer afford basic goods.</div>
+        </div>
+
+        <div class="term" data-terms="hawala money transfer informal exchange network">
+            <div class="term-name">Hawala</div>
+            <span class="tag financial">FINANCIAL</span>
+            <div class="term-def">Informal money transfer system used throughout Middle East. Allows moving funds without formal banking. Iran and Hezbollah use hawala networks to evade sanctions.</div>
+            <div class="term-context">IRGC-QF uses exchange houses and hawala networks to transfer billions to Hezbollah, bypassing the SWIFT banking system.</div>
+        </div>
+
+        <div class="term" data-terms="secondary sanctions foreign companies banks third party">
+            <div class="term-name">Secondary Sanctions</div>
+            <span class="tag financial">FINANCIAL</span>
+            <div class="term-def">US sanctions that punish foreign (non-US) companies and banks for doing business with Iran. Forces global companies to choose between Iranian market or US financial system.</div>
+            <div class="term-context">Secondary sanctions have effectively isolated Iran from global banking and trade, as most international banks refuse to process Iran-related transactions.</div>
+        </div>
+    </div>
+
+    <div class="category">
+        <h2>CURRENT EVENTS</h2>
+
+        <div class="term" data-terms="protests riots demonstrations economic uprising 2025 2026">
+            <div class="term-name">2025-2026 Economic Protests</div>
+            <span class="tag political">POLITICAL</span>
+            <div class="term-def">Ongoing nationwide protests that began December 28, 2025 triggered by currency collapse and economic hardship. Largest demonstrations since 2022 Mahsa Amini uprising.</div>
+            <div class="term-context">Protests have spread to 22 of 31 provinces with 100+ locations affected. Security forces have used live ammunition, killing multiple protesters.</div>
+        </div>
+
+        <div class="term" data-terms="twelve day war iran israel june 2025 bombing nuclear">
+            <div class="term-name">12-Day War (June 2025)</div>
+            <span class="tag military">MILITARY</span>
+            <div class="term-def">Brief but intense conflict between Israel/US and Iran in June 2025. Israeli strikes destroyed nuclear facilities; US bombed three additional sites. IRGC commander Salami killed.</div>
+            <div class="term-context">Iran's regime claims they "forced the enemy to beg for ceasefire" but suffered significant military and nuclear infrastructure losses.</div>
+        </div>
+
+        <div class="term" data-terms="mahsa amini woman life freedom hijab 2022">
+            <div class="term-name">Mahsa Amini Protests (2022)</div>
+            <div class="term-alt">Also: Woman, Life, Freedom Movement</div>
+            <span class="tag political">POLITICAL</span>
+            <div class="term-def">Nationwide protests sparked by death of 22-year-old Mahsa Amini in morality police custody (September 2022). Hundreds killed in government crackdown.</div>
+            <div class="term-context">The 2022 protests weakened the regime's legitimacy. Current 2025-2026 economic protests are compared to this movement in scale.</div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    <strong>Generated:</strong> 2026-01-04 | Classification: OSINT - UNCLASSIFIED<br>
+    <em>For educational purposes - understanding Iran-related terminology</em>
+</div>
+
+<script>
+function searchTerms() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const terms = document.querySelectorAll('.term');
+    let visibleCount = 0;
+
+    terms.forEach(term => {
+        const name = term.querySelector('.term-name').textContent.toLowerCase();
+        const alt = term.querySelector('.term-alt')?.textContent.toLowerCase() || '';
+        const def = term.querySelector('.term-def').textContent.toLowerCase();
+        const dataTerms = term.getAttribute('data-terms').toLowerCase();
+
+        if (name.includes(input) || alt.includes(input) || def.includes(input) || dataTerms.includes(input)) {
+            term.classList.remove('hidden');
+            visibleCount++;
+        } else {
+            term.classList.add('hidden');
+        }
+    });
+
+    const resultsDiv = document.getElementById('resultsCount');
+    if (input.length > 0) {
+        resultsDiv.textContent = `Showing ${visibleCount} of ${terms.length} terms`;
+    } else {
+        resultsDiv.textContent = '';
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+US DOJ DOMAIN SEIZURES - EFFECTIVENESS
+=======================================
+
+SEIZED BY US DOJ:
+- moqawama.org -> DOJ seizure page
+- almanarnews.org -> DOJ seizure page
+- manarnews.org -> DOJ seizure page
+- almanar-tv.org -> DOJ seizure page
+- alshahid.org -> DOJ seizure page
+
+STILL OPERATIONAL (.lb TLD):
+- moqawama.org.lb (Islamic Resistance)
+- almanar.com.lb (Al-Manar TV)
+- alahednews.com.lb (Al-Ahed News)
+
+EFFECTIVENESS: MINIMAL
+- .lb TLD = Lebanese jurisdiction
+- US cannot seize Lebanese domains
+- All core operations continue
+- Only .org/.com variants seized
+- .lb alternatives pre-positioned
+
+HOSTING RESILIENCE:
+- Russian hosting (Okay-Telecom, Selectel)
+- Hungarian DNS (NewPush Europe)
+- Multi-country redundancy
+
+WHY IT MATTERS:
+- Seizures are symbolic only
+- Hezbollah anticipated US action
+- .lb domains remain untouchable
+- Infrastructure planning evident

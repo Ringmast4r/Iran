@@ -1,0 +1,36 @@
+KHAMENEI.IR - STREAMING INFRASTRUCTURE
+=======================================
+
+FINDING: 5-server high-availability streaming setup
+
+LIVE STREAMING SERVERS:
+- live1.khamenei.ir
+- live2.khamenei.ir
+- live3.khamenei.ir
+- live4.khamenei.ir
+- live5.khamenei.ir
+
+CDN NODES:
+- cdn-*.khamenei.ir (multiple)
+
+LANGUAGE PROPAGANDA NETWORK:
+- farsi.khamenei.ir (Primary)
+- english.khamenei.ir
+- arabic.khamenei.ir
+- french.khamenei.ir
+- spanish.khamenei.ir
+- russian.khamenei.ir
+- urdu.khamenei.ir
+- hindi.khamenei.ir
+- azeri.khamenei.ir
+- nojavan.khamenei.ir (Youth targeting)
+
+MAIL SERVER SEPARATION:
+- Main site: 5.160.10.200-202 (AS200554)
+- Mail: 94.232.174.104 (AS48434 Tebyan-e-Noor)
+
+WHY IT MATTERS:
+- 5 live servers = high redundancy
+- Nojavan = youth radicalization target
+- Mail on separate ASN = compartmentalized
+- Tebyan-e-Noor = "cultural institute" cover

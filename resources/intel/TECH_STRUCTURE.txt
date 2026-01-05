@@ -1,0 +1,321 @@
+================================================================================
+                    HEZBOLLAH NETWORK TECHNICAL INFRASTRUCTURE
+                    Analysis Date: 2026-01-04
+                    Collection Method: Tor (RU/TR/AE/LB exits)
+================================================================================
+
+[1] SERVER INFRASTRUCTURE
+================================================================================
+
+MOQAWAMA.ORG.LB (Main Resistance Portal)
+--------------------------------------------------------------------------------
+Server:         Apache
+Backend:        PHP (PHPSESSID cookies)
+Session Cookie: PHPSESSID=83d0d0dde0bdea9c508fb780f5e22330
+Protocol:       HTTP/1.1 with H2 upgrade support
+CORS:           Access-Control-Allow-Origin: *
+Cache:          no-store, no-cache, must-revalidate
+Hosting:        Lebanese ISP (outside US jurisdiction)
+
+VIDEO.MOQAWAMA.ORG.LB
+--------------------------------------------------------------------------------
+Server:         Apache
+Backend:        PHP
+Protocol:       HTTP/1.1 with H2 upgrade
+Content-Type:   text/html; charset=UTF-8
+
+AUDIO.MOQAWAMA.ORG.LB
+--------------------------------------------------------------------------------
+Server:         Apache
+Backend:        PHP
+Session Cookie: sec_session_id=78278a485df2a5807e6d9c45158a989e (HttpOnly)
+CORS:           Access-Control-Allow-Origin: *
+
+GALLERY.MOQAWAMA.ORG.LB
+--------------------------------------------------------------------------------
+Server:         Apache
+Backend:        PHP
+Session Cookie: sec_session_id=d0130803e2bad19514db5f13679dbd1f (HttpOnly)
+
+GAMES.MOQAWAMA.ORG.LB
+--------------------------------------------------------------------------------
+Server:         Apache
+Security:       Strict-Transport-Security (HSTS)
+                X-Frame-Options: sameorigin
+                X-XSS-Protection: 1; mode=block
+                X-Content-Type-Options: nosniff
+                Referrer-Policy: no-referrer
+Last-Modified:  Tue, 20 Feb 2024 08:19:02 GMT (STATIC - not updated)
+
+ENGLISH.ALAHEDNEWS.COM.LB -> ALAHEDNEWS.NEWS
+--------------------------------------------------------------------------------
+Server:         Apache
+Redirect:       301 to https://english.alahednews.news/
+Security:       HSTS enabled
+Note:           Domain migrated from .com.lb to .news TLD
+
+ENGLISH.ALMANAR.COM.LB (Al-Manar TV)
+--------------------------------------------------------------------------------
+Server:         nginx (different from others)
+Cache:          X-Proxy-Cache: EXPIRED (CDN/reverse proxy)
+Security:       HSTS enabled
+Backend:        Separate infrastructure from Moqawama network
+
+--------------------------------------------------------------------------------
+
+[2] DISCOVERED EMAIL ADDRESSES
+================================================================================
+
+info@moqawama.org.lb      - Main contact (audio/video subdomain footers)
+games@moqawama.org        - Games subdomain (uses seized .org domain!)
+
+OPSEC FAILURE: games@moqawama.org still references the US-seized domain,
+indicating outdated contact info or internal use of seized domain.
+
+--------------------------------------------------------------------------------
+
+[3] SESSION HASHES COLLECTED
+================================================================================
+
+PHPSESSID:      83d0d0dde0bdea9c508fb780f5e22330    (moqawama.org.lb)
+sec_session_id: 78278a485df2a5807e6d9c45158a989e    (audio.moqawama.org.lb)
+sec_session_id: d0130803e2bad19514db5f13679dbd1f    (gallery.moqawama.org.lb)
+
+Note: All MD5 hashes (32 hex chars), standard PHP session format.
+Different cookie names suggest separate application instances.
+
+--------------------------------------------------------------------------------
+
+[4] CSS/JS CACHE HASHES (Al-Manar)
+================================================================================
+
+mnrminify_3c902298363cd2282b362f860e54fe29.css
+
+Pattern: mnrminify_[MD5].css
+Indicates: Custom minification system, content-based cache busting
+
+--------------------------------------------------------------------------------
+
+[5] DOMAIN STRUCTURE
+================================================================================
+
+MOQAWAMA NETWORK:
+├── moqawama.org.lb          (Main portal - Arabic)
+│   ├── video.moqawama.org.lb
+│   ├── audio.moqawama.org.lb
+│   ├── gallery.moqawama.org.lb
+│   ├── games.moqawama.org.lb
+│   └── july2006.moqawama.org.lb (2006 war archive)
+│
+├── moqawama.org             (SEIZED BY US DOJ)
+│
+└── alahednews.news          (News - migrated from .com.lb)
+    └── english.alahednews.news
+
+AL-MANAR NETWORK (Separate infrastructure):
+└── almanar.com.lb
+    └── english.almanar.com.lb
+
+--------------------------------------------------------------------------------
+
+[6] URL PATTERNS & ENDPOINTS
+================================================================================
+
+MOQAWAMA ESSAYS:
+/essaydetails.php?eid=[ID]
+- Sequential IDs (41998-42010+ observed)
+- Arabic content
+
+MOQAWAMA CATEGORIES:
+/category.php?catid=[ID]
+- Category IDs: 199, 209, 212, 330, 537-541
+
+MOQAWAMA SPECIAL PAGES:
+/chahid.php              - Martyrs database
+/fimisil.php             - Military operations
+/leadership.php          - Leadership info
+/history.php             - Organization history
+/structure.php           - Org structure
+
+GALLERY:
+/martyrs.php?page=[N]    - Paginated martyrs list
+/albums.php?aid=[ID]     - Photo albums
+
+VIDEO:
+/details.php?id=[ID]     - Video detail pages
+
+AUDIO:
+/details.php?id=[ID]     - Audio/speech detail pages
+
+AL-AHED NEWS:
+/category/[ID]           - News categories
+/page/[N]                - Pagination
+
+--------------------------------------------------------------------------------
+
+[7] TECHNOLOGY STACK SUMMARY
+================================================================================
+
++-------------------+------------------------------------------+
+| Component         | Technology                               |
++-------------------+------------------------------------------+
+| Web Server        | Apache (Moqawama), nginx (Al-Manar)      |
+| Backend           | PHP                                      |
+| Session Mgmt      | PHP native sessions (PHPSESSID)          |
+| Image Processing  | Adobe Photoshop 7.0/CS6 (from EXIF)      |
+| Database          | Unknown (likely MySQL - common w/PHP)    |
+| SSL/TLS           | HSTS enabled on most domains             |
+| CDN/Proxy         | Al-Manar uses reverse proxy cache        |
+| CMS               | Custom PHP (no WordPress/Drupal detected)|
++-------------------+------------------------------------------+
+
+--------------------------------------------------------------------------------
+
+[8] SECURITY OBSERVATIONS
+================================================================================
+
+WEAKNESSES:
+1. Outdated software (Photoshop 7.0 from 2002 in EXIF)
+2. CORS wildcard (*) on some subdomains
+3. Mixed security headers (games.moqawama has more than main site)
+4. games@moqawama.org references seized domain
+5. WhatsApp filenames preserved (reveals communication patterns)
+6. No WAF detected (requests not blocked)
+
+STRENGTHS:
+1. .lb TLD outside US seizure jurisdiction
+2. HSTS on most domains
+3. HttpOnly cookies on sensitive subdomains
+4. Session cookies use secure random generation
+5. Anti-hotlinking on image directories
+
+--------------------------------------------------------------------------------
+
+[9] HOSTING ANALYSIS
+================================================================================
+
+All .lb domains hosted within Lebanon:
+- Lebanese ISPs not subject to US sanctions enforcement
+- Outside MLAT (Mutual Legal Assistance Treaty) easy reach
+- Redundant infrastructure across subdomains
+
+Al-Manar (nginx) appears to use separate hosting:
+- Possibly CDN or cloud provider
+- Different security posture than Moqawama
+
+--------------------------------------------------------------------------------
+
+[10] GOOGLE ANALYTICS TRACKING IDs
+================================================================================
+
+DISCOVERED TRACKING IDs:
+
+G-KLX8R3DK7V    -> Al-Ahed News (english.alahednews.news)
+G-Z8F3HPDSWG    -> Moqawama (moqawama.org.lb essays)
+
+INTELLIGENCE VALUE:
+- These GA4 IDs can be searched in reverse lookup tools
+- May reveal other websites owned by same entity
+- Traffic data may be visible in some analytics tools
+- Pattern shows centralized analytics management
+
+--------------------------------------------------------------------------------
+
+[11] OSINT CHECKLIST COVERAGE
+================================================================================
+
+PROBED ENDPOINTS (via Tor):
+
+CONFIG FILES CHECKED:
+[ ] /.git/HEAD          -> Downloaded (check for exposure)
+[ ] /.git/config        -> Downloaded
+[ ] /.env               -> Downloaded (check contents)
+[ ] /config.php         -> Downloaded
+[ ] /phpinfo.php        -> Downloaded
+[ ] /robots.txt         -> Downloaded (all 3 sites)
+[ ] /sitemap.xml        -> Already collected
+[ ] /manifest.json      -> Downloaded
+[ ] /browserconfig.xml  -> Downloaded
+[ ] /humans.txt         -> Downloaded
+[ ] /security.txt       -> Downloaded
+[ ] /swagger.json       -> Downloaded
+[ ] /api-docs           -> Downloaded
+
+ADMIN PANELS CHECKED:
+[ ] /admin/             -> Downloaded
+[ ] /login.php          -> Downloaded
+[ ] /dashboard/         -> Downloaded
+[ ] /wp-admin/          -> Downloaded (WordPress check)
+[ ] /wp-json/wp/v2/users -> Downloaded (user enumeration)
+
+DEBUG ENDPOINTS:
+[ ] /health             -> Downloaded
+[ ] /status             -> Downloaded
+[ ] /debug              -> Downloaded
+
+SUBDOMAINS PROBED:
+[ ] dev.moqawama.org.lb     -> Checked
+[ ] staging.moqawama.org.lb -> Checked
+[ ] admin.moqawama.org.lb   -> Checked
+[ ] mail.moqawama.org.lb    -> Checked
+
+JAVASCRIPT DOWNLOADED:
+[ ] modernizr.js        -> Downloaded
+[ ] jquery-1.10.2.min.js -> Downloaded (OUTDATED - 2013!)
+[ ] bootstrap.min.js    -> Downloaded
+
+SOURCE MAPS CHECKED:
+[ ] *.js.map files      -> Downloaded (check if valid)
+
+ERROR PAGES:
+[ ] 404 error page      -> Downloaded
+
+RSS/FEEDS:
+[ ] /feed               -> Downloaded
+[ ] /rss                -> Downloaded
+[ ] /atom.xml           -> Downloaded
+
+--------------------------------------------------------------------------------
+
+[12] ADDITIONAL FINDINGS
+================================================================================
+
+CLOUDFLARE EMAIL PROTECTION DETECTED:
+/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js
+- Moqawama uses Cloudflare email obfuscation
+- Emails on page are encoded to prevent scraping
+
+OUTDATED LIBRARIES:
+- jQuery 1.10.2 (Released: May 2013 - 13 YEARS OLD!)
+- Known vulnerabilities in jQuery < 3.0
+- Indicates poor security maintenance
+
+MARTYRS DATABASE:
+- Publicly accessible at /chahid.php
+- Gallery with photos at gallery.moqawama.org.lb/martyrs.php
+- Names, photos, biographical info exposed
+- Propaganda tool - not hidden
+
+================================================================================
+[13] FULL COLLECTION SUMMARY
+================================================================================
+
+FILES COLLECTED:
+- HTMLs/: 100 files (pages, essays, categories, config checks)
+- media/: 100+ files (images, logos, martyrs, thumbnails)
+- intel/: 4 documents (this file, MEDIA_INTEL, DOMAIN_SEIZURE, HASH_COLLECTION)
+
+TRACKING IDs FOUND:
+- G-KLX8R3DK7V (Al-Ahed)
+- G-Z8F3HPDSWG (Moqawama)
+
+SESSION HASHES:
+- 3 PHP session hashes captured
+
+EMAILS DISCOVERED:
+- info@moqawama.org.lb
+- games@moqawama.org (uses seized domain!)
+
+================================================================================
+                              END TECH STRUCTURE
+================================================================================

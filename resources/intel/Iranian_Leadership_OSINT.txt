@@ -1,0 +1,210 @@
+================================================================================
+                    IRANIAN LEADERSHIP - OSINT INTELLIGENCE DOCUMENT
+                              Classification: OPEN SOURCE
+                              Last Updated: 2026-01-03
+================================================================================
+
+[1] SUPREME LEADER - AYATOLLAH ALI HOSSEINI KHAMENEI
+================================================================================
+Name: Ayatollah Ali Hosseini Khamenei
+Title: Supreme Leader of Iran (Rahbar)
+In Power Since: June 4, 1989
+Born: April 19, 1939 (Age ~86)
+Birthplace: Mashhad, Iran
+
+ROLE & AUTHORITY:
+- Commander-in-Chief of all armed forces
+- Controls IRGC (Islamic Revolutionary Guard Corps)
+- Appoints head of judiciary
+- Controls state media
+- Final authority on all state matters
+- Appoints 6 of 12 members of Guardian Council
+
+KNOWN RESIDENCES:
+- Beit Rahbari (House of Leadership), Tehran
+
+HEALTH STATUS:
+- Reports of prostate cancer treatment (unconfirmed)
+- Multiple hospitalizations reported in Iranian exile media
+
+SUCCESSION:
+- Potential successors discussed in Iranian political circles:
+  * Mojtaba Khamenei (son)
+  * Ebrahim Raisi (deceased 2024 - helicopter crash)
+  * Various senior clerics
+
+--------------------------------------------------------------------------------
+
+[1.1] KHAMENEI SOCIAL MEDIA ACCOUNTS
+================================================================================
+
+ACTIVE ACCOUNTS:
+- X/Twitter: @khamenei_ir (Main - 1M+ followers)
+  URL: https://twitter.com/khamenei_ir
+
+- X/Twitter: @Khamenei_m (Khamenei Media)
+  URL: https://twitter.com/Khamenei_m
+
+- Official Website: khamenei.ir (Multilingual)
+  URL: https://khamenei.ir
+
+SUSPENDED/REMOVED ACCOUNTS:
+- X/Twitter Hebrew Account: SUSPENDED (Jan 2024)
+  Reason: Suspended after 2 posts, violated X Rules
+
+- Instagram @khamenei_ir: REMOVED by Meta (Feb 2024)
+  Had 5M+ followers (Persian), 200K+ (English)
+  Reason: "Dangerous Organizations & Individuals policy" after Oct 7 content
+
+- Facebook: REMOVED by Meta (Feb 2024)
+  Reason: Same as Instagram
+
+NOTES:
+- Multiple language accounts maintained (Persian, English, Arabic, Urdu, Hindi)
+- Iranians require VPN/anti-filtering to access social media
+- Content frequently promotes "resistance axis" narratives
+
+--------------------------------------------------------------------------------
+
+[1.2] KHAMENEI - VENEZUELA CONNECTION
+================================================================================
+
+IRAN-VENEZUELA RELATIONSHIP:
+- Strategic alliance based on anti-US ideology
+- 20-year defense pact signed 2022
+- IRGC investments totaling billions in Venezuela
+- Joint drone manufacturing on Venezuelan soil
+- Iranian drone development base at El Libertador air base
+- IRGC personnel training Venezuelan military
+
+KEY EVENTS (2025-2026):
+- Dec 11, 2025: Khamenei claimed US pressure on Venezuela aimed at oil/land grab
+- Dec 2025: US seized Venezuela-linked tanker carrying Iranian oil
+- Jan 3, 2026: US captured Maduro following strikes on Caracas
+- Khamenei called for "resistance" against US action in Venezuela
+- Iran Foreign Ministry condemned US action as "blatant violation of sovereignty"
+
+STRATEGIC SIGNIFICANCE:
+- Venezuela = Iran foothold in Western Hemisphere
+- Used to evade oil sanctions
+- Part of "Axis of Resistance" network
+- Loss of Maduro = major blow to Iranian influence in Americas
+
+SOURCES:
+- Atlantic Council analysis
+- Iran International reporting
+- Euronews analysis (Jan 3, 2026)
+
+--------------------------------------------------------------------------------
+
+[1.3] KHAMENEI - HEZBOLLAH CONNECTION
+================================================================================
+
+HISTORICAL RELATIONSHIP:
+- Hezbollah founded 1982 with 1,500 IRGC instructors
+- Khamenei appointed Nasrallah as religious representative (1995)
+- Hezbollah's allegiance to Khamenei is "paramount"
+- Iran provides $700M-$1B annually to Hezbollah
+
+KHAMENEI'S DIRECT CONTROL:
+- May 17, 1995: Appointed Nasrallah & Yazbek as religious reps in Lebanon
+- 1992: Endorsed Hezbollah's political participation
+- Hezbollah closely aligned with IRGC Quds Force
+- Quds Force reports directly to Khamenei
+
+RECENT DEVELOPMENTS (2025):
+- Dec 2025: Khamenei advisor Velayati reaffirmed "resolute support" for Hezbollah
+- Oct 2025: Launched Arabic edition of Khamenei's scholarly book in Beirut
+- Hezbollah leader Qassem praised Khamenei's "steadfast support"
+- Aug 2025: Lebanese gov't voted to disarm Hezbollah (US-backed plan)
+
+IRAN-HEZBOLLAH ACTIVITIES:
+- Weapons transfers via Syria
+- Training of Hezbollah fighters
+- Intelligence sharing
+- Joint operations in Syria
+- Rocket/missile program development
+
+SOURCES:
+- USIP Iran Primer
+- Council on Foreign Relations
+- UANI (United Against Nuclear Iran)
+- Wikipedia: Hezbollah-Iran relations
+
+--------------------------------------------------------------------------------
+
+[2] IRGC - ISLAMIC REVOLUTIONARY GUARD CORPS (SEPAH)
+================================================================================
+Commander: Major General Hossein Salami
+Appointed: April 2019
+
+IRGC STRUCTURE:
+- Ground Forces
+- Navy (IRGCN)
+- Aerospace Force
+- Quds Force (External Operations)
+- Basij Militia
+
+QUDS FORCE:
+Commander: Brigadier General Esmail Qaani
+Previous Commander: Major General Qasem Soleimani (KIA Jan 3, 2020 - US strike)
+
+Quds Force Operations:
+- Lebanon (Hezbollah support)
+- Syria (Assad regime support)
+- Iraq (militia coordination)
+- Yemen (Houthi support)
+- Gaza (Hamas/PIJ support)
+- Venezuela (military training, drone program)
+
+--------------------------------------------------------------------------------
+
+[3] KEY MILITARY/INTELLIGENCE FIGURES
+================================================================================
+
+MOIS (Ministry of Intelligence and Security):
+Minister: Esmail Khatib
+Role: Domestic/foreign intelligence, counterintelligence
+
+IRGC Intelligence Organization (IRGC-IO):
+- Parallel intelligence to MOIS
+- Reports directly to Supreme Leader
+- Handles sensitive external operations
+
+--------------------------------------------------------------------------------
+
+[4] DESIGNATIONS & SANCTIONS
+================================================================================
+- IRGC designated as Foreign Terrorist Organization (FTO) by USA (April 2019)
+- Khamenei under US Treasury sanctions
+- Multiple IRGC commanders under UN/EU/US sanctions
+- Quds Force designated by multiple nations
+- Hezbollah designated FTO by US, EU, and others
+
+--------------------------------------------------------------------------------
+
+[5] OSINT SOURCES FOR FURTHER RESEARCH
+================================================================================
+- Iran International: https://iranintl.com
+- Radio Farda: https://radiofarda.com
+- BBC Persian: https://bbc.com/persian
+- Amwaj Media: https://amwaj.media
+- Atlantic Council Iran Source
+- USIP Iran Primer: https://iranprimer.usip.org
+- UANI: https://unitedagainstnucleariran.com
+- CFR (Council on Foreign Relations)
+- MEMRI: https://memri.org
+- Times of Israel (Iran coverage)
+- Newsweek (Iran desk)
+
+--------------------------------------------------------------------------------
+
+[6] DATABASE
+================================================================================
+SQLite database created: iran_osint.db
+Tables: persons, organizations, events, sources, social_media, connections
+Location: C:\Users\Squir\Desktop\IRAN\iran_osint.db
+
+================================================================================
+                              END OF DOCUMENT
+================================================================================

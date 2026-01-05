@@ -1,0 +1,230 @@
+================================================================================
+                    SITE FINGERPRINTING & TRACKING INTEL
+                    Tech Stack | Tracking IDs | Headers | Cookies
+                    Extracted: 2026-01-03
+================================================================================
+
+================================================================================
+[1] ALMANAR.COM.LB (Hezbollah TV)
+================================================================================
+
+TECH STACK:
+- CMS: Custom built (NOT WordPress)
+- Server: nginx
+- Framework: Custom PHP + Bootstrap
+- JS Libraries: jQuery, OwlCarousel2, Swiper, Flaticon
+- CDN: Cloudflare (jsdelivr.net for assets)
+
+HTTP HEADERS:
+- Server: nginx
+- Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+- X-Proxy-Cache: HIT
+- Content-Type: text/html; charset=UTF-8
+
+TRACKING IDS FOUND:
+┌────────────────────────────────────────────────────────────────┐
+│ Google Tag Manager:    GTM-TLJW8TR                             │
+│ Google Analytics (UA): UA-199941297-1                          │
+│ Google Analytics (G4): G-JJ1SM3JFZW                            │
+│ Microsoft Clarity:     cgaike4iub (primary)                    │
+│ Microsoft Clarity:     cs22bibpe3 (secondary)                  │
+│ Clicky Analytics:      101369727                               │
+│ Google Site Verify:    uKONEXKPHaKP2TcRviBc_p5xMXtLokVZAV9_wLLFpTg │
+└────────────────────────────────────────────────────────────────┘
+
+LINKED DOMAINS (in GTM config):
+- almanar.com.lb
+- almanartv.com.lb
+- manartv.com.lb
+
+CONSENT TRACKING:
+- ad_storage
+- analytics_storage
+- ad_user_data
+- ad_personalization
+
+SOCIAL LINKS:
+- Telegram: /static/r.php?r=telegram
+- Twitter/X: /static/r.php?r=twitter
+- WhatsApp: almanar.com.lb/whatsapp/
+- Live stream: almanar.com.lb/live/
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[2] KHAMENEI.IR (Supreme Leader)
+================================================================================
+
+TECH STACK:
+- CMS: Custom built (NOT WordPress)
+- Server: nginx (HTTP 445 response - custom)
+- Framework: Custom
+- CDN: ArvanCloud (Iranian)
+
+HTTP HEADERS:
+- Server: nginx
+- Response: HTTP/1.1 445 (custom status code)
+- Keep-Alive: timeout=15
+
+TRACKING IDS (from prior analysis):
+┌────────────────────────────────────────────────────────────────┐
+│ Google Analytics (UA): UA-6238962-2                            │
+│ Google Analytics (G4): G-8MVZ1HLJT0                            │
+└────────────────────────────────────────────────────────────────┘
+
+SUBDOMAINS:
+- farsi.khamenei.ir (main Persian)
+- english.khamenei.ir
+- arabic.khamenei.ir
+- french.khamenei.ir
+- spanish.khamenei.ir
+- urdu.khamenei.ir
+- hindi.khamenei.ir
+- russian.khamenei.ir
+- azeri.khamenei.ir
+- nojavan.khamenei.ir (youth)
+- mail.khamenei.ir
+- doran.khamenei.ir
+- live1-5.khamenei.ir (streaming)
+- cdn-*.khamenei.ir (content delivery)
+
+DNS TXT (Google Verification):
+google-site-verification=FrS79LKnklz_7cQGdeYYR5RW-gtYz2sm3JWIVWo24W0
+
+LICENSE: Creative Commons Attribution 4.0 International
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[3] MOQAWAMA.ORG.LB (Hezbollah Resistance)
+================================================================================
+
+TECH STACK:
+- CMS: Custom PHP (NOT WordPress)
+- Server: Apache
+- Framework: Bootstrap + jQuery
+- JS Libraries: Owl Carousel, FlexSlider, Video.js
+
+HTTP HEADERS:
+- Server: Apache
+- Response: HTTP/1.1 403 Forbidden (blocked direct curl)
+- Content-Type: text/html; charset=iso-8859-1
+
+TRACKING IDS:
+┌────────────────────────────────────────────────────────────────┐
+│ Google Analytics (G4): G-Z8F3HPDSWG                            │
+└────────────────────────────────────────────────────────────────┘
+
+URL STRUCTURE:
+- /essaydetails.php?eid={ID} - Articles
+- /catessays.php?cid={ID} - Categories
+- /fastdetails.php?fid={ID} - Fast news
+- /operations.php - Operations archive
+- /guestbook.php - Guest book
+- /mailinglist.php - Email signup
+- /search.php - Search
+- /rsspage.php - RSS feeds
+
+SOCIAL LINKS:
+- Twitter: @almoqawama1
+- YouTube: MoqawamaOrg
+- SoundCloud: audiomoqawama
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[4] MEHRNEWS.COM (Iranian News Agency)
+================================================================================
+
+TRACKING IDS:
+┌────────────────────────────────────────────────────────────────┐
+│ Google Analytics (G4): G-ERSHRYVTBP                            │
+│ Microsoft Clarity:     o2z34ibfin                              │
+└────────────────────────────────────────────────────────────────┘
+
+AD NETWORKS:
+- Tavoos (native video ads)
+- Adexo (programmatic)
+- MediaAd
+- JW Player integration
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[5] IRANIAN GOV SITES (.gov.ir)
+================================================================================
+
+PRESIDENT.IR & DOLAT.IR:
+- Use obfuscated JavaScript
+- Cookie-setting scripts: __arcsjs, __arcsjsc
+- Timezone detection (Tehran/Iran)
+- Redirect/validation system
+- Heavy code obfuscation with eval()
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[6] WHAT TRACKING IDS REVEAL
+================================================================================
+
+GOOGLE ANALYTICS INTEL:
+- UA-* = Universal Analytics (legacy, being deprecated)
+- G-* = GA4 (newer, event-based)
+- GTM-* = Tag Manager container (can contain multiple trackers)
+
+WHAT YOU CAN DO WITH THESE IDS:
+
+1. GA ID Lookup:
+   - Search "[GA ID]" to find other sites using same account
+   - Indicates shared ownership/management
+
+2. GTM Container Analysis:
+   - Fetch: googletagmanager.com/gtm.js?id=GTM-XXXXX
+   - Reveals linked properties, pixels, config
+
+3. Clarity Sessions:
+   - Microsoft Clarity records user sessions
+   - Heatmaps, scroll depth, clicks
+
+4. Cross-Reference:
+   - Same GA ID on multiple domains = same owner
+   - almanar.com.lb, almanartv.com.lb, manartv.com.lb share GTM
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[7] EXPOSED HASHES FOUND
+================================================================================
+
+NONE - These sites do NOT use WordPress or Gravatar.
+No user avatar hashes exposed.
+No comment systems with MD5 hashes.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[8] FINGERPRINTING NOTES
+================================================================================
+
+BROWSER F12/DEVTOOLS WOULD REVEAL:
+- All network requests (XHR, fetch, websockets)
+- Cookies set (session, tracking, consent)
+- Local storage data
+- Service workers
+- Console errors/warnings
+- Performance metrics
+- Security headers (CSP, CORS, etc.)
+
+THINGS THESE SITES TRACK:
+- Page views (GA)
+- User sessions (Clarity)
+- Click patterns (Clarity heatmaps)
+- Scroll depth
+- Time on page
+- Referrer data
+- Device/browser info
+- Geographic location (via IP)
+
+================================================================================
+                              END FINGERPRINT INTEL
+================================================================================

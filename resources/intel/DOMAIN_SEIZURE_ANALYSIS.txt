@@ -1,0 +1,251 @@
+================================================================================
+                    DOMAIN SEIZURE JURISDICTIONAL ANALYSIS
+                    US DOJ vs Lebanese ccTLD - The Hezbollah Workaround
+                    Analysis Date: 2026-01-04
+================================================================================
+
+[1] EXECUTIVE SUMMARY
+================================================================================
+
+The US Department of Justice (Eastern District of Virginia) seized 13 domains
+associated with Hezbollah under the International Emergency Economic Powers Act
+(IEEPA). However, Hezbollah continues to operate identical websites using
+Lebanon's country-code top-level domain (.lb), which remains outside US
+jurisdictional reach.
+
+KEY FINDING: Domain seizures are ineffective against actors who control or
+have access to sovereign ccTLD registries.
+
+================================================================================
+
+[2] SEIZED DOMAINS (US DOJ - EDVA)
+================================================================================
+
+The following domains were seized and now display DOJ seizure notices:
+
+HEZBOLLAH MEDIA:
++---------------------------+------------------+---------------------------+
+| SEIZED DOMAIN             | REGISTRY         | ACTIVE ALTERNATIVE        |
++---------------------------+------------------+---------------------------+
+| moqawama.org              | PIR (US)         | moqawama.org.lb (ACTIVE)  |
+| almanarnews.org           | PIR (US)         | almanar.com.lb (ACTIVE)   |
+| manarnews.org             | PIR (US)         | almanar.com.lb (ACTIVE)   |
+| almanar-tv.org            | PIR (US)         | almanar.com.lb (ACTIVE)   |
+| alshahid.org              | PIR (US)         | Unknown                   |
++---------------------------+------------------+---------------------------+
+| + 8 additional domains    |                  |                           |
++---------------------------+------------------+---------------------------+
+
+SEIZURE NOTICE (moqawama.org):
+"United States Attorney's Office, Eastern District of Virginia Seizure"
+Link: justice.gov/usao-edva/pr/edva-seizes-thirteen-domains-used-lebanese-hizballah-and-its-affiliates
+
+================================================================================
+
+[3] WHY .LB DOMAINS CANNOT BE SEIZED
+================================================================================
+
+JURISDICTIONAL BREAKDOWN:
+
++-------------+---------------------------+------------------+----------------+
+| TLD         | REGISTRY OPERATOR         | JURISDICTION     | US CAN SEIZE?  |
++-------------+---------------------------+------------------+----------------+
+| .com        | Verisign (US)             | United States    | YES            |
+| .org        | Public Interest Registry  | United States    | YES            |
+| .net        | Verisign (US)             | United States    | YES            |
+| .info       | Afilias (US)              | United States    | YES            |
++-------------+---------------------------+------------------+----------------+
+| .lb         | LBDR (Lebanese Domain     | Lebanon          | NO             |
+|             | Registry - American Univ. |                  |                |
+|             | of Beirut)                |                  |                |
++-------------+---------------------------+------------------+----------------+
+| .ir         | IPM (Iran)                | Iran             | NO             |
+| .ru         | Coordination Center (RU)  | Russia           | NO             |
+| .cn         | CNNIC (China)             | China            | NO             |
++-------------+---------------------------+------------------+----------------+
+
+LEGAL MECHANISM:
+
+US domain seizures work via:
+1. Court order issued to US-based registry operator
+2. Registry updates nameservers to point to DOJ seizure page
+3. Domain effectively "captured" at infrastructure level
+
+This ONLY works when:
+- The TLD registry is US-based OR
+- The TLD registry is subject to US jurisdiction OR
+- International cooperation agreements exist
+
+Lebanon's .lb registry (LBDR) is:
+- Operated by American University of Beirut (Lebanese institution)
+- Subject to Lebanese law
+- Outside US court jurisdiction
+- No extradition/cooperation treaty for domain seizures
+
+================================================================================
+
+[4] THE HEZBOLLAH WORKAROUND - TECHNICAL ANALYSIS
+================================================================================
+
+BEFORE SEIZURE:
+- Primary: moqawama.org (International audience)
+- Backup: moqawama.org.lb (Lebanese audience)
+
+AFTER SEIZURE:
+- moqawama.org -> DOJ seizure page
+- moqawama.org.lb -> FULLY OPERATIONAL (identical content)
+
+CURRENT ACTIVE INFRASTRUCTURE (as of 2026-01-04):
+
+moqawama.org.lb:
+    IP: 91.109.206.65 (Moscow, Russia - Okay-Telecom)
+    IP: 176.74.216.191 (Czech Republic - HOST-TELECOM)
+    DNS: ns41-44.cloudns.net
+    Status: ACTIVE - Full website operational
+
+almanar.com.lb:
+    IP: 5.35.14.164-166 (Russia - Selectel Moscow)
+    IP: 47.250.57.153 (Malaysia - Alibaba Cloud)
+    Status: ACTIVE - Full TV streaming operational
+
+english.alahednews.com.lb:
+    Status: ACTIVE - News site operational
+
+SUBDOMAINS CONFIRMED ACTIVE:
+- audio.moqawama.org.lb (Audio library)
+- video.moqawama.org.lb (Video archive)
+- gallery.moqawama.org.lb (Photo gallery)
+- games.moqawama.org.lb (Propaganda games)
+
+================================================================================
+
+[5] EFFECTIVENESS ASSESSMENT
+================================================================================
+
+SEIZURE IMPACT: MINIMAL
+
++---------------------------+------------------------------------------+
+| METRIC                    | ASSESSMENT                               |
++---------------------------+------------------------------------------+
+| Content Availability      | 100% available via .lb domains           |
+| Audience Reach            | Minimal impact (users redirect to .lb)   |
+| Propaganda Operations     | Unaffected                               |
+| Financial Operations      | Unaffected (not domain-dependent)        |
+| Symbolic Value            | Moderate (shows US opposition)           |
++---------------------------+------------------------------------------+
+
+WHY SEIZURES FAIL:
+
+1. ALTERNATIVE DOMAINS: Actors simply use ccTLDs from friendly nations
+2. DNS RESILIENCE: CloudNS and other providers outside US jurisdiction
+3. HOSTING DIVERSITY: Servers in Russia, Czech Republic, Malaysia
+4. USER BEHAVIOR: Audiences quickly learn new domains
+5. NO CONTENT REMOVAL: Actual content/servers remain untouched
+
+================================================================================
+
+[6] SIMILAR PATTERNS - OTHER ACTORS
+================================================================================
+
+IRANIAN GOVERNMENT:
+- All .ir domains immune to US seizure
+- khamenei.ir, president.ir, mfa.gov.ir - all untouchable
+- Use ArvanCloud (Iranian CDN) for additional protection
+
+RUSSIAN STATE MEDIA:
+- RT uses .com (vulnerable) but has rt.ru backup
+- Sputnik maintains .ru alternatives
+
+NORTH KOREA:
+- Uses .kp ccTLD (impossible to seize)
+- Limited international domains
+
+PATTERN: State actors and sophisticated groups ALWAYS maintain ccTLD backups
+in jurisdictions hostile or uncooperative with US law enforcement.
+
+================================================================================
+
+[7] WHAT WOULD BE REQUIRED TO ACTUALLY BLOCK ACCESS
+================================================================================
+
+OPTIONS (theoretical):
+
+1. ICANN DELISTING (Unprecedented)
+   - Remove .lb from global DNS root
+   - Would affect ALL Lebanese websites
+   - Never been done for political reasons
+   - Would set dangerous precedent
+
+2. ISP-LEVEL BLOCKING (Country-specific)
+   - Requires each country to implement
+   - Easily bypassed with VPN/Tor
+   - Not globally enforceable
+
+3. CDN/HOSTING PRESSURE
+   - Target Cloudflare, Selectel, Alibaba
+   - Whack-a-mole problem - they move hosts
+   - Russia/China hosts won't cooperate
+
+4. PHYSICAL INFRASTRUCTURE
+   - Military/intelligence action
+   - Servers distributed across multiple countries
+   - Impractical
+
+CONCLUSION: No practical method exists to fully block access to .lb domains
+from global internet users.
+
+================================================================================
+
+[8] OSINT IMPLICATIONS
+================================================================================
+
+FOR RESEARCHERS:
+- Always check ccTLD alternatives when domains are seized
+- Pattern: [domain].org seized -> check [domain].[country-code]
+- Seized domains often still resolve (check DNS history)
+- Wayback Machine preserves pre-seizure content
+
+FOR THIS INVESTIGATION:
+- moqawama.org.lb is the PRIMARY collection target
+- All content identical to seized .org domain
+- No legal barriers to accessing .lb domain from US
+- Tor recommended for operational security, not legal necessity
+
+VERIFIED ACCESS (2026-01-04):
+- Successfully accessed via Tor (RU/TR/AE/LB exit nodes)
+- Also accessible via clearnet (no Tor required)
+- Full sitemap: 341 categories, 42000+ articles
+- All subdomains operational
+
+================================================================================
+
+[9] LEGAL NOTES
+================================================================================
+
+ACCESSING SEIZED DOMAINS: The seizure notice page is publicly accessible.
+No legal issue viewing it.
+
+ACCESSING .LB ALTERNATIVES: No US law prohibits viewing websites hosted
+on Lebanese domains. OFAC sanctions apply to financial transactions with
+designated entities, not passive viewing of public websites.
+
+RESEARCH EXCEPTION: Academic research, journalism, and OSINT collection
+of publicly available information is legal under US law.
+
+DISCLAIMER: This document is for research purposes only. Consult legal
+counsel for specific guidance on sanctions compliance.
+
+================================================================================
+
+[10] SOURCES
+================================================================================
+
+- DOJ Press Release: justice.gov/usao-edva/pr/edva-seizes-thirteen-domains...
+- LBDR (Lebanese Domain Registry): lbdr.org.lb
+- Direct verification via curl/Tor (2026-01-04)
+- IANA Root Zone Database
+- ICANN Registry Agreements
+
+================================================================================
+                              END ANALYSIS
+================================================================================

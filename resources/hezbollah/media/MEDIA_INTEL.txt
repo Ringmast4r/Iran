@@ -1,0 +1,206 @@
+================================================================================
+                    MEDIA FILENAME INTELLIGENCE ANALYSIS
+                    Hezbollah/Al-Ahed News Image Collection
+                    Analysis Date: 2026-01-04
+================================================================================
+
+[1] FILENAME PATTERNS DISCOVERED
+================================================================================
+
+TIMESTAMP-BASED FILENAMES (Al-Ahed News):
+Format: YYYYMMDDHHmmss.jpg
+- 20260101193702.jpg -> Uploaded 2026-01-01 at 19:37:02
+- 20260101142822.jpg -> Uploaded 2026-01-01 at 14:28:22
+- 20251231100707.jpg -> Uploaded 2025-12-31 at 10:07:07
+- 20251230103150.jpg -> Uploaded 2025-12-30 at 10:31:50
+- 20251229114231.jpg -> Uploaded 2025-12-29 at 11:42:31
+- 20251227091207.jpg -> Uploaded 2025-12-27 at 09:12:07
+- 20251226131055.jpg -> Uploaded 2025-12-26 at 13:10:55
+- 20251225122449.jpg -> Uploaded 2025-12-25 at 12:24:49
+
+INSIGHT: Timestamps appear to be Beirut local time (UTC+2/+3)
+PATTERN: Automated upload system, no manual renaming
+
+--------------------------------------------------------------------------------
+
+WHATSAPP ORIGIN DETECTED:
+File: WhatsApp Image 2025-12-13 at 9.50.45 AM.jpeg
+- Original WhatsApp export filename preserved
+- Indicates image was sent via WhatsApp before upload
+- Timestamp: December 13, 2025 at 9:50:45 AM
+- Someone forwarded this from WhatsApp to news team
+
+OPSEC FAILURE: Editorial staff uploading images directly from WhatsApp
+without renaming - reveals communication patterns
+
+--------------------------------------------------------------------------------
+
+COMMEMORATIVE BANNERS:
+File: Soleimani-Mohandes2025.jpeg
+Path: /uploaded2/2021/images/Banners/2025/
+- Annual Soleimani commemoration banner
+- Path structure: /2021/ suggests folder created in 2021
+- /2025/ subfolder for 2025 commemoration materials
+
+--------------------------------------------------------------------------------
+
+CARICATURE NAMING:
+Sequential IDs: 1679.jpg, 1713.jpg, 1808.jpg, 1833.jpg
+- Database-driven sequential numbering
+- 1833 - 1679 = 154 caricatures in this range
+- Indicates organized content management system
+
+Descriptive names: Africa.jpg, attack.jpg, deals.jpg, un.jpg
+- Some manually named by topic
+- Mixed naming convention = multiple content creators
+
+--------------------------------------------------------------------------------
+
+[2] BLOCKED DOWNLOADS (MOQAWAMA.ORG.LB)
+================================================================================
+
+The following returned 403 Forbidden (355 bytes each):
+- /uploads/posters/6.jpg
+- /uploads/posters/7.jpg
+- /uploads/posters/8.jpg
+- /uploads/essays/2024/03/41696_l.jpg
+- /uploads/essays/2024/01/41443_l.jpg
+- /uploads/essays/2025/01/42004_l.jpg
+
+FINDING: Moqawama blocks direct image hotlinking
+WORKAROUND: Would require referer header spoofing or browser automation
+
+--------------------------------------------------------------------------------
+
+[3] DIRECTORY STRUCTURE REVEALED
+================================================================================
+
+ENGLISH.ALAHEDNEWS.COM.LB:
+/uploaded2/
+    /2021/
+        /images/
+            /Banners/
+                /2025/
+    /caricature/
+    /images/
+        [timestamp-named files]
+
+MOQAWAMA.ORG.LB:
+/uploads/
+    /posters/
+        [numbered files]
+    /essays/
+        /YYYY/
+            /MM/
+                [article_id]_l.jpg
+
+AUDIO.MOQAWAMA.ORG.LB:
+/sound/
+    /images/
+        /thumbnail/
+            /YYYY/
+                /MM/
+                    [numbered].png
+
+--------------------------------------------------------------------------------
+
+[4] COLLECTED MEDIA INVENTORY
+================================================================================
+
+SUCCESSFULLY DOWNLOADED: 20 files
+TOTAL SIZE: ~2.8 MB
+FAILED (403 Blocked): 6 files
+
++---------------------------+----------+------------------+
+| FILENAME                  | SIZE     | SOURCE           |
++---------------------------+----------+------------------+
+| Africa.jpg                | 576 KB   | Al-Ahed caricature |
+| 1833.jpg                  | 447 KB   | Al-Ahed caricature |
+| 1808.jpg                  | 403 KB   | Al-Ahed caricature |
+| 1679.jpg                  | 289 KB   | Al-Ahed caricature |
+| attack.jpg                | 193 KB   | Al-Ahed caricature |
+| 1713.jpg                  | 171 KB   | Al-Ahed caricature |
+| un.jpg                    | 124 KB   | Al-Ahed caricature |
+| deals.jpg                 | 118 KB   | Al-Ahed caricature |
+| WhatsApp_Image*.jpeg      | 90 KB    | Al-Ahed (WhatsApp) |
+| 20251229114231.jpg        | 68 KB    | Al-Ahed news       |
+| 20251225122449.jpg        | 63 KB    | Al-Ahed news       |
+| 20251227091207.jpg        | 62 KB    | Al-Ahed news       |
+| 20251230103150.jpg        | 60 KB    | Al-Ahed news       |
+| 20260101142822.jpg        | 56 KB    | Al-Ahed news       |
+| 20260101193702.jpg        | 43 KB    | Al-Ahed news       |
+| 20251231100707.jpg        | 43 KB    | Al-Ahed news       |
+| 20251226131055.jpg        | 40 KB    | Al-Ahed news       |
+| Soleimani-Mohandes*.jpeg  | 38 KB    | Al-Ahed banner     |
++---------------------------+----------+------------------+
+
+--------------------------------------------------------------------------------
+
+[5] EXIF/METADATA STATUS
+================================================================================
+
+EXIF DATA: PARTIALLY PRESERVED (Caricatures retain Photoshop metadata)
+
++------------------+----------------------------+----------------------+
+| FILE             | SOFTWARE                   | EDIT TIMESTAMP       |
++------------------+----------------------------+----------------------+
+| 1679.jpg         | Adobe Photoshop 7.0        | 2023-04-15 15:27:26  |
+| 1713.jpg         | Adobe Photoshop 7.0        | 2023-05-31 07:13:38  |
+| 1808.jpg         | Adobe Photoshop CS6 (Win)  | 2014-07-22 16:07:36  |
+| 1833.jpg         | Adobe Photoshop CS6 (Win)  | 2024-01-22 14:34:12  |
+| Africa.jpg       | Adobe Photoshop 7.0        | 2023-08-09 09:25:03  |
++------------------+----------------------------+----------------------+
+
+OPSEC FAILURES IDENTIFIED:
+
+1. OUTDATED SOFTWARE:
+   - Photoshop 7.0 released in 2002 (22 years old)
+   - Indicates pirated software or legacy workstations
+   - Multiple files = same artist/workstation
+
+2. CS6 PERPETUAL LICENSE:
+   - Last non-subscription Photoshop (2012)
+   - Common in regions avoiding Adobe CC subscriptions
+   - Confirms Windows-based production environment
+
+3. TIMEZONE ANALYSIS:
+   - Edit times suggest Beirut working hours
+   - 07:13, 09:25, 14:34, 15:27, 16:07
+   - Consistent with GMT+2/+3 timezone
+
+GPS DATA: NOT FOUND
+- Caricatures are created graphics, not photos
+- No camera EXIF (Make, Model, GPS)
+- News photos (20251225*.jpg etc) have EXIF stripped
+
+RECOVERABLE INTEL:
+- Original filenames (WhatsApp pattern)
+- Upload timestamps (from filename)
+- Directory structure (path analysis)
+- Content management patterns
+- **Production software versions**
+- **Edit timestamps (artist working hours)**
+
+--------------------------------------------------------------------------------
+
+[6] RECOMMENDATIONS FOR FURTHER ANALYSIS
+================================================================================
+
+1. REFERER SPOOFING: Try moqawama images with:
+   -H "Referer: https://moqawama.org.lb/"
+
+2. WAYBACK MACHINE: Check archive.org for historical images
+   that may have been accessible previously
+
+3. REVERSE IMAGE SEARCH: Use TinEye/Google to find original
+   sources of caricatures (may reveal artists)
+
+4. VIDEO ANALYSIS: Check video.moqawama.org.lb for MP4 files
+   which often retain more metadata
+
+5. TELEGRAM SCRAPING: Al-Ahed Telegram channel may have
+   higher resolution originals with metadata
+
+================================================================================
+                              END MEDIA INTEL
+================================================================================

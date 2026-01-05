@@ -1,0 +1,23 @@
+PRIVATE IP LEAK - IRNA.IR
+==========================
+
+FINDING: Internal RFC1918 IP exposed in public DNS
+
+SUBDOMAIN: kateb.irna.ir
+RESOLVES TO: 10.30.41.85 (PRIVATE IP)
+
+WHY IT MATTERS:
+- Reveals internal network subnet: 10.30.41.0/24
+- "Kateb" = writer/scribe in Farsi (editorial system)
+- Split-horizon DNS misconfiguration
+- Can map internal network topology from public DNS
+
+INTERNAL NETWORK MAP (from DNS):
+- 10.30.41.x   - Editorial systems
+- 217.25.48.x  - Mail, Gallery, Tahrir
+- 217.25.51.x  - RS1 server farm
+- 217.25.53.x  - RS2 server farm
+- 217.25.56.x  - News, Streaming
+- 217.25.58.x  - Remote access
+
+STATUS: HIGH VALUE - Infrastructure exposure

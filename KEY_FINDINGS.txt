@@ -1,0 +1,248 @@
+================================================================================
+                    KEY OSINT FINDINGS
+                    Actionable Intelligence Only
+                    Generated: 2026-01-04
+================================================================================
+
+================================================================================
+[1] PRIVATE IP LEAK - IRNA.IR
+================================================================================
+
+FINDING: Internal RFC1918 IP exposed in public DNS
+
+SUBDOMAIN: kateb.irna.ir
+RESOLVES TO: 10.30.41.85 (PRIVATE IP)
+
+WHY IT MATTERS:
+- Reveals internal network subnet: 10.30.41.0/24
+- "Kateb" = writer/scribe in Farsi (editorial system)
+- Split-horizon DNS misconfiguration
+- Can map internal network topology from public DNS
+
+INTERNAL NETWORK MAP (from DNS):
+- 10.30.41.x   - Editorial systems
+- 217.25.48.x  - Mail, Gallery, Tahrir
+- 217.25.51.x  - RS1 server farm
+- 217.25.53.x  - RS2 server farm
+- 217.25.56.x  - News, Streaming
+- 217.25.58.x  - Remote access
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[2] VPN ENDPOINT EXPOSED - MFA.GOV.IR
+================================================================================
+
+FINDING: Ministerial VPN hostname in public DNS
+
+SUBDOMAIN: r1.vpn.minister.local.mfa.gov.ir
+RESOLVES TO: 185.143.235.201 (ArvanCloud)
+
+WHY IT MATTERS:
+- "minister.local" = internal naming convention leaked
+- "r1" suggests multiple endpoints (r2, r3...)
+- Target for credential stuffing/brute force
+- VPN software version could be fingerprinted
+
+RELATED:
+- cp.mfa.gov.ir (Control Panel) -> 109.201.11.102
+- ORG confirmed: "Foreign Ministry of IRAN"
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[3] ADMIN PORTAL IN CERTIFICATE TRANSPARENCY
+================================================================================
+
+FINDING: Admin subdomain exposed via SSL certs
+
+SUBDOMAIN: admin.english.khamenei.ir
+
+WHY IT MATTERS:
+- Administrative interface exists
+- Exposed in public Certificate Transparency logs
+- Likely internal-only but now known
+- Target for access attempts
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[4] HIDDEN API DOMAIN - KHAMENEI.IR
+================================================================================
+
+FINDING: Separate TLD used for API infrastructure
+
+DOMAIN: formx.khamenei.link (not khamenei.ir)
+ENDPOINT: https://formx.khamenei.link/farsi-json/topticker
+STATUS: Active, returns JSON
+
+WHY IT MATTERS:
+- Deliberately used different TLD to hide API
+- Not found via normal subdomain enumeration
+- Discovered only through JavaScript analysis
+- Contains redirect tracking system
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[5] MOBILE APK EXPOSED - FARSNEWS.IR
+================================================================================
+
+FINDING: Android app direct download link exposed
+
+URL: https://dl.farsnews.ir/app.apk
+
+WHY IT MATTERS:
+- Can be downloaded and reverse engineered
+- May contain hardcoded API keys/secrets
+- Reveals authentication mechanisms
+- Device fingerprinting system exposed in headers:
+  - duid (device unique ID)
+  - platform, os
+  - app-market, app-scope
+
+API SERVER: api.farsnews.ir (returns 401 - needs auth)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[6] EMBASSY SUBDOMAIN NETWORK - MFA.GOV.IR
+================================================================================
+
+FINDING: 182 subdomains mapping entire diplomatic network
+
+KEY SUBDOMAINS:
+- lebanon.mfa.gov.ir (Hezbollah connection)
+- venezuela.mfa.gov.ir (Maduro alliance - now disrupted)
+- russia.mfa.gov.ir, china.mfa.gov.ir (strategic partners)
+- 100+ country-specific embassy subdomains
+
+INTERNAL SYSTEMS FOUND:
+- cms.mfa.gov.ir (Content Management)
+- cloud.mfa.gov.ir (Cloud Storage)
+- email.mfa.gov.ir (Email Portal)
+- visareq.mfa.gov.ir (Visa Requests)
+
+WHY IT MATTERS:
+- Complete map of Iranian diplomatic web presence
+- Shows which embassies have dedicated infrastructure
+- Internal systems identified (blocked but exist)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[7] HEZBOLLAH HOSTING STRATEGY
+================================================================================
+
+FINDING: Deliberate use of Russian/Czech hosting for resilience
+
+MOQAWAMA.ORG.LB:
+- Primary: 91.109.206.65 (Moscow, Russia - Okay-Telecom)
+- Backup: 176.74.216.191 (Czech Republic - HOST-TELECOM)
+
+ALMANAR.COM.LB:
+- IPs: 5.35.14.164-166 (Selectel Moscow)
+- Backup: 47.250.57.153 (Alibaba Cloud Malaysia)
+
+WHY IT MATTERS:
+- Russian hosting = protection from Western takedowns
+- Multiple countries = redundancy
+- .lb TLD = outside US legal jurisdiction
+- Shows deliberate infrastructure planning
+
+US-SEIZED DOMAINS (ineffective):
+- moqawama.org, almanarnews.org, almanar-tv.org -> DOJ pages
+- But .lb alternatives remain fully operational
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[8] EXIF METADATA - ATTRIBUTION
+================================================================================
+
+FINDING: Photoshop metadata preserved in Hezbollah graphics
+
+FILE             | SOFTWARE              | TIMESTAMP
+-----------------|-----------------------|--------------------
+1679.jpg         | Adobe Photoshop 7.0   | 2023-04-15 15:27:26
+1713.jpg         | Adobe Photoshop 7.0   | 2023-05-31 07:13:38
+1808.jpg         | Photoshop CS6 (Win)   | 2014-07-22 16:07:36
+1833.jpg         | Photoshop CS6 (Win)   | 2024-01-22 14:34:12
+
+WHY IT MATTERS:
+- Photoshop 7.0 (2002) = likely pirated software
+- Multiple files from same workstation
+- Timestamps = Beirut working hours (GMT+2/+3)
+- Can track individual content creators
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[9] WHATSAPP OPSEC FAILURE
+================================================================================
+
+FINDING: Original WhatsApp filename preserved on news site
+
+FILE: "WhatsApp Image 2025-12-13 at 9.50.45 AM.jpeg"
+LOCATION: english.alahednews.com.lb
+
+WHY IT MATTERS:
+- Staff uploads directly from WhatsApp without renaming
+- Reveals internal communication patterns
+- Timestamp shows when image was shared
+- Editorial workflow exposed
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[10] GOVERNMENT ASN OWNERSHIP
+================================================================================
+
+FINDING: Dedicated government-owned networks identified
+
+ASN          | OWNER                          | USAGE
+-------------|--------------------------------|------------------
+AS34592      | Iranian Presidential Admin     | president.ir
+AS29079      | IRNA                           | irna.ir network
+AS24631      | Tose'h Fanavari                | mfa.gov.ir
+AS48434      | Tebyan-e-Noor Institute        | khamenei.ir mail
+AS205585     | ArvanCloud                     | ALL gov sites CDN
+
+WHY IT MATTERS:
+- Direct attribution to government entities
+- ArvanCloud = single point of failure for regime web
+- Can monitor these ASNs for new infrastructure
+
+--------------------------------------------------------------------------------
+
+================================================================================
+SUMMARY - WHAT'S ACTUALLY USEFUL
+================================================================================
+
+INFRASTRUCTURE MAPPING:
+[x] Private IP leak reveals internal network
+[x] VPN endpoint exposed for potential targeting
+[x] Admin portal discovered via cert transparency
+[x] Hidden API domain on separate TLD
+[x] 182 embassy subdomains mapped
+[x] Government ASN ownership confirmed
+
+ATTACK SURFACE:
+[x] APK can be reverse engineered
+[x] VPN endpoint for credential attacks
+[x] Admin portal location known
+[x] API endpoints enumerable
+
+ATTRIBUTION:
+[x] EXIF metadata links files to workstations
+[x] Working hours reveal timezone
+[x] WhatsApp patterns show communication flow
+
+RESILIENCE ANALYSIS:
+[x] Russian/Czech hosting strategy documented
+[x] .lb TLD workaround for US seizures
+[x] ArvanCloud as single point of failure
+
+================================================================================
+                              END KEY FINDINGS
+================================================================================

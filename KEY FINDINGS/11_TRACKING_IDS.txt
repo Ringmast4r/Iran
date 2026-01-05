@@ -1,0 +1,30 @@
+TRACKING IDS - CONFIRMED LIVE
+=============================
+
+GOOGLE TAG MANAGER:
+1. GTM-TLJW8TR | almanar.com.lb (Hezbollah TV)
+2. GTM-PZ3N9B8 | tasnimnews.com (IRGC)
+
+GOOGLE ANALYTICS (GA4):
+3. G-JJ1SM3JFZW | almanar.com.lb
+4. G-8MVZ1HLJT0 | khamenei.ir
+5. G-MGYZR3Q3BS | tasnimnews.com
+6. G-F359E8PMME | presstv.ir
+7. G-ERSHRYVTBP | mehrnews.com
+8. G-94BW46TZJM | defapress.ir
+9. G-Z8F3HPDSWG | moqawama.org.lb
+
+GOOGLE ANALYTICS (UA):
+10. UA-199941297-1 | almanar.com.lb
+11. UA-6238962-2   | khamenei.ir
+
+MICROSOFT CLARITY:
+12. cgaike4iub | almanar.com.lb
+13. cs22bibpe3 | almanar.com.lb
+14. o2z34ibfin | mehrnews.com
+
+WHY IT MATTERS:
+- Cross-site tracking possible via shared GTM
+- Can correlate visitors across properties
+- GA accounts may reveal admin emails
+- Microsoft Clarity = full session recordings

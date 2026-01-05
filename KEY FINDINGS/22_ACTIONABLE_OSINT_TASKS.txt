@@ -1,0 +1,181 @@
+ACTIONABLE OSINT TASKS
+=======================
+Specific research tasks that could help activists
+Priority order for maximum impact
+
+================================================================================
+[PRIORITY 1] IMMEDIATE VALUE
+================================================================================
+
+TASK 1: SHODAN IRAN SCAN
+-------------------------
+Command: country:ir port:443 product:apache
+Purpose: Find exposed government web servers
+Output: List of potentially vulnerable IPs
+Time: 1-2 hours
+
+TASK 2: CERTIFICATE TRANSPARENCY WATCH
+---------------------------------------
+Monitor: crt.sh for new *.gov.ir, *.ir domains
+Tool: Set up crt.sh RSS or API monitoring
+Purpose: Catch new regime sites before launch
+Output: Early warning on new propaganda/surveillance
+
+TASK 3: GTM CONTAINER ANALYSIS
+------------------------------
+Target: GTM-TLJW8TR (Hezbollah), GTM-PZ3N9B8 (IRGC)
+Tool: GTM debug mode, network analysis
+Purpose: Find all sites sharing same GTM
+Output: Map of connected propaganda network
+
+TASK 4: ARVANCLOUD CUSTOMER ENUMERATION
+---------------------------------------
+Method: DNS enumeration of arvancdn.ir customers
+Tool: Certificate Transparency + passive DNS
+Purpose: Complete list of regime sites on ArvanCloud
+Output: Comprehensive target list
+
+================================================================================
+[PRIORITY 2] INFRASTRUCTURE MAPPING
+================================================================================
+
+TASK 5: GOVERNMENT ASN MAPPING
+------------------------------
+ASNs to monitor:
+- AS34592 (Presidential Admin)
+- AS29079 (IRNA)
+- AS24631 (Foreign Ministry)
+- AS48434 (Tebyan-e-Noor)
+- AS205585 (ArvanCloud)
+
+Tool: BGP monitoring, Shodan ASN search
+Purpose: Track all IPs in government networks
+Output: Complete IP inventory by ministry
+
+TASK 6: HEZBOLLAH DNS INFRASTRUCTURE
+------------------------------------
+Target: awt-lb.com (ns1.awt-lb.com, ns2.awt-lb.com)
+Method: Passive DNS, zone transfer attempts
+Purpose: Find all domains using Hezbollah DNS
+Output: List of Hezbollah-controlled domains
+
+TASK 7: EMBASSY SUBDOMAIN VERIFICATION
+--------------------------------------
+Target: 182 mfa.gov.ir subdomains
+Method: HTTP probing, content analysis
+Purpose: Find active vs inactive embassies
+Output: Map of functional diplomatic infrastructure
+
+================================================================================
+[PRIORITY 3] SURVEILLANCE RESEARCH
+================================================================================
+
+TASK 8: SIAM API DOCUMENTATION
+------------------------------
+Source: Citizen Lab leaked documents
+Method: Extract and document all API commands
+Purpose: Help activists understand surveillance
+Output: Public SIAM capability reference
+
+TASK 9: IRANIAN ISP ANALYSIS
+----------------------------
+Targets:
+- Iran Telecommunication Company PJS
+- Mobile operators (MCI, Irancell, Rightel)
+
+Method: BGP analysis, IP range mapping
+Purpose: Understand network control points
+Output: ISP infrastructure map
+
+TASK 10: VPN DETECTION PATTERNS
+-------------------------------
+Method: Network traffic analysis from Iran
+Purpose: Identify which VPN protocols blocked
+Output: Guide for activists on working VPNs
+
+================================================================================
+[PRIORITY 4] CONTENT ANALYSIS
+================================================================================
+
+TASK 11: PROPAGANDA MEDIA FINGERPRINTING
+----------------------------------------
+Targets: khamenei.ir, presstv.ir, tasnimnews.com
+Method: EXIF analysis, CSS/JS fingerprinting
+Purpose: Track propaganda production pipeline
+Output: Attribution evidence
+
+TASK 12: MICROSOFT CLARITY SESSION DATA
+---------------------------------------
+Targets: almanar.com.lb, mehrnews.com
+Method: Document Clarity project IDs
+Purpose: Evidence of user surveillance via US tools
+Output: Sanctions violation documentation
+
+TASK 13: TELEGRAM CHANNEL NETWORK
+---------------------------------
+Targets: Regime-affiliated Telegram channels
+Method: Channel analysis, forward mapping
+Purpose: Map disinformation network
+Output: Propaganda channel database
+
+================================================================================
+[PRIORITY 5] LONG-TERM MONITORING
+================================================================================
+
+TASK 14: AUTOMATED CT MONITORING
+--------------------------------
+Setup: crt.sh API monitoring for key domains
+Frequency: Daily
+Purpose: Catch new infrastructure immediately
+
+TASK 15: SHODAN MONITOR ALERTS
+------------------------------
+Setup: Shodan Monitor for key IP ranges
+Frequency: Continuous
+Purpose: Detect new exposed services
+
+TASK 16: SOCIAL MEDIA OSINT
+---------------------------
+Targets: @khaboronline, regime Twitter accounts
+Method: Account behavior analysis
+Purpose: Detect coordinated campaigns
+
+================================================================================
+TOOLS REQUIRED
+================================================================================
+
+FREE:
+- Shodan (limited), Censys (limited)
+- crt.sh (Certificate Transparency)
+- BGPView (ASN analysis)
+- Tor Browser
+- nslookup/dig
+- curl/wget
+
+PAID/SUBSCRIPTION:
+- Shodan Pro ($59/month)
+- Censys Enterprise
+- Maltego (graph analysis)
+- SpiderFoot HX
+
+CUSTOM:
+- Python scripts for automation
+- API integrations
+- Database for storing results
+
+================================================================================
+OUTPUT FORMATS
+================================================================================
+
+For each task, produce:
+1. Raw data file (CSV/JSON)
+2. Summary analysis (TXT)
+3. Visualization if applicable
+4. Recommendations
+
+Share findings via:
+- Secure channels to activist groups
+- Academic/research publication
+- Responsible disclosure if vulnerabilities found
+
+================================================================================

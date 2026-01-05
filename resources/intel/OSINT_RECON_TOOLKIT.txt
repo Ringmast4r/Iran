@@ -1,0 +1,303 @@
+================================================================================
+                    OSINT TECHNICAL RECONNAISSANCE TOOLKIT
+                         APIs | Subdomains | Hashes | Tools
+                              Classification: OPEN SOURCE
+                              Last Updated: 2026-01-03
+================================================================================
+
+[1] EMAIL HASH LOOKUP TOOLS (GRAVATAR/MD5)
+================================================================================
+
+GRAVATAR OSINT BASICS:
+- Gravatar has 150M-400M+ users
+- Profiles linked via MD5 hash of email
+- URL pattern: https://gravatar.com/avatar/{MD5_HASH}
+- Profile URL: https://gravatar.com/{username}
+
+HASH GENERATION:
+1. Take email: example@email.com
+2. Lowercase: example@email.com
+3. MD5 hash: d4c74594d841139328695756648b6bd6
+4. Gravatar URL: https://gravatar.com/avatar/d4c74594d841139328695756648b6bd6
+
+TOOLS:
+
+Hashtray (GitHub: balestek/hashtray)
+- Find Gravatar from email OR email from hash
+- Handles secondary emails
+- Python 3.8+
+- URL: https://github.com/balestek/hashtray
+
+Gravsint (GitHub: Akinarisekigawa/Gravsint)
+- Search by email or username
+- URL: https://github.com/Akinarisekigawa/Gravsint
+
+Buster (GitHub: sham00n/buster)
+- Multi-source email recon
+- Sources: Gravatar, About.me, Myspace, Skype, GitHub, LinkedIn
+- Searches breaches, paste sites, dark web
+- URL: https://github.com/sham00n/buster
+
+Email OSINT API (GitHub: nikhgupta/email-osint-api)
+- Grape API for email validation + Gravatar
+- URL: https://github.com/nikhgupta/email-osint-api
+
+MD5 HASH SERVICES:
+- Encrypt: https://www.md5online.org/md5-encrypt.html
+- Decrypt: CrackStation, HashKiller, md5decrypt.net
+
+--------------------------------------------------------------------------------
+
+[2] USERNAME SEARCH TOOLS
+================================================================================
+
+Sherlock
+- 400+ social networks
+- Web/CLI deployments
+- Tor & proxy support
+- CSV export
+- URL: https://github.com/sherlock-project/sherlock
+
+Maigret
+- 3100+ sites coverage
+- Profile page parsing
+- Extracts personal info + links
+- Recursive username search
+- Search by country/category
+- URL: https://github.com/soxoj/maigret
+
+Social Analyzer
+- ~1000 platforms
+- Takes username, email, or real name
+- Scores match likelihood
+- API & CLI interfaces
+- URL: https://github.com/qeeqbox/social-analyzer
+
+Namechk
+- URL: https://namechk.com/
+- Quick username availability check
+
+Knowem
+- URL: https://knowem.com/
+- Brand/username search across 500+ sites
+
+SherlockOSINT (Web)
+- URL: https://sherlockosint.com
+- Web-based username hunting
+
+OSINT Framework
+- URL: https://osintframework.com/
+- Comprehensive tool directory
+
+--------------------------------------------------------------------------------
+
+[3] SUBDOMAIN ENUMERATION TOOLS
+================================================================================
+
+PASSIVE RECONNAISSANCE:
+
+Subfinder (ProjectDiscovery)
+- Fast passive subdomain discovery
+- Multiple sources: search engines, DNS, APIs
+- URL: https://github.com/projectdiscovery/subfinder
+
+Amass (OWASP)
+- Comprehensive subdomain enum
+- Active + passive methods
+- DNS records, network infrastructure
+- URL: https://github.com/owasp-amass/amass
+
+TheHarvester
+- Emails, subdomains, hosts, open ports
+- Sources: search engines, PGP servers, Shodan
+- URL: https://github.com/laramies/theHarvester
+
+Findomain
+- Very fast
+- Multi-domain batch search
+- URL: https://github.com/Findomain/Findomain
+
+ONLINE SERVICES:
+
+osint.sh Subdomain Finder
+- URL: https://osint.sh/subdomain/
+
+crt.sh (Certificate Transparency)
+- URL: https://crt.sh/
+- Query: %.target.com
+
+SecurityTrails
+- URL: https://securitytrails.com/
+
+VirusTotal
+- URL: https://www.virustotal.com/
+- Passive DNS data
+
+DNSDumpster
+- URL: https://dnsdumpster.com/
+
+Shodan
+- URL: https://www.shodan.io/
+- IoT/infrastructure search
+
+CERTIFICATE TRANSPARENCY:
+
+Merklemap
+- Ingests certificate transparency logs
+- Finds non-public subdomains
+- URL: https://www.merklemap.com/
+
+--------------------------------------------------------------------------------
+
+[4] IRAN-SPECIFIC OSINT RESOURCES
+================================================================================
+
+SEARCH ENGINES:
+- Parseek (parseek.com) - Iranian search engine
+
+GOVERNMENT/BUSINESS DATABASES:
+- Codal (codal.ir) - Company financial statements
+- Iran Company Register (irsherkat.ssaa.ir) - Business registry
+- Iran Customs (irica.ir) - Import/export data
+- Bank Markazi (cbi.ir) - Central bank, economic data
+
+IRANIAN IP RANGES:
+- Use Shodan: country:IR
+- Iranian ASN research via bgp.he.net
+
+KEY GOVERNMENT DOMAINS:
+- .gov.ir - Government
+- .ac.ir - Academic
+- .sch.ir - Schools
+- .co.ir - Commercial
+- .org.ir - Organizations
+
+--------------------------------------------------------------------------------
+
+[5] GEOLOCATION & EXIF TOOLS
+================================================================================
+
+ONLINE EXIF VIEWERS:
+- Jeffrey's EXIF Viewer: http://exif.regex.info/exif.cgi
+- ExifData.com: https://exifdata.com/
+- Metapicz: https://metapicz.com/
+- Pic2Map: https://www.pic2map.com/
+
+DESKTOP TOOLS:
+- ExifTool (CLI): https://exiftool.org/
+  Command: exiftool -gps:all image.jpg
+
+- GeoSetter (Windows): Free geotagging viewer
+
+BROWSER EXTENSIONS:
+- Firefox: Exif Viewer
+- Chrome: Exif Viewer Pro
+
+PYTHON LIBRARIES:
+- Pillow: pip install pillow
+- ExifRead: pip install exifread
+
+COORDINATE MAPPING:
+- Google Maps: paste coordinates directly
+- OpenStreetMap: https://www.openstreetmap.org/
+- Google Earth: https://earth.google.com/
+
+IMPORTANT NOTES:
+- Most social media STRIPS EXIF data (privacy)
+- Flickr RETAINS EXIF data (exception)
+- Check original source when possible
+- EXIF can be faked/edited
+
+--------------------------------------------------------------------------------
+
+[6] COMMERCIAL OSINT PLATFORMS (APIs)
+================================================================================
+
+OSINT Industries
+- Real-time lookup: email, phone, username, crypto
+- API access available
+- URL: https://www.osint.industries/
+
+X-Ray Contact
+- People identification platform
+- Multi-source aggregation
+- URL: https://xray.contact/
+
+IRBIS Pro
+- Email, phone, username profiling
+- Dark web monitoring
+- URL: https://irbis.espysys.com/
+
+Maltego
+- Graph-based OSINT
+- Extensive transforms
+- URL: https://www.maltego.com/
+
+SpiderFoot
+- Automated OSINT collection
+- 200+ modules
+- URL: https://github.com/smicallef/spiderfoot
+
+ShadowDragon SocialNet
+- Social media intelligence
+- URL: https://shadowdragon.io/
+
+--------------------------------------------------------------------------------
+
+[7] API ENDPOINT DISCOVERY
+================================================================================
+
+TECHNIQUES:
+- Wayback Machine: Check historical API paths
+- robots.txt: Often lists API paths
+- sitemap.xml: May reveal endpoints
+- JS file analysis: Extract API calls
+- Swagger/OpenAPI docs: /swagger.json, /api-docs
+
+TOOLS:
+
+Burp Suite
+- Proxy-based API discovery
+- URL: https://portswigger.net/burp
+
+OWASP ZAP
+- Open source proxy
+- URL: https://www.zaproxy.org/
+
+Postman
+- API testing/documentation
+- URL: https://www.postman.com/
+
+GAU (Get All URLs)
+- Fetch URLs from Wayback, Common Crawl
+- URL: https://github.com/lc/gau
+
+Katana (ProjectDiscovery)
+- Web crawling, JS parsing
+- URL: https://github.com/projectdiscovery/katana
+
+--------------------------------------------------------------------------------
+
+[8] OPERATIONAL SECURITY NOTES
+================================================================================
+
+TOR CONFIGURED: Swiss Exit Node ({ch})
+Location: C:\Users\Squir\Desktop\Tor Browser
+
+ADDITIONAL OPSEC:
+- Use Tor Browser for all research
+- Don't login to personal accounts through Tor
+- Use separate research identities
+- Clear metadata from downloaded files
+- Use VPN + Tor for additional layer
+- Avoid patterns (vary timing, exit nodes)
+
+ALTERNATE EXIT NODES:
+ExitNodes {nl}  # Netherlands
+ExitNodes {de}  # Germany
+ExitNodes {se}  # Sweden
+ExitNodes {is}  # Iceland
+
+================================================================================
+                              END OF DOCUMENT
+================================================================================

@@ -1,0 +1,28 @@
+HEZBOLLAH EXIF METADATA - ATTRIBUTION
+======================================
+
+FINDING: Photoshop metadata preserved in propaganda graphics
+
+FILE             | SOFTWARE              | TIMESTAMP
+-----------------|-----------------------|--------------------
+1679.jpg         | Adobe Photoshop 7.0   | 2023-04-15 15:27:26
+1713.jpg         | Adobe Photoshop 7.0   | 2023-05-31 07:13:38
+1808.jpg         | Photoshop CS6 (Win)   | 2014-07-22 16:07:36
+1833.jpg         | Photoshop CS6 (Win)   | 2024-01-22 14:34:12
+
+ANALYSIS:
+- Photoshop 7.0 (2002 software) = likely pirated
+- Multiple files from same workstation
+- Timestamps = Beirut working hours (GMT+2/+3)
+- CS6 (Win) = Windows environment
+
+WHATSAPP OPSEC FAILURE:
+- File: "WhatsApp Image 2025-12-13 at 9.50.45 AM.jpeg"
+- Location: english.alahednews.com.lb
+- Staff uploads directly without renaming
+
+WHY IT MATTERS:
+- Can track individual content creators
+- Working hours reveal timezone/location
+- WhatsApp patterns expose workflow
+- Pirated software = sanctions compliance failure

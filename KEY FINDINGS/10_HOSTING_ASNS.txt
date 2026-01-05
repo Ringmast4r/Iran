@@ -1,0 +1,32 @@
+HEZBOLLAH HOSTING ASN ANALYSIS
+==============================
+
+MOQAWAMA.ORG.LB HOSTING:
+IP: 91.109.206.65
+Location: Chekhov, Moscow Oblast, Russia
+ASN: AS199669 Okay-Telecom Ltd.
+Hostname: mq.webking1.net
+
+ALMANAR.COM.LB HOSTING:
+IP: 5.35.14.166
+Location: Moscow, Russia
+ASN: AS50340 JSC Selectel
+Note: Selectel = major Russian cloud provider
+
+AWT-LB.COM DNS INFRA:
+IP: 185.112.156.85
+Location: Budapest, Hungary
+ASN: AS210772 NewPush Europe Kft.
+Hostname: test44.sebalinux.eu
+
+PATTERN:
+- Primary hosting: Russia (multiple providers)
+- DNS infrastructure: Hungary
+- Deliberate geographic distribution
+- Russian hosting = Western takedown immunity
+- Hungarian DNS = EU jurisdiction complexity
+
+TOTAL ASNs IDENTIFIED:
+1. AS199669 - Okay-Telecom (Russia)
+2. AS50340 - Selectel (Russia)
+3. AS210772 - NewPush Europe (Hungary)

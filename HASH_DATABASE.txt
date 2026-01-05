@@ -1,0 +1,132 @@
+================================================================================
+                    HASH & TOKEN DATABASE
+                    Iranian Government & Hezbollah Infrastructure
+                    ONLY REAL COLLECTED DATA - No Derived Hashes
+                    Generated: 2026-01-04
+================================================================================
+
+================================================================================
+[1] PHP SESSION HASHES (Collected from HTTP Responses)
+================================================================================
+
+SOURCE: HTTP Set-Cookie headers during OSINT collection
+
+1.  moqawama.org.lb         | PHPSESSID      | 83d0d0dde0bdea9c508fb780f5e22330
+2.  audio.moqawama.org.lb   | sec_session_id | 78278a485df2a5807e6d9c45158a989e
+3.  gallery.moqawama.org.lb | sec_session_id | d0130803e2bad19514db5f13679dbd1f
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[2] COOKIE SESSION IDENTIFIERS (From API Responses)
+================================================================================
+
+SOURCE: farsnews.ir API response headers
+
+4.  farsnews.ir | cookiesession1 | 678B286B29F37FAC96F0F1CB00C133DC
+    Expires: Mon, 04 Jan 2027 (1 year)
+    HttpOnly: true
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[3] CSS CACHE HASHES (Found in HTML Source)
+================================================================================
+
+SOURCE: almanar.com.lb HTML source code
+
+5.  almanar.com.lb | mnrminify_3c902298363cd2282b362f860e54fe29.css
+    Pattern: mnrminify_[MD5].css
+    Purpose: Content-based cache busting
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[4] API TRACKING HASHES (Found in API JSON Response)
+================================================================================
+
+SOURCE: formx.khamenei.link API response
+
+6.  formx.khamenei.link | c=ae8373ca17dc9561f317
+    Full URL: redirect?id=62251&c=ae8373ca17dc9561f317&u=https://farsi.khamenei.ir/...
+    Purpose: Click/redirect tracking
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[5] GOOGLE SITE VERIFICATION TOKEN (Found in DNS TXT Record)
+================================================================================
+
+SOURCE: nslookup -type=TXT khamenei.ir
+
+7.  khamenei.ir | FrS79LKnklz_7cQGdeYYR5RW-gtYz2sm3JWIVWo24W0
+    Location: DNS TXT record
+    Significance: Proves Supreme Leader's office has Google account
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[6] GOOGLE ANALYTICS IDs (Found in HTML Source)
+================================================================================
+
+SOURCE: Extracted from <script> tags in HTML
+
+ 8. khamenei.ir      | UA-6238962-2     | Universal Analytics
+ 9. khamenei.ir      | G-8MVZ1HLJT0     | GA4
+10. almanar.com.lb   | UA-199941297-1   | Universal Analytics
+11. almanar.com.lb   | G-JJ1SM3JFZW     | GA4
+12. tasnimnews.com   | G-MGYZR3Q3BS     | GA4
+13. presstv.ir       | G-F359E8PMME     | GA4
+14. mehrnews.com     | G-ERSHRYVTBP     | GA4
+15. defapress.ir     | G-94BW46TZJM     | GA4
+16. moqawama.org.lb  | G-Z8F3HPDSWG     | GA4
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[7] GOOGLE TAG MANAGER CONTAINERS (Found in HTML Source)
+================================================================================
+
+SOURCE: GTM script tags in HTML
+
+17. GTM-TLJW8TR | almanar.com.lb  | Hezbollah media network
+    Links: almanar.com.lb, almanartv.com.lb, manartv.com.lb
+
+18. GTM-PZ3N9B8 | tasnimnews.com  | IRGC media
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[8] MICROSOFT CLARITY PROJECT IDs (Found in HTML Source)
+================================================================================
+
+SOURCE: Clarity script tags in HTML
+NOTE: Microsoft records full user sessions on these sites
+
+19. cgaike4iub | almanar.com.lb | Primary project
+20. cs22bibpe3 | almanar.com.lb | Secondary project
+21. o2z34ibfin | mehrnews.com   | Session recording
+
+--------------------------------------------------------------------------------
+
+================================================================================
+[9] SUMMARY
+================================================================================
+
+TOTAL REAL COLLECTED ITEMS: 21
+
+BY TYPE:
+- PHP Session Hashes:      3  (from HTTP responses)
+- Cookie Sessions:         1  (from API response)
+- CSS Cache Hashes:        1  (from HTML)
+- API Tracking Hashes:     1  (from API response)
+- Google Verification:     1  (from DNS TXT)
+- Google Analytics IDs:    9  (from HTML)
+- GTM Container IDs:       2  (from HTML)
+- Microsoft Clarity IDs:   3  (from HTML)
+
+ALL DATA IS REAL - collected during OSINT, not derived/computed.
+
+================================================================================
+                              END HASH DATABASE
+================================================================================

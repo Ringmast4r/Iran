@@ -1,0 +1,19 @@
+VPN ENDPOINT EXPOSED - MFA.GOV.IR
+==================================
+
+FINDING: Ministerial VPN hostname in public DNS
+
+SUBDOMAIN: r1.vpn.minister.local.mfa.gov.ir
+RESOLVES TO: 185.143.235.201 (ArvanCloud)
+
+WHY IT MATTERS:
+- "minister.local" = internal naming convention leaked
+- "r1" suggests multiple endpoints (r2, r3...)
+- Target for credential stuffing/brute force
+- VPN software version could be fingerprinted
+
+RELATED:
+- cp.mfa.gov.ir (Control Panel) -> 109.201.11.102
+- ORG confirmed: "Foreign Ministry of IRAN"
+
+STATUS: HIGH VALUE - Attack surface

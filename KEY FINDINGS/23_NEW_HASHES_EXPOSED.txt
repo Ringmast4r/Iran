@@ -1,0 +1,197 @@
+NEW HASHES & EXPOSED DATA
+==========================
+Collected: January 5, 2026
+
+================================================================================
+[1] DNS TXT VERIFICATION HASHES
+================================================================================
+
+IRNA.IR:
+- bc9d8d4b4f7d2d246b11eb92292fc8fe8a2f6836c3f496998b56f16756bba1c
+- google-site-verification=EtvtdhZLfgtd3f1Belf5x_fl6kGp-lvYTuXkTbv1PpE
+
+MEHRNEWS.COM:
+- dd607b0e1784ef9cb0a34c222822fbe0ef3c2aaa4dd9a979a9fe56298168b5e
+- b983f1083ba5330bc0de425e6f7f47601b40f87c47ec5e4260588a3765524f7
+- google-site-verification=QrXe7QIJuqTL2_fIDnPtpyvr0muOLphsJJZn-VSSjdA
+
+TASNIMNEWS.COM:
+- google-site-verification=pUDjRp5gXOeJ-eJD_Fcas7mKOaF3KYVYG4PQjAcMAg0
+- google-site-verification=Hi6zKYSec5OK8Gv7wa5IS2OTw6BNC5x2Wmu1UkJLFK0
+
+FARSNEWS.IR:
+- google-site-verification=e1aUAOGiYvB9ZZ4DEfcBPwkJmsthSpfugZCKE7KwHbk
+
+================================================================================
+[2] NEW COOKIE/SESSION HASHES
+================================================================================
+
+FARSNEWS.IR:
+- cookiesession1=678B286BEEA6C1F2F8384B3103219F68
+- Expires: Tue, 05 Jan 2027
+- HttpOnly: true
+- Server: ninja
+
+================================================================================
+[3] NEW GOOGLE ANALYTICS IDs
+================================================================================
+
+MEHRNEWS.COM:
+- G-5Q1HBWB4QM (new - different from G-ERSHRYVTBP)
+
+================================================================================
+[4] DMARC EMAIL ADDRESSES EXPOSED
+================================================================================
+
+KHAMENEI.IR:
+- mailauth-rua@khamenei.ir (DMARC aggregate reports)
+- mailauth-ruf@khamenei.ir (DMARC forensic reports)
+
+MFA.GOV.IR:
+- dmarc-error@mfa.gov.ir (DMARC reports)
+
+FARSNEWS.IR:
+- noc@farsnews.ir (Network Operations Center)
+
+================================================================================
+[5] FARSNEWS.IR - NEW SUBDOMAINS (Certificate Transparency)
+================================================================================
+
+DEVELOPMENT/INTERNAL:
+- jira.farsnews.ir (Atlassian JIRA)
+- confluence.farsnews.ir (Atlassian Confluence)
+- chat.farsnews.ir (Internal chat)
+- matomo.farsnews.ir (Self-hosted analytics)
+- tracker.farsnews.ir (Tracking server)
+- robot.farsnews.ir (Automation)
+
+API/TELEGRAM:
+- my-api-tlg.farsnews.ir (Telegram API integration!)
+- api.farsnews.ir (returns 401 Unauthorized)
+
+MEDIA:
+- my-media.farsnews.ir
+- my-media2.farsnews.ir
+- app.farsnews.ir (Mobile app backend)
+- book.farsnews.ir
+
+OTHER:
+- evaluation.farsnews.ir
+- faculty.farsnews.ir
+- tavana.farsnews.ir
+- stat.farsnews.ir
+- intevl.farsnews.ir
+- nmblt1.farsnews.ir
+
+NOTE: Most don't resolve publicly - internal only but exposed in certs
+
+================================================================================
+[6] MEHRNEWS.COM - NEW SUBDOMAINS
+================================================================================
+
+MONITORING/ADMIN:
+- prtg.mehrnews.com (PRTG Network Monitor!)
+- www.prtg.mehrnews.com
+- hrm.mehrnews.com (HR Management System)
+
+AUTOMATION:
+- bot.mehrnews.com
+- bot2.mehrnews.com
+
+EDITORIAL SYSTEMS:
+- edit.mehrnews.com
+- edit2.mehrnews.com
+- editar.mehrnews.com (Arabic)
+- editen.mehrnews.com (English)
+- editku.mehrnews.com (Kurdish)
+- edittr.mehrnews.com (Turkish)
+- editur.mehrnews.com (Urdu)
+
+SPECIAL:
+- election.mehrnews.com (Election coverage)
+- majles.mehrnews.com (Parliament)
+- lms.mehrnews.com (Learning Management)
+- mehrinno.mehrnews.com (Innovation?)
+- chart.mehrnews.com
+- map.mehrnews.com
+- my.mehrnews.com
+- webmail.mehrnews.com
+
+================================================================================
+[7] PRESSTV.IR - SUBDOMAINS
+================================================================================
+
+STREAMING:
+- hls1.presstv.ir (HLS streaming server)
+
+STATISTICS:
+- stat.presstv.ir
+- wsstat.presstv.ir (WebSocket stats)
+
+MAIL:
+- mail.presstv.ir
+
+================================================================================
+[8] ARVANCLOUD CHALLENGE TOKENS
+================================================================================
+
+PRESIDENT.IR (from challenge page):
+- Cookie: __arcsjs (ArvanCloud JS hash)
+- Cookie: __arcsjsc (ArvanCloud JS challenge)
+- Obfuscated JS decoder found
+- Tehran timezone detection in code
+
+================================================================================
+[9] SPF RECORDS - MAIL SERVER IPs
+================================================================================
+
+IRNA.IR:
+- 217.25.48.34 (mail.irna.ir)
+
+TASNIMNEWS.COM:
+- 185.167.124.44
+
+FARSNEWS.IR:
+- 45.157.244.60
+- 77.104.70.15
+
+PRESSTV.IR:
+- 93.190.24.225
+- edge.presstv.ir
+
+ALMANAR.COM.LB:
+- 5.35.14.165
+
+DEFAPRESS.IR:
+- 94.182.146.237
+
+================================================================================
+[10] ROBOTS.TXT FINDINGS
+================================================================================
+
+FARSNEWS.IR:
+- Disallow: /_hybrid/
+- Sitemap: https://farsnews.ir/sitemaps/profiles/index.xml
+- Sitemap: https://farsnews.ir/sitemap.xml
+- Exposes: /showcase, /tv/services, /campaigns/services, /privacy
+
+================================================================================
+SUMMARY - NEW ITEMS COLLECTED
+================================================================================
+
+DNS HASHES: 7 new
+COOKIE SESSIONS: 1 new
+ANALYTICS IDs: 1 new (G-5Q1HBWB4QM)
+DMARC EMAILS: 4 addresses
+SUBDOMAINS: 40+ new (farsnews, mehrnews, presstv)
+MAIL SERVER IPs: 8 new
+SITEMAP PATHS: 4 exposed
+
+HIGH VALUE TARGETS:
+[!] prtg.mehrnews.com - Network monitoring (may leak infra info)
+[!] my-api-tlg.farsnews.ir - Telegram integration
+[!] hrm.mehrnews.com - HR system (employee data)
+[!] noc@farsnews.ir - NOC contact for IRGC media
+[!] majles.mehrnews.com - Parliament coverage system
+
+================================================================================

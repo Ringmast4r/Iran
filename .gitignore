@@ -1,0 +1,7 @@
+# Exclude operational files
+SNIPs/
+tor_data/
+scripts/
+*.py
+tor_osint.torrc
+*.db

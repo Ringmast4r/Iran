@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iran-Hezbollah OSINT Collection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 4px solid #cc0000;
+        }
+
+        .header h1 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            letter-spacing: 3px;
+        }
+
+        .header .subtitle {
+            color: #888;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .header .classification {
+            display: inline-block;
+            background: #cc0000;
+            padding: 8px 25px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            flex: 1;
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .nav-card {
+            background: #f9f9f9;
+            border-left: 5px solid #1a1a1a;
+            padding: 30px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s ease;
+            display: block;
+        }
+
+        .nav-card:hover {
+            border-left-color: #cc0000;
+            background: #fff;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            transform: translateY(-3px);
+        }
+
+        .nav-card .icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .nav-card h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .nav-card p {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .nav-card .tag {
+            display: inline-block;
+            padding: 5px 12px;
+            font-size: 0.75em;
+            font-weight: bold;
+            border-radius: 3px;
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+
+        .nav-card .tag.critical { background: #cc0000; color: #fff; }
+        .nav-card .tag.reference { background: #00aa44; color: #fff; }
+        .nav-card .tag.data { background: #ff6600; color: #fff; }
+
+        .status-bar {
+            background: #1a1a1a;
+            padding: 25px;
+            margin-bottom: 40px;
+        }
+
+        .status-bar h3 {
+            color: #cc0000;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+        }
+
+        .status-bar ul {
+            list-style: none;
+            color: #aaa;
+        }
+
+        .status-bar li {
+            padding: 5px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .status-bar li:last-child {
+            border-bottom: none;
+        }
+
+        .status-bar .highlight {
+            color: #cc0000;
+            font-weight: bold;
+        }
+
+        .info-section {
+            background: #f5f5f5;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 4px solid #ff6600;
+        }
+
+        .info-section h3 {
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .info-section ul {
+            margin-left: 20px;
+            color: #555;
+        }
+
+        .info-section li {
+            margin-bottom: 8px;
+        }
+
+        .footer {
+            background: #1a1a1a;
+            color: #666;
+            padding: 30px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .footer a {
+            color: #888;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 { font-size: 2em; }
+            .nav-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>IRAN-HEZBOLLAH OSINT</h1>
+    <div class="subtitle">Open Source Intelligence Collection</div>
+    <div class="classification">UNCLASSIFIED</div>
+</div>
+
+<div class="container">
+
+    <div class="status-bar">
+        <h3>CURRENT SITUATION</h3>
+        <ul>
+            <li><span class="highlight">DAY 8:</span> Economic protests ongoing across 22 provinces</li>
+            <li><span class="highlight">CONFIRMED:</span> Security forces using live ammunition on civilians</li>
+            <li><span class="highlight">TRIGGER:</span> Rial currency collapse due to sanctions + war costs</li>
+            <li><span class="highlight">SCALE:</span> Largest protests since 2022 Mahsa Amini uprising</li>
+        </ul>
+    </div>
+
+    <div class="nav-grid">
+
+        <a href="timeline.html" class="nav-card">
+            <div class="icon">||</div>
+            <h2>Timeline</h2>
+            <p>Chronological breakdown of events from 2024-2026. Focus on ongoing 7+ day economic riots, June 2025 war, nuclear developments, and sanctions impact.</p>
+            <span class="tag critical">LIVE UPDATES</span>
+        </a>
+
+        <a href="glossary.html" class="nav-card">
+            <div class="icon">A-Z</div>
+            <h2>Glossary</h2>
+            <p>Key terms explained for American audiences. Searchable database covering IRGC, Hezbollah, nuclear terminology, sanctions, and current events.</p>
+            <span class="tag reference">REFERENCE</span>
+        </a>
+
+    </div>
+
+    <div class="info-section">
+        <h3>COLLECTION SOURCES</h3>
+        <ul>
+            <li><strong>Iranian State Media:</strong> khamenei.ir, moqawama.org.lb, alahednews.com.lb, almanar.com.lb</li>
+            <li><strong>US Government:</strong> Treasury OFAC, State Department, DOJ press releases</li>
+            <li><strong>International:</strong> IAEA reports, UN sanctions documents</li>
+            <li><strong>Research:</strong> Washington Institute, FDD, open source analysis</li>
+        </ul>
+    </div>
+
+    <div class="info-section">
+        <h3>DATA COLLECTED</h3>
+        <ul>
+            <li>66+ HTML pages from target websites via Tor</li>
+            <li>20+ media files with EXIF metadata extracted</li>
+            <li>RSS feeds and sitemaps parsed</li>
+            <li>Domain seizure analysis (moqawama.org vs .org.lb)</li>
+            <li>Infrastructure mapping (subdomains, hosting, ASN)</li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="footer">
+    <strong>Generated:</strong> 2026-01-04 | Classification: OSINT - UNCLASSIFIED<br>
+    <em>Collection via Tor exit nodes: RU/TR/AE/LB</em>
+</div>
+
+</body>
+</html>

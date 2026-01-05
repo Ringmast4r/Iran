@@ -1,0 +1,31 @@
+PRESIDENT.IR INFRASTRUCTURE
+============================
+
+DOMAIN: president.ir
+CDN: ArvanCloud (Iranian government CDN)
+
+IP ADDRESSES:
+- 185.143.234.235
+- 185.143.233.235
+
+NAMESERVERS:
+- e.ns.arvancdn.ir
+- hostmaster.arvancloud.ir
+
+DNS TXT VERIFICATION HASH:
+59cc9d3d3aab44f87fc1866cbed8977dc11ba864759e585d44cba1a906c7ad6
+
+HTTP HEADERS:
+- Server: ArvanCloud
+- X-Request-ID: 797f2c5bf7bddaca18a340a322803920
+- X-SID: 6980
+
+SSL CERTIFICATE:
+- Wildcard: *.president.ir
+
+ASN: AS34592 (Iranian Presidential Administration)
+
+WHY IT MATTERS:
+- Single ArvanCloud dependency for CDN
+- X-SID header may leak session info
+- Wildcard cert = hidden subdomains possible

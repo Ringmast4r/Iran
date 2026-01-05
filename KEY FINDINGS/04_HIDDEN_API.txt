@@ -1,0 +1,19 @@
+HIDDEN API DOMAIN - KHAMENEI.IR
+================================
+
+FINDING: Separate TLD used for API infrastructure
+
+DOMAIN: formx.khamenei.link (not khamenei.ir)
+ENDPOINT: https://formx.khamenei.link/farsi-json/topticker
+STATUS: Active, returns JSON
+
+WHY IT MATTERS:
+- Deliberately used different TLD to hide API
+- Not found via normal subdomain enumeration
+- Discovered only through JavaScript analysis
+- Contains redirect tracking system
+
+TRACKING HASH FOUND:
+c=ae8373ca17dc9561f317
+
+STATUS: HIGH VALUE - Hidden infrastructure

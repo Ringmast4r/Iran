@@ -1,0 +1,15 @@
+IRANIAN GOVERNMENT ASN OWNERSHIP
+=================================
+
+ASN          | OWNER                          | USAGE
+-------------|--------------------------------|------------------
+AS34592      | Iranian Presidential Admin     | president.ir
+AS29079      | IRNA                           | irna.ir network
+AS24631      | Tose'h Fanavari                | mfa.gov.ir
+AS48434      | Tebyan-e-Noor Institute        | khamenei.ir mail
+AS205585     | ArvanCloud                     | ALL gov sites CDN
+
+WHY IT MATTERS:
+- Direct attribution to government entities
+- ArvanCloud = single point of failure for regime web
+- Can monitor these ASNs for new infrastructure

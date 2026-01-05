@@ -1,0 +1,276 @@
+OSINT IDEAS FOR ACTIVISTS & RESEARCHERS
+=========================================
+How collected intel can help Iranian people
+Last Updated: January 5, 2026
+
+================================================================================
+[1] ARVANCLOUD - SINGLE POINT OF FAILURE
+================================================================================
+
+FINDING: All Iranian gov sites depend on ArvanCloud CDN (AS205585)
+
+HOW THIS HELPS ACTIVISTS:
+- Monitor ArvanCloud status = know when gov sites are down
+- If ArvanCloud has issues, regime propaganda offline
+- Single target for disruption vs. distributed infrastructure
+
+IRONIC TWIST - CDN BYPASS METHOD:
+- Activists use ArvanCloud CDN to BYPASS censorship
+- Protocol: shadowsocks+v2ray+websocket+tls+cdn
+- Hide VPN behind ArvanCloud IPs (ISPs won't block)
+- Works during protests when other methods fail
+
+MONITOR:
+- 185.143.232.0/22 (ArvanCloud IP range)
+- *.ns.arvancdn.ir (nameservers)
+- ArvanCloud is US/UK SANCTIONED (but EU removed sanctions)
+
+================================================================================
+[2] SIAM SURVEILLANCE AWARENESS
+================================================================================
+
+CRITICAL: SIAM is Iran's mobile surveillance system
+
+WHAT SIAM CAN DO TO ACTIVISTS:
+- Track location via cell towers
+- Read SMS messages
+- Force phone to 2G (easier to intercept)
+- Slow data to unusable speeds
+- Access father's name, address, employer, billing
+- Track Wi-Fi and IP history
+
+PROTECTION ADVICE FOR ACTIVISTS:
+- Assume ALL calls/SMS are monitored
+- Use end-to-end encrypted apps (Signal)
+- Disable 2G fallback if possible
+- Use separate "protest phone" with no personal data
+- Be aware: regime officials DON'T use VPNs (leaked X data)
+- There is "digital apartheid" - elite have unrestricted access
+
+SOURCE: Citizen Lab, The Intercept leaked documents
+
+================================================================================
+[3] SHODAN RECONNAISSANCE
+================================================================================
+
+FINDING: Nearly 2 million Iranian devices indexed on Shodan
+
+OSINT OPPORTUNITIES:
+- Search: country:ir (general Iran)
+- Search: country:ir city:tehran (capital)
+- Search: country:ir port:22 (SSH servers)
+- Search: country:ir product:apache (web servers)
+
+EXPOSED DEVICES FOUND:
+- Government webcams with compounds visible
+- ICS/SCADA systems (critical infrastructure)
+- Unpatched servers with known vulnerabilities
+- IoT devices with default credentials
+
+HOW THIS HELPS:
+- Map regime infrastructure
+- Identify weak points
+- Document security failures
+- Build IP block lists for activists
+
+================================================================================
+[4] TRACKING REGIME PROPAGANDA VIA ANALYTICS
+================================================================================
+
+COLLECTED TRACKING IDS (from our OSINT):
+
+GOOGLE TAG MANAGER:
+- GTM-TLJW8TR = almanar.com.lb (Hezbollah)
+- GTM-PZ3N9B8 = tasnimnews.com (IRGC)
+
+GOOGLE ANALYTICS:
+- G-8MVZ1HLJT0 = khamenei.ir
+- G-JJ1SM3JFZW = almanar.com.lb
+- G-MGYZR3Q3BS = tasnimnews.com
+- G-F359E8PMME = presstv.ir
+
+MICROSOFT CLARITY (SESSION RECORDING):
+- cgaike4iub, cs22bibpe3 = almanar.com.lb
+- o2z34ibfin = mehrnews.com
+
+HOW THIS HELPS RESEARCHERS:
+- Google/Microsoft have data on these sites
+- Subpoena potential for traffic patterns
+- Can request account info from Google/MS
+- Cross-reference to find linked properties
+- Monitor for new properties added to same accounts
+
+WARNING FOR ACTIVISTS:
+- These sites record your behavior (Clarity)
+- Use Tor or VPN when accessing regime media
+- Disable JavaScript to prevent tracking
+
+================================================================================
+[5] SAFE VS UNSAFE VPN IDENTIFICATION
+================================================================================
+
+PROBLEM: Many VPNs in Iran are government-controlled traps
+
+RED FLAGS:
+- VPNs promoted on state media
+- VPNs available without circumvention
+- Free VPNs with no known organization behind them
+- VPNs that don't use obfuscation
+
+TRUSTED OPTIONS (per research):
+- Proton VPN (Stealth protocol designed for Iran)
+- Outline VPN (Google Jigsaw backed)
+- Tor with Snowflake bridges
+- Lantern
+
+CDN-BASED BYPASS (works during shutdowns):
+- shadowsocks + v2ray + websocket + TLS + CDN
+- Uses major CDN IPs that can't be blocked
+- Works even during cellular shutdowns in protests
+
+================================================================================
+[6] CERTIFICATE TRANSPARENCY MONITORING
+================================================================================
+
+FINDING: Regime domains exposed via CT logs
+
+DISCOVERED VIA CT:
+- admin.english.khamenei.ir (admin portal)
+- All embassy subdomains (182 for mfa.gov.ir)
+- Hidden internal systems
+
+HOW ACTIVISTS CAN USE:
+- Monitor crt.sh for new *.gov.ir domains
+- Watch for new propaganda sites
+- Identify when regime launches new services
+- Find admin/internal subdomains accidentally exposed
+
+TOOLS:
+- crt.sh (Certificate Transparency search)
+- Censys.io (certificate database)
+- Google Transparency Report
+
+================================================================================
+[7] STARLINK ACCESS (POST JUNE 2025)
+================================================================================
+
+DEVELOPMENT: SpaceX activated Starlink for Iran
+
+CONTEXT:
+- June 13, 2025: Israeli strikes on nuclear facilities
+- Regime cut ground-based internet to millions
+- SpaceX activated Starlink satellite internet
+- Bypasses ground infrastructure entirely
+
+HOW THIS HELPS:
+- Satellite = cannot be blocked by ISPs
+- Direct-to-cell technology emerging
+- FREEDOM Act (Dec 2025) evaluating expansion
+- No reliance on Iranian telecom infrastructure
+
+LIMITATIONS:
+- Requires Starlink hardware (hard to obtain in Iran)
+- Direct-to-cell not yet widely available
+- Regime may attempt to jam signals
+
+================================================================================
+[8] HEZBOLLAH INFRASTRUCTURE MAPPING
+================================================================================
+
+FINDING: Hezbollah uses Russian/Hungarian hosting
+
+HOSTING DETAILS:
+- moqawama.org.lb: 91.109.206.65 (Moscow, AS199669)
+- almanar.com.lb: 5.35.14.166 (Moscow, AS50340)
+- awt-lb.com DNS: 185.112.156.85 (Hungary, AS210772)
+
+HOW THIS HELPS ACTIVISTS:
+- Target specific ASNs for monitoring
+- Identify new Hezbollah domains via same hosting
+- Report to hosting providers (may not care, but documented)
+- Build comprehensive block lists
+
+KEY INSIGHT:
+- awt-lb.com = likely Hezbollah-controlled DNS
+- Monitor for new domains using this DNS
+- Pattern: Lebanese TLD (.lb) + Russian hosting
+
+================================================================================
+[9] INTERNAL NETWORK LEAKS
+================================================================================
+
+DISCOVERED LEAKS:
+- kateb.irna.ir -> 10.30.41.85 (private IP exposed!)
+- r1.vpn.minister.local.mfa.gov.ir (VPN endpoint)
+- jira.farsnews.ir, git.farsnews.ir (dev tools)
+
+HOW THIS HELPS:
+- Reveals internal network structure
+- Shows misconfiguration patterns
+- Identifies potential entry points
+- Documents regime technical incompetence
+
+IRNA INTERNAL NETWORK MAP:
+- 10.30.41.x = Editorial systems
+- 217.25.48.x = Mail, Gallery
+- 217.25.58.x = Remote access
+
+================================================================================
+[10] EXIF METADATA FOR ATTRIBUTION
+================================================================================
+
+FINDING: Propaganda images contain metadata
+
+COLLECTED:
+- Adobe Photoshop 7.0 (2002!) = pirated software
+- CS6 (Windows) timestamps
+- Working hours reveal Beirut timezone
+- WhatsApp filenames preserved (opsec failure)
+
+HOW THIS HELPS:
+- Track individual content creators
+- Prove state involvement in propaganda
+- Document patterns for attribution
+- Legal evidence for sanctions cases
+
+================================================================================
+PRIORITY RESEARCH AREAS
+================================================================================
+
+1. SIAM SYSTEM DOCUMENTATION
+   - Continue analyzing leaked documents
+   - Map API commands and capabilities
+   - Develop detection methods
+
+2. ARVANCLOUD MONITORING
+   - Track all gov sites on ArvanCloud
+   - Monitor for new infrastructure
+   - Document for future sanctions evidence
+
+3. ANALYTICS ACCOUNT RESEARCH
+   - Request data from Google/Microsoft
+   - Identify account holders
+   - Map network of regime media
+
+4. IRAN IP SPACE SCANNING
+   - Regular Shodan/Censys scans
+   - Document exposed infrastructure
+   - Track changes over time
+
+5. TELEGRAM CHANNEL OSINT
+   - Many activists use Telegram
+   - Regime also uses Telegram for propaganda
+   - Monitor for disinformation patterns
+
+================================================================================
+SOURCES
+================================================================================
+- Citizen Lab: SIAM analysis
+- The Intercept: Leaked surveillance docs
+- Freedom House: Iran freedom reports
+- OONI: Censorship measurement
+- Tor Project: Circumvention research
+- osintme.com: Iran OSINT methodology
+- Treasury/State Dept: ArvanCloud sanctions
+- Scientific American: SIAM surveillance
+================================================================================

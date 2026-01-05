@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+Disallow: /cgi-bin/
+Sitemap: https://english.alahednews.com.lb/sitemap.xml
+Sitemap: https://english.alahednews.com.lb/sitemap-news.xml
