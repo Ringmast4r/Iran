@@ -1,7 +1,7 @@
 # Iran OSINT - Government & Hezbollah Infrastructure Analysis
 
 <p align="center">
-  <img src="resources/hezbollah/media/kaed0259.jpg" alt="Ayatollah Khamenei" width="400">
+  <img src="kaed0259.jpg" alt="Ayatollah Khamenei" width="400">
 </p>
 
 ---
