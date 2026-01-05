@@ -36,6 +36,36 @@
 
 ---
 
+## Collection Statistics
+
+| Category | Count |
+|----------|-------|
+| KEY FINDINGS Files | 23 |
+| Intel Reports | 14 |
+| MFA Embassy Subdomains | 182 |
+| IRNA Subdomains | 50 |
+| Khamenei.ir Subdomains | 48 |
+| FarsNews/MehrNews Subdomains | 40+ |
+| Hezbollah Media Files | 100+ |
+| Captured HTML Pages | 120+ |
+| Tracking Tokens/Hashes | 28+ |
+| Mail Server IPs | 15+ |
+| ASNs Mapped | 12 |
+
+---
+
+## Current Situation (January 2026)
+
+| Event | Status |
+|-------|--------|
+| **Economic Protests** | Day 8+ - 222 locations, 26 provinces, 19+ dead |
+| **Khamenei** | "Rioters must be put in their place" |
+| **Currency** | Rial collapsed - worst since 1979 |
+| **Maduro Capture** | US extracted Jan 3 - Iran condemns |
+| **Hezbollah Ceasefire** | 2,024 violations - IDF preparing offensive |
+
+---
+
 ## Targets Overview
 
 | Target | Type | Status |
@@ -46,6 +76,8 @@
 | **President.ir** | Presidential Office | ASN ownership mapped |
 | **Hezbollah Media** | FTO Propaganda | Russian/Czech hosting documented |
 | **Al-Manar TV** | FTO Media | Tracking IDs captured |
+| **FarsNews** (farsnews.ir) | IRGC News | Jira, Confluence, Telegram API exposed |
+| **MehrNews** (mehrnews.com) | State Media | PRTG monitoring, HR system found |
 
 ---
 
@@ -112,6 +144,33 @@ https://dl.farsnews.ir/app.apk
 - cloud.mfa.gov.ir (Cloud Storage)
 - email.mfa.gov.ir (Email Portal)
 - visareq.mfa.gov.ir (Visa Requests)
+
+### 7. FarsNews Internal Tools Exposed
+
+```
+jira.farsnews.ir (Atlassian JIRA)
+confluence.farsnews.ir (Atlassian Confluence)
+chat.farsnews.ir (Internal Chat)
+my-api-tlg.farsnews.ir (Telegram API integration!)
+```
+
+### 8. MehrNews Monitoring Infrastructure
+
+```
+prtg.mehrnews.com (PRTG Network Monitor!)
+hrm.mehrnews.com (HR Management System)
+election.mehrnews.com (Election coverage)
+majles.mehrnews.com (Parliament system)
+```
+
+### 9. DMARC Email Addresses Exposed
+
+| Domain | Email |
+|--------|-------|
+| khamenei.ir | mailauth-rua@khamenei.ir |
+| khamenei.ir | mailauth-ruf@khamenei.ir |
+| mfa.gov.ir | dmarc-error@mfa.gov.ir |
+| farsnews.ir | noc@farsnews.ir (NOC contact) |
 
 ---
 
@@ -209,33 +268,46 @@ Location: english.alahednews.com.lb
 
 ```
 IRAN/
+|-- README.md                     # This file
 |-- KEY_FINDINGS.txt              # Master summary
-|-- HASH_DATABASE.txt             # Tokens & hashes
-|-- osint_log.txt                 # Session log
-|-- iran_osint.db                 # SQLite database
-|-- hash_database.db              # Hash collection DB
-|-- hash_viewer.html              # Browser viewer
-|-- tor_osint.torrc               # Tor configuration
+|-- HASH_DATABASE.txt             # Tokens & hashes (28+ items)
+|-- osint_log.txt                 # Session log with timestamps
+|-- hash_viewer.html              # Browser-based hash viewer
+|-- kaed0259.jpg                  # Khamenei photo
 |
 |-- KEY FINDINGS/                 # 23 intelligence files
-|   |-- 01_PRIVATE_IP_LEAK.txt
-|   |-- 02_VPN_ENDPOINT.txt
-|   |-- 03_ADMIN_PORTAL.txt
-|   |-- 04_HIDDEN_API.txt
-|   |-- 06_HEZBOLLAH_HOSTING.txt
-|   |-- 07_GOVERNMENT_ASNS.txt
-|   |-- 15_MFA_EMBASSY_MAP.txt
-|   |-- 17_EXIF_METADATA.txt
-|   |-- 19_SEIZED_DOMAINS.txt
-|   |-- 21_OSINT_FOR_ACTIVISTS.txt
-|   |-- ...
+|   |-- 01_PRIVATE_IP_LEAK.txt    # IRNA 10.30.41.85 exposure
+|   |-- 02_VPN_ENDPOINT.txt       # MFA VPN discovery
+|   |-- 03_ADMIN_PORTAL.txt       # khamenei.ir admin
+|   |-- 04_HIDDEN_API.txt         # formx.khamenei.link
+|   |-- 05_HASHES_TOKENS.txt      # Initial token collection
+|   |-- 06_HEZBOLLAH_HOSTING.txt  # Russian/Czech analysis
+|   |-- 07_GOVERNMENT_ASNS.txt    # ASN ownership map
+|   |-- 14_FARSNEWS_DEVTOOLS.txt  # Jira/Confluence exposure
+|   |-- 15_MFA_EMBASSY_MAP.txt    # 182 diplomatic subdomains
+|   |-- 17_EXIF_METADATA.txt      # Photoshop attribution
+|   |-- 19_SEIZED_DOMAINS.txt     # DOJ seizure analysis
+|   |-- 23_NEW_HASHES_EXPOSED.txt # Latest: 40+ new subdomains
+|   |-- INDEX.txt                 # File index
 |
-|-- Downloaded/                   # Raw HTML captures
-|-- HTMLs/                        # Processed HTML
-|-- SNIPs/                        # Screenshots
-|-- scripts/                      # Collection scripts
-|-- resources/                    # Reference materials
-|-- tor_data/                     # Tor runtime data
+|-- HTMLs/                        # Interactive reports (GitHub Pages)
+|   |-- index.html                # Main dashboard
+|   |-- timeline.html             # 2025-2026 event timeline
+|   |-- glossary.html             # Searchable term database
+|
+|-- resources/
+|   |-- intel/                    # 14 intelligence reports
+|   |   |-- IRAN_MASTER_INTEL.txt # Comprehensive document
+|   |   |-- HEZBOLLAH_DATA_DUMP.txt
+|   |   |-- SUBDOMAIN_INTEL.txt   # 300+ subdomains
+|   |   |-- HEZBOLLAH_FINANCIAL_INTEL.txt
+|   |
+|   |-- hezbollah/
+|   |   |-- HTMLs/                # 120+ captured pages
+|   |   |-- media/                # 100+ images with EXIF
+|   |
+|   |-- khamenei/                 # Supreme Leader site captures
+|   |-- rss/                      # RSS feed archives
 ```
 
 ---

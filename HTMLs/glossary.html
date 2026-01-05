@@ -355,10 +355,51 @@
         </div>
     </div>
 
+    <div class="category">
+        <h2>INFRASTRUCTURE & OSINT</h2>
+
+        <div class="term" data-terms="arvancloud cdn iran hosting infrastructure single point failure">
+            <div class="term-name">ArvanCloud</div>
+            <div class="term-alt">AS205585 - Iranian CDN Provider</div>
+            <span class="tag org">ORGANIZATION</span>
+            <div class="term-def">Iran's primary Content Delivery Network. Hosts ALL major government websites including khamenei.ir, president.ir, mfa.gov.ir. Single point of failure for regime web infrastructure.</div>
+            <div class="term-context">ArvanCloud uses IP range 185.143.232.0/22. Disrupting ArvanCloud would cripple Iranian government web presence.</div>
+        </div>
+
+        <div class="term" data-terms="certificate transparency ct logs ssl tls certificates">
+            <div class="term-name">Certificate Transparency (CT)</div>
+            <span class="tag org">OSINT</span>
+            <div class="term-def">Public logs of SSL/TLS certificates. Reveals subdomains that website operators may not want publicly known, including internal systems and admin portals.</div>
+            <div class="term-context">CT logs exposed admin.english.khamenei.ir and r1.vpn.minister.local.mfa.gov.ir - internal systems not meant for public access.</div>
+        </div>
+
+        <div class="term" data-terms="subdomain enumeration dns reconnaissance infrastructure mapping">
+            <div class="term-name">Subdomain Enumeration</div>
+            <span class="tag org">OSINT</span>
+            <div class="term-def">OSINT technique to discover hidden subdomains of a target domain. Reveals internal systems, development environments, and administrative portals.</div>
+            <div class="term-context">Enumeration of mfa.gov.ir revealed 182 embassy subdomains and exposed VPN endpoints with internal naming conventions.</div>
+        </div>
+
+        <div class="term" data-terms="exif metadata photo image attribution photoshop">
+            <div class="term-name">EXIF Metadata</div>
+            <span class="tag org">OSINT</span>
+            <div class="term-def">Hidden data embedded in image files containing camera info, software used, timestamps, and sometimes GPS coordinates. Useful for attribution.</div>
+            <div class="term-context">EXIF from Hezbollah media revealed Adobe Photoshop 7.0 (2002 - likely pirated) and timestamps in Beirut working hours.</div>
+        </div>
+
+        <div class="term" data-terms="private ip rfc1918 internal network leak exposure">
+            <div class="term-name">RFC1918 Private IP Leak</div>
+            <span class="tag org">OSINT</span>
+            <div class="term-def">When internal IP addresses (10.x.x.x, 172.16-31.x.x, 192.168.x.x) are accidentally exposed in public DNS records, revealing internal network structure.</div>
+            <div class="term-context">IRNA's kateb.irna.ir resolved to 10.30.41.85 - exposing their internal editorial network topology.</div>
+        </div>
+
+    </div>
+
 </div>
 
 <div class="footer">
-    <strong>Generated:</strong> 2026-01-04 | Classification: OSINT - UNCLASSIFIED<br>
+    <strong>Last Updated:</strong> 2026-01-05 | Classification: OSINT - UNCLASSIFIED<br>
     <em>For educational purposes - understanding Iran-related terminology</em>
 </div>
 
